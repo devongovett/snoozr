@@ -1,4 +1,4 @@
-sleepr
+snoozr
 ======
 
-Sleepr is an app for sleeping
+Snoozr is an app for sleeping
