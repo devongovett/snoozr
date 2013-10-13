@@ -23,6 +23,9 @@
 		0D84214A180B2887005AB0D0 /* SnoozrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842149180B2887005AB0D0 /* SnoozrTests.m */; };
 		0D842154180B39A6005AB0D0 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D842153180B39A6005AB0D0 /* background@2x.jpg */; };
 		0D842157180B3A85005AB0D0 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842156180B3A85005AB0D0 /* UIImage+ImageEffects.m */; };
+		0D84215A180B4E52005AB0D0 /* SNSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842159180B4E52005AB0D0 /* SNSettingsViewController.m */; };
+		0D84215C180B5734005AB0D0 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 0D84215B180B5734005AB0D0 /* about.html */; };
+		0D84215F180B581F005AB0D0 /* SNAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D84215E180B581F005AB0D0 /* SNAboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,11 @@
 		0D842153180B39A6005AB0D0 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		0D842155180B3A85005AB0D0 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		0D842156180B3A85005AB0D0 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		0D842158180B4E52005AB0D0 /* SNSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSettingsViewController.h; sourceTree = "<group>"; };
+		0D842159180B4E52005AB0D0 /* SNSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSettingsViewController.m; sourceTree = "<group>"; };
+		0D84215B180B5734005AB0D0 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
+		0D84215D180B581F005AB0D0 /* SNAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNAboutViewController.h; sourceTree = "<group>"; };
+		0D84215E180B581F005AB0D0 /* SNAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNAboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,11 @@
 				0D84212D180B2887005AB0D0 /* SNAppDelegate.h */,
 				0D84212E180B2887005AB0D0 /* SNAppDelegate.m */,
 				0D842130180B2887005AB0D0 /* Main.storyboard */,
+				0D84215D180B581F005AB0D0 /* SNAboutViewController.h */,
+				0D84215E180B581F005AB0D0 /* SNAboutViewController.m */,
+				0D84215B180B5734005AB0D0 /* about.html */,
+				0D842158180B4E52005AB0D0 /* SNSettingsViewController.h */,
+				0D842159180B4E52005AB0D0 /* SNSettingsViewController.m */,
 				0D842133180B2887005AB0D0 /* SNViewController.h */,
 				0D842134180B2887005AB0D0 /* SNViewController.m */,
 				0D842136180B2887005AB0D0 /* Images.xcassets */,
@@ -240,6 +253,7 @@
 				0D842137180B2887005AB0D0 /* Images.xcassets in Resources */,
 				0D842129180B2887005AB0D0 /* InfoPlist.strings in Resources */,
 				0D842132180B2887005AB0D0 /* Main.storyboard in Resources */,
+				0D84215C180B5734005AB0D0 /* about.html in Resources */,
 				0D842154180B39A6005AB0D0 /* background@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,8 +275,10 @@
 			files = (
 				0D842157180B3A85005AB0D0 /* UIImage+ImageEffects.m in Sources */,
 				0D84212B180B2887005AB0D0 /* main.m in Sources */,
+				0D84215A180B4E52005AB0D0 /* SNSettingsViewController.m in Sources */,
 				0D842135180B2887005AB0D0 /* SNViewController.m in Sources */,
 				0D84212F180B2887005AB0D0 /* SNAppDelegate.m in Sources */,
+				0D84215F180B581F005AB0D0 /* SNAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
