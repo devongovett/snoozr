@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SNSettingsViewController : UITableViewController
+@interface SNSettingsViewController : UITableViewController <UIActionSheetDelegate>
 
 @end
