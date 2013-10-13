@@ -18,16 +18,11 @@
 {
     [super viewDidLoad];
 
-    
-    self.view.backgroundColor = [UIColor clearColor];
-	// Do any additional setup after loading the view, typically from a nib.
     UIImage *image = [UIImage imageNamed:@"background.jpg"];
-    
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[image applyDarkEffect]];
     [self.view insertSubview:imageView atIndex:0];
 
     self.view.tintColor = [UIColor whiteColor];
-    
     self.titleLabel.textColor = [UIColor whiteColor];
     self.timeLabel.textColor = [UIColor whiteColor];
     self.dateLabel.textColor = [UIColor whiteColor];
