@@ -1,0 +1,961 @@
+TSnoozr
+v6
+r1
+cCheck dependencies
+cProcessPCH /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch.pch Snoozr/Snoozr-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/UIImage+ImageEffects.o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/main.o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNViewController.o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNAppDelegate.o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr normal x86_64
+cGenerateDSYMFile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app.dSYM /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr
+cCopyStringsFile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/en.lproj/InfoPlist.strings Snoozr/en.lproj/InfoPlist.strings
+cCompileStoryboard /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard
+cCpResource Snoozr/background@2x.jpg DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background@2x.jpg
+cCompileAssetCatalog /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Images.xcassets
+cProcessInfoPlistFile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Info.plist /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Info.plist
+cTouch /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk
+c00000000521BCCE50000000000000176
+t1377553637
+s374
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/SDKSettings.plist
+c00000000525AED3300000000000003B5
+t1381690675
+s949
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000525AED3E000000000000019E
+t1381690686
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
+c00000000525AED3E00000000000085D0
+t1381690686
+s34256
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/vImage
+c00000000525AED3F00000000005CB030
+t1381690687
+s6074416
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBLAS.dylib
+c00000000525AED3F00000000002DCBC0
+t1381690687
+s3001280
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libLAPACK.dylib
+c00000000525AED400000000000803B80
+t1381690688
+s8403840
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvDSP.dylib
+c00000000525AED3E00000000001B2650
+t1381690686
+s1779280
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvMisc.dylib
+c00000000525AED3F000000000012F570
+t1381690687
+s1242480
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/vecLib
+c00000000525AED3E0000000000008630
+t1381690686
+s34352
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c00000000525AED410000000000583810
+t1381690689
+s5781520
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+c00000000525AED4100000000005B82A0
+t1381690689
+s5997216
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000525AED410000000000445830
+t1381690689
+s4479024
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+c00000000525AED410000000000355270
+t1381690689
+s3494512
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+c00000000525AED4200000000002F4800
+t1381690690
+s3098624
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+c00000000525AED41000000000004B000
+t1381690689
+s307200
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000525AED43000000000088B570
+t1381690691
+s8959344
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c00000000525AED450000000000037620
+t1381690693
+s226848
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000525AED460000000000484860
+t1381690694
+s4737120
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Security.framework/Security
+c00000000525AED450000000000127E10
+t1381690693
+s1211920
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000525AED4A0000000001DB1C90
+t1381690698
+s31136912
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+c00000000525AED5A00000000002B9E80
+t1381690714
+s2858624
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/crt1.o
+c00000000525AED610000000000002338
+t1381690721
+s9016
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libSystem.dylib
+c00000000525AED63000000000008D300
+t1381690723
+s578304
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libobjc.dylib
+c00000000525AED62000000000038ACB0
+t1381690722
+s3714224
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/host/libdyld.dylib
+c000000005010582F00000000000121D0
+t1343248431
+s74192
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcache_sim.dylib
+c00000000525AED640000000000013500
+t1381690724
+s79104
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+c00000000525AED640000000000033BA0
+t1381690724
+s211872
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+c00000000525AED64000000000001CFB0
+t1381690724
+s118704
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcopyfile_sim.dylib
+c00000000525AED64000000000001B2B0
+t1381690724
+s111280
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdispatch.dylib
+c00000000525AED6400000000000632B0
+t1381690724
+s406192
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdyld_sim.dylib
+c00000000525AED640000000000008880
+t1381690724
+s34944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libmacho_sim.dylib
+c00000000525AED640000000000015080
+t1381690724
+s86144
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libnotify_sim.dylib
+c00000000525AED6400000000000230E0
+t1381690724
+s143584
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libremovefile_sim.dylib
+c00000000525AED64000000000000E380
+t1381690724
+s58240
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_network.dylib
+c00000000525AED640000000000087200
+t1381690724
+s553472
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_override.dylib
+c00000000525AED6400000000000171A0
+t1381690724
+s94624
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_asl.dylib
+c00000000525AED640000000000039C10
+t1381690724
+s236560
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+c00000000525AED64000000000000B0B0
+t1381690724
+s45232
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_c.dylib
+c00000000525AED640000000000167FE0
+t1381690724
+s1474528
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+c00000000525AED6400000000000106A0
+t1381690724
+s67232
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+c00000000525AED64000000000001CE40
+t1381690724
+s118336
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_info.dylib
+c00000000525AED640000000000071040
+t1381690724
+s462912
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_m.dylib
+c00000000525AED640000000000067A10
+t1381690724
+s424464
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libunwind_sim.dylib
+c00000000525AED64000000000001BAD0
+t1381690724
+s113360
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libxpc.dylib
+c00000000525AED640000000000088BA0
+t1381690724
+s560032
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/include/module.map
+c00000000525AED6E0000000000000AC9
+t1381690734
+s2761
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a
+c00000000525AED6E0000000000005004
+t1381690734
+s20484
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-bzkykrribkfddxhiarimsbuxyayl/Snoozr-Prefix.pch.pch
+t1381692392
+s109360
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch.pch
+t1381692440
+s110100
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNAppDelegate.o
+t1381692392
+s65408
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNViewController.o
+t1381692392
+s41140
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/Snoozr.LinkFileList
+c00000000525AF3E60000000000000243
+t1381692390
+s579
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/main.o
+t1381692392
+s3748
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNAppDelegate.o
+t1381697140
+s71648
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNViewController.o
+t1381698988
+s60788
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/Snoozr.LinkFileList
+c00000000525B03570000000000000315
+t1381696343
+s789
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/UIImage+ImageEffects.o
+t1381697214
+s24588
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/main.o
+t1381692440
+s3992
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/assetcatalog_dependencies.txt
+t1381692393
+s526
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/assetcatalog_generated_info.plist
+t1381692393
+s525
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app
+t1381698988
+s374
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app.dSYM
+t1381698988
+s102
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Base.lproj/Main.storyboardc
+t1381697759
+s170
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Info.plist
+t1381697140
+s1058
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/PkgInfo
+t1381697140
+s8
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr
+t1381698988
+s40936
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background.jpg
+t1381696344
+s65852
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background@2x.jpg
+t1381696845
+s65852
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/en.lproj/InfoPlist.strings
+t1381692392
+s42
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard
+c00000000525B08DD0000000000002862
+t1381697757
+s10338
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Images.xcassets
+c00000000525AF1070000000000000088
+t1381691655
+s136
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.h
+c00000000525AF1070000000000000115
+t1381691655
+s277
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m
+c00000000525B06590000000000000832
+t1381697113
+s2098
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.h
+c00000000525B08DD00000000000001A4
+t1381697757
+s420
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m
+c00000000525B0DAB00000000000009EF
+t1381698987
+s2543
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Info.plist
+c00000000525B065C0000000000000505
+t1381697116
+s1285
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Prefix.pch
+c00000000525AF1070000000000000158
+t1381691655
+s344
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.h
+c0000000051AFB14900000000000015BB
+t1370468681
+s5563
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m
+c00000000525B06BE00000000000032F0
+t1381697214
+s13040
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/background.jpg
+c00000000525B0217000000000001013C
+t1381696023
+s65852
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/background@2x.jpg
+c00000000525B0217000000000001013C
+t1381696023
+s65852
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/en.lproj/InfoPlist.strings
+c00000000525AF107000000000000002D
+t1381691655
+s45
+
+N/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m
+c00000000525AF1070000000000000151
+t1381691655
+s337
+
+N/usr/lib/libSystem.B.dylib
+c000000005010581B000000000000D2A0
+t1343248411
+s53920
+
+N/usr/lib/system/libcache.dylib
+c000000005010582F0000000000013870
+t1343248431
+s79984
+
+N/usr/lib/system/libcommonCrypto.dylib
+c0000000051494E4F0000000000030250
+t1363758671
+s197200
+
+N/usr/lib/system/libcompiler_rt.dylib
+c000000005010581B0000000000017910
+t1343248411
+s96528
+
+N/usr/lib/system/libcopyfile.dylib
+c000000005010582E000000000001A130
+t1343248430
+s106800
+
+N/usr/lib/system/libdnsinfo.dylib
+c0000000051494E4F000000000000C2A0
+t1363758671
+s49824
+
+N/usr/lib/system/libdyld.dylib
+c000000005010582F00000000000121D0
+t1343248431
+s74192
+
+N/usr/lib/system/libkeymgr.dylib
+c000000005010582F0000000000008CE0
+t1343248431
+s36064
+
+N/usr/lib/system/liblaunch.dylib
+c00000000505A8450000000000001D350
+t1348109392
+s119632
+
+N/usr/lib/system/libmacho.dylib
+c000000005010582D0000000000014F90
+t1343248429
+s85904
+
+N/usr/lib/system/libquarantine.dylib
+c0000000051AE9813000000000000D790
+t1370396691
+s55184
+
+N/usr/lib/system/libremovefile.dylib
+c0000000051494E4F000000000000C330
+t1363758671
+s49968
+
+N/usr/lib/system/libsystem_blocks.dylib
+c000000005010582F000000000000A080
+t1343248431
+s41088
+
+N/usr/lib/system/libsystem_c.dylib
+c00000000513E754E00000000001F91C0
+t1363047758
+s2068928
+
+N/usr/lib/system/libsystem_dnssd.dylib
+c0000000051AE9813000000000001BC00
+t1370396691
+s113664
+
+N/usr/lib/system/libsystem_info.dylib
+c000000005010581B000000000008B580
+t1343248411
+s570752
+
+N/usr/lib/system/libsystem_kernel.dylib
+c0000000051AE981300000000000569B0
+t1370396691
+s354736
+
+N/usr/lib/system/libsystem_m.dylib
+c000000005010581B0000000000070540
+t1343248411
+s460096
+
+N/usr/lib/system/libsystem_notify.dylib
+c000000005010581B0000000000025620
+t1343248411
+s153120
+
+N/usr/lib/system/libsystem_sandbox.dylib
+c0000000051AE9813000000000000C780
+t1370396691
+s51072
+
+N/usr/lib/system/libunc.dylib
+c0000000050105827000000000000D430
+t1343248423
+s54320
+
+N/usr/lib/system/libunwind.dylib
+c0000000050105830000000000001BAA0
+t1343248432
+s113312
+
+CBuild AST from /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m
+r0
+
+CBuild AST from /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m
+r0
+
+CBuild AST from /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m
+r0
+
+CBuild AST from /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesa3ae5537450bb841^6c7c5637450bb841^---0#1#1#--18"Check dependencies36"F69E874D-A55E-4496-AC50-B5228A3D4227-
+
+CCompileAssetCatalog /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Images.xcassets
+s403385192.627429
+e403385193.210024
+r1
+xCompileAssetCatalog
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Images.xcassets
+o2013-10-13 12:26:32.969 IBCocoaTouchImageCatalogTool[34306:303] CFPreferences: user home directory at file:///Users/devongovett/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+o/* com.apple.actool.compilation-results */
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/LaunchImage-700-568h@2x.png
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Assets.car
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/assetcatalog_generated_info.plist
+o
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"CompileAssetCatalog DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app Snoozr/Images.xcassets109"CompileAssetCatalog DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app Snoozr/Images.xcassetsb5c2a0682b0bb841^fcc435692b0bb841^-784"2013-10-13 12:26:32.969 IBCocoaTouchImageCatalogTool[34306:303] CFPreferences: user home directory at file:///Users/devongovett/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile./* com.apple.actool.compilation-results *//Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/LaunchImage-700-568h@2x.png/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Assets.car/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/assetcatalog_generated_info.plist-0#0#1#-19%DVTDocumentLocation2@111"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Images.xcassets/0000000000000000^1371"CompileAssetCatalog DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app Snoozr/Images.xcassets    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/assetcatalog_dependencies.txt --output-partial-info-plist /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/assetcatalog_generated_info.plist --app-icon AppIcon --launch-image LaunchImage --platform iphonesimulator --minimum-deployment-target 7.0 --target-device iphone --compress-pngs --compile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Images.xcassets36"F935DD85-1A2C-4289-B627-E5F70C0188F9-
+bDC7AB0F8-CF3B-4A08-9502-5CB375E6E12A
+
+CCompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNAppDelegate.o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s403385192.219717
+e403385192.361411
+r1
+xCompileC
+xDerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNAppDelegate.o
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m222"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNAppDelegate.o Snoozr/SNAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler916238682b0bb841^d3855c682b0bb841^---0#0#1#-19%DVTDocumentLocation2@110"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m0000000000000000^4367"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNAppDelegate.o Snoozr/SNAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-generated-files.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-own-target-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-all-target-headers.hmap -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-project-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources/i386 -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources -F/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator -include /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-bzkykrribkfddxhiarimsbuxyayl/Snoozr-Prefix.pch -MMD -MT dependencies -MF /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNAppDelegate.d --serialize-diagnostics /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNAppDelegate.dia -c /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNAppDelegate.o36"5A665124-26F8-468F-9E13-9F58ED774126-
+bDC7AB0F8-CF3B-4A08-9502-5CB375E6E12A
+
+CCompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNViewController.o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s403385192.219531
+e403385192.356456
+r1
+xCompileC
+xDerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNViewController.o
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m228"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNViewController.o Snoozr/SNViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler765138682b0bb841^d1415b682b0bb841^---0#0#1#-19%DVTDocumentLocation2@113"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m0000000000000000^4385"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNViewController.o Snoozr/SNViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-generated-files.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-own-target-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-all-target-headers.hmap -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-project-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources/i386 -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources -F/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator -include /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-bzkykrribkfddxhiarimsbuxyayl/Snoozr-Prefix.pch -MMD -MT dependencies -MF /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNViewController.d --serialize-diagnostics /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNViewController.dia -c /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNViewController.o36"53577A9F-DEE9-4AE7-A3E9-71120D765BD7-
+bDC7AB0F8-CF3B-4A08-9502-5CB375E6E12A
+
+CCompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/main.o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s403385192.219509
+e403385192.352298
+r1
+xCompileC
+xDerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/main.o
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m204"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/main.o Snoozr/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compileref5838682b0bb841^c32e5a682b0bb841^---0#0#1#-19%DVTDocumentLocation2@101"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m0000000000000000^4313"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/main.o Snoozr/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-generated-files.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-own-target-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-all-target-headers.hmap -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-project-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources/i386 -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources -F/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator -include /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-bzkykrribkfddxhiarimsbuxyayl/Snoozr-Prefix.pch -MMD -MT dependencies -MF /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/main.dia -c /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/main.o36"1D99DEA4-AA8F-4B30-9D78-632850330262-
+bDC7AB0F8-CF3B-4A08-9502-5CB375E6E12A
+
+CCompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNAppDelegate.o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s403389939.980341
+e403389940.196248
+r1
+xCompileC
+xDerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNAppDelegate.o
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m226"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNAppDelegate.o Snoozr/SNAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler6d1efbf33d0bb841^922533f43d0bb841^---0#0#1#-19%DVTDocumentLocation2@110"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m0000000000000000^4381"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNAppDelegate.o Snoozr/SNAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-generated-files.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-own-target-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-all-target-headers.hmap -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-project-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources/x86_64 -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources -F/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator -include /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch -MMD -MT dependencies -MF /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNAppDelegate.d --serialize-diagnostics /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNAppDelegate.dia -c /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.m -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNAppDelegate.o36"9D72C994-DE37-41A6-B554-09C99E02753D-
+bFE669F81-6305-4112-B9D3-D8C8B3A644E4
+
+CCompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNViewController.o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s403391788.515908
+e403391788.628981
+r1
+xCompileC
+xDerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNViewController.o
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.h
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m232"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNViewController.o Snoozr/SNViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler8941842c450bb841^4b05a12c450bb841^---0#0#1#-19%DVTDocumentLocation2@113"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m0000000000000000^4399"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNViewController.o Snoozr/SNViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-generated-files.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-own-target-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-all-target-headers.hmap -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-project-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources/x86_64 -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources -F/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator -include /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch -MMD -MT dependencies -MF /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNViewController.d --serialize-diagnostics /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNViewController.dia -c /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNViewController.m -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNViewController.o36"4AE54313-F389-4DE8-9618-83DD448A13AC-
+b78E75F15-1E59-4467-BFAB-E210C9E70C21
+
+CCompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/UIImage+ImageEffects.o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s403390014.569846
+e403390014.651411
+r1
+xCompileC
+xDerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/UIImage+ImageEffects.o
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.h
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:130:26: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+o    int componentCount = CGColorGetNumberOfComponents(tintColor.CGColor);
+o        ~~~~~~~~~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:207:87: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+o            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
+o            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                ^~~~~~
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:207:95: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+o            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
+o            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                        ^~~~~~
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:208:87: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+o            vImageBoxConvolve_ARGB8888(&effectOutBuffer, &effectInBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
+o            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                ^~~~~~
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:208:95: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+o            vImageBoxConvolve_ARGB8888(&effectOutBuffer, &effectInBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
+o            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                        ^~~~~~
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:209:87: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+o            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
+o            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                ^~~~~~
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:209:95: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+o            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
+o            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                        ^~~~~~
+o7 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m240"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/UIImage+ImageEffects.o Snoozr/UIImage+ImageEffects.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerc40b923e3e0bb841^e3c5a63e3e0bb841^-3256"/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:130:26: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]    int componentCount = CGColorGetNumberOfComponents(tintColor.CGColor);        ~~~~~~~~~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:207:87: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                ^~~~~~/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:207:95: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                        ^~~~~~/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:208:87: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]            vImageBoxConvolve_ARGB8888(&effectOutBuffer, &effectInBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                ^~~~~~/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:208:95: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]            vImageBoxConvolve_ARGB8888(&effectOutBuffer, &effectInBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                        ^~~~~~/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:209:87: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                ^~~~~~/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m:209:95: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]            vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);            ~~~~~~~~~~~~~~~~~~~~~~~~~~                                                        ^~~~~~7 warnings generated.7(36%IDEClangDiagnosticActivityLogMessage2@84"Implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int'-403390014#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^129#25#129#25#6077#0#22"Value Conversion Issue2(3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^129#25#129#72#6077#46#3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^129#8#129#22#6060#0#-2@114"Implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int')-403390014#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^206#86#206#86#9944#0#22"Value Conversion Issue2(3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^206#86#206#92#9944#0#3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^206#12#206#38#9870#0#-2@114"Implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int')-403390014#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^206#94#206#94#9952#0#22"Value Conversion Issue2(3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^206#94#206#100#9952#0#3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^206#12#206#38#9870#0#-2@114"Implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int')-403390014#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^207#86#207#86#10069#0#22"Value Conversion Issue2(3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^207#86#207#92#10069#0#3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^207#12#207#38#9995#0#-2@114"Implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int')-403390014#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^207#94#207#94#10077#0#22"Value Conversion Issue2(3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^207#94#207#100#10077#0#3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^207#12#207#38#9995#0#-2@114"Implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int')-403390014#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^208#86#208#86#10194#0#22"Value Conversion Issue2(3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^208#86#208#92#10194#0#3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^208#12#208#38#10120#0#-2@114"Implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'uint32_t' (aka 'unsigned int')-403390014#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^208#94#208#94#10202#0#22"Value Conversion Issue2(3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^208#94#208#100#10202#0#3@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^208#12#208#38#10120#0#-0#0#1#-19%DVTDocumentLocation4@117"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m0000000000000000^4423"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/UIImage+ImageEffects.o Snoozr/UIImage+ImageEffects.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-generated-files.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-own-target-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-all-target-headers.hmap -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-project-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources/x86_64 -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources -F/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator -include /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch -MMD -MT dependencies -MF /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/UIImage+ImageEffects.d --serialize-diagnostics /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/UIImage+ImageEffects.dia -c /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/UIImage+ImageEffects.m -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/UIImage+ImageEffects.o36"D8127739-CBA4-4420-8643-9E78A7075CF7-
+bC90B6EC6-A826-422C-AF83-EE22D64C1E68
+
+CCompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/main.o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s403385240.541597
+e403385240.689852
+r1
+xCompileC
+xDerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/main.o
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/SNAppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m208"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/main.o Snoozr/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler57ce8a982b0bb841^249ab0982b0bb841^---0#0#1#-19%DVTDocumentLocation2@101"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m0000000000000000^4327"CompileC DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/main.o Snoozr/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-generated-files.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-own-target-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-all-target-headers.hmap -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-project-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources/x86_64 -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources -F/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator -include /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch -MMD -MT dependencies -MF /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/main.dia -c /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/main.m -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/main.o36"427B94C6-90AD-43F6-9518-1DD6D280C6C5-
+bBB26649A-2463-4BF3-99B9-BFB3AFD03159
+
+CCompileStoryboard /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard
+s403390557.577303
+e403390559.307359
+r1
+xCompileStoryboard
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard
+o2013-10-13 13:55:58.676 Interface Builder Cocoa Touch Tool[37040:303] CFPreferences: user home directory at file:///Users/devongovett/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+o2013-10-13 13:55:59.195 Interface Builder Cocoa Touch Tool[37041:303] CFPreferences: user home directory at file:///Users/devongovett/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+o/* com.apple.ibtool.document.warnings */
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard:ybv-Aa-RP5: warning: Horizontal position is ambiguous for "Label - Snoozr". [17]
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard:ybv-Aa-RP5: warning: Frame for "Label - Snoozr" will be different at run time. [16]
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard:rqy-Mc-FfF: warning: Frame for "Label - Tuesday, February 4th 2013" will be different at run time. [16]
+o/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard:SWD-iR-OwN: warning: Frame for "Label - 8:00AM" will be different at run time. [16]
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"CompileStoryboard Snoozr/Base.lproj/Main.storyboard51"CompileStoryboard Snoozr/Base.lproj/Main.storyboard1ede935d400bb841^8aaf4e5f400bb841^-1270"2013-10-13 13:55:58.676 Interface Builder Cocoa Touch Tool[37040:303] CFPreferences: user home directory at file:///Users/devongovett/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.2013-10-13 13:55:59.195 Interface Builder Cocoa Touch Tool[37041:303] CFPreferences: user home directory at file:///Users/devongovett/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile./* com.apple.ibtool.document.warnings *//Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard:ybv-Aa-RP5: warning: Horizontal position is ambiguous for "Label - Snoozr"./Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard:ybv-Aa-RP5: warning: Frame for "Label - Snoozr" will be different at run time./Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard:rqy-Mc-FfF: warning: Frame for "Label - Tuesday, February 4th 2013" will be different at run time./Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard:SWD-iR-OwN: warning: Frame for "Label - 8:00AM" will be different at run time.4(21%IDEActivityLogMessage2@54"Horizontal position is ambiguous for "Label - Snoozr".-403390559#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@121"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#16"Ambiguous Layout--2@57"Frame for "Label - Snoozr" will be different at run time.-403390559#18446744073709551615#0#-1#-3@121"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#14"Misplaced View--2@77"Frame for "Label - Tuesday, February 4th 2013" will be different at run time.-403390559#18446744073709551615#0#-1#-3@121"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#14"Misplaced View--2@57"Frame for "Label - 8:00AM" will be different at run time.-403390559#18446744073709551615#0#-1#-3@121"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#14"Misplaced View--0#0#1#-19%DVTDocumentLocation4@121"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard0000000000000000^954"CompileStoryboard Snoozr/Base.lproj/Main.storyboard    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.0 --output-format human-readable-text --compile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Base.lproj/Main.storyboardc /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Base.lproj/Main.storyboard36"4AC8AFF0-64A3-4A5B-A3F6-AE39EBDF1690-
+bA63356CA-4C59-4A77-8A13-4748AB333034
+
+CCopyStringsFile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/en.lproj/InfoPlist.strings Snoozr/en.lproj/InfoPlist.strings
+s403385192.627416
+e403385192.634616
+r1
+xCopyStringsFile
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/en.lproj/InfoPlist.strings
+xSnoozr/en.lproj/InfoPlist.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Copy Snoozr/en.lproj/InfoPlist.strings143"CopyStringsFile DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/en.lproj/InfoPlist.strings Snoozr/en.lproj/InfoPlist.strings94c2a0682b0bb841^c976a2682b0bb841^---0#0#1#-19%DVTDocumentLocation2@121"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/en.lproj/InfoPlist.strings0000000000000000^693"CopyStringsFile DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/en.lproj/InfoPlist.strings Snoozr/en.lproj/InfoPlist.strings    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/en.lproj -- Snoozr/en.lproj/InfoPlist.strings36"0994279D-C153-46F2-A552-379D4FD972BC-
+bDC7AB0F8-CF3B-4A08-9502-5CB375E6E12A
+
+CCpResource Snoozr/background.jpg DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background.jpg
+s403389144.238540
+e403389144.244504
+r1
+xCpResource
+xSnoozr/background.jpg
+xDerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background.jpg
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Copy DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background.jpg114"CpResource Snoozr/background.jpg DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background.jpg54353dd83a0bb841^9f914cd83a0bb841^---0#0#1#-19%DVTDocumentLocation2@169"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background.jpg00387884ddffdf42^734"CpResource Snoozr/background.jpg DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background.jpg    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/background.jpg /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app36"34CBA8B3-A29A-4628-A9AB-0214B278C07C-
+bB2E5D059-0B93-4AF6-B37F-C95C6EFE3DE5
+
+CCpResource Snoozr/background@2x.jpg DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background@2x.jpg
+s403389645.192093
+e403389645.195217
+r1
+xCpResource
+xSnoozr/background@2x.jpg
+xDerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background@2x.jpg
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Copy DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background@2x.jpg120"CpResource Snoozr/background@2x.jpg DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background@2x.jpg0b4231cd3c0bb841^632532cd3c0bb841^---0#0#1#-19%DVTDocumentLocation2@172"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background@2x.jpg00387884ddffdf42^743"CpResource Snoozr/background@2x.jpg DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/background@2x.jpg    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/background@2x.jpg /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app36"9D7FC440-297D-4361-A9EC-69DC26A60664-
+bCE8A3721-B45D-48BB-8A44-B726B908E1DD
+
+CGenerateDSYMFile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app.dSYM /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr
+s403391788.700458
+e403391788.725496
+r1
+xGenerateDSYMFile
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app.dSYM
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection152"Generate /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app.dSYM162"GenerateDSYMFile DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app.dSYM DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr4964b32c450bb841^7aaabb2c450bb841^---0#0#1#-19%DVTDocumentLocation2@160"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app.dSYM/0000000000000000^830"GenerateDSYMFile DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app.dSYM DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app.dSYM36"5E6E4ADA-1DB3-472F-91A2-3CCB809603C4-
+b78E75F15-1E59-4467-BFAB-E210C9E70C21
+
+CLd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr normal i386
+s403385192.370707
+e403385192.565008
+r1
+xLd
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr
+xnormal
+xi386
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/Snoozr.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/crt1.o
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/main.o
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNViewController.o
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/SNAppDelegate.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Security.framework/Security
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_override.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcache_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcopyfile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdyld_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libmacho_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libnotify_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libremovefile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libunwind_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_asl.dylib
+d/usr/lib/libSystem.B.dylib
+d/usr/lib/system/libcache.dylib
+d/usr/lib/system/libcommonCrypto.dylib
+d/usr/lib/system/libcompiler_rt.dylib
+d/usr/lib/system/libcopyfile.dylib
+d/usr/lib/system/libdnsinfo.dylib
+d/usr/lib/system/libdyld.dylib
+d/usr/lib/system/libkeymgr.dylib
+d/usr/lib/system/liblaunch.dylib
+d/usr/lib/system/libmacho.dylib
+d/usr/lib/system/libquarantine.dylib
+d/usr/lib/system/libremovefile.dylib
+d/usr/lib/system/libsystem_blocks.dylib
+d/usr/lib/system/libsystem_c.dylib
+d/usr/lib/system/libsystem_dnssd.dylib
+d/usr/lib/system/libsystem_info.dylib
+d/usr/lib/system/libsystem_kernel.dylib
+d/usr/lib/system/libsystem_m.dylib
+d/usr/lib/system/libsystem_notify.dylib
+d/usr/lib/system/libsystem_sandbox.dylib
+d/usr/lib/system/libunc.dylib
+d/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/host/libdyld.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection150"Link /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr88"Ld DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr normal i386f4fb5e682b0bb841^dfa590682b0bb841^---0#0#1#--1691"Ld DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr normal i386    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv IPHONEOS_DEPLOYMENT_TARGET 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -L/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator -F/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator -filelist /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/Snoozr.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.0 -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/i386/Snoozr_dependency_info.dat -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr36"D98B44C5-B6A7-47B1-9EF0-1A8C2BEFBF37-
+bDC7AB0F8-CF3B-4A08-9502-5CB375E6E12A
+
+CLd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr normal x86_64
+s403391788.639269
+e403391788.691294
+r1
+xLd
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr
+xnormal
+xx86_64
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/Snoozr.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/crt1.o
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/UIImage+ImageEffects.o
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/main.o
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNViewController.o
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/SNAppDelegate.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Security.framework/Security
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/vImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/vecLib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvDSP.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_override.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcache_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcopyfile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdyld_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libmacho_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libnotify_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libremovefile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libunwind_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_asl.dylib
+d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libLAPACK.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBLAS.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvMisc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/host/libdyld.dylib
+d/usr/lib/system/libcache.dylib
+d/usr/lib/system/libcommonCrypto.dylib
+d/usr/lib/system/libcompiler_rt.dylib
+d/usr/lib/system/libcopyfile.dylib
+d/usr/lib/system/libdnsinfo.dylib
+d/usr/lib/system/libkeymgr.dylib
+d/usr/lib/system/liblaunch.dylib
+d/usr/lib/system/libmacho.dylib
+d/usr/lib/system/libquarantine.dylib
+d/usr/lib/system/libremovefile.dylib
+d/usr/lib/system/libsystem_blocks.dylib
+d/usr/lib/system/libsystem_c.dylib
+d/usr/lib/system/libsystem_dnssd.dylib
+d/usr/lib/system/libsystem_info.dylib
+d/usr/lib/system/libsystem_kernel.dylib
+d/usr/lib/system/libsystem_m.dylib
+d/usr/lib/system/libsystem_notify.dylib
+d/usr/lib/system/libsystem_sandbox.dylib
+d/usr/lib/system/libunc.dylib
+d/usr/lib/system/libunwind.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection150"Link /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr90"Ld DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr normal x86_646fd3a32c450bb841^a0f9b02c450bb841^---0#0#1#--1699"Ld DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr normal x86_64    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv IPHONEOS_DEPLOYMENT_TARGET 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -L/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator -F/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator -filelist /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/Snoozr.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.0 -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Objects-normal/x86_64/Snoozr_dependency_info.dat -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Snoozr36"09590EBB-9492-41EB-8250-4872B17750BB-
+b78E75F15-1E59-4467-BFAB-E210C9E70C21
+
+CProcessInfoPlistFile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Info.plist /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Info.plist
+s403389940.329461
+e403389940.332915
+r1
+xProcessInfoPlistFile
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Info.plist
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Process /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Info.plist123"ProcessInfoPlistFile DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Info.plist Snoozr/Snoozr-Info.plistc26a54f43d0bb841^603a55f43d0bb841^---0#0#1#-19%DVTDocumentLocation2@112"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Info.plist0000000000000000^1114"ProcessInfoPlistFile DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Info.plist Snoozr/Snoozr-Info.plist    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Info.plist -genpkginfo /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/assetcatalog_generated_info.plist -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app/Info.plist36"A82901A9-BB26-427C-AB39-FA17BAEBCDF5-
+bFE669F81-6305-4112-B9D3-D8C8B3A644E4
+
+CProcessPCH /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-bzkykrribkfddxhiarimsbuxyayl/Snoozr-Prefix.pch.pch Snoozr/Snoozr-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s403385190.329447
+e403385192.210881
+r1
+xProcessPCH
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-bzkykrribkfddxhiarimsbuxyayl/Snoozr-Prefix.pch.pch
+xSnoozr/Snoozr-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile Snoozr/Snoozr-Prefix.pch226"ProcessPCH DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-bzkykrribkfddxhiarimsbuxyayl/Snoozr-Prefix.pch.pch Snoozr/Snoozr-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerfcdf55662b0bb841^e7ff35682b0bb841^---0#0#1#-19%DVTDocumentLocation2@112"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Prefix.pch0000000000000000^4176"ProcessPCH DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-bzkykrribkfddxhiarimsbuxyayl/Snoozr-Prefix.pch.pch Snoozr/Snoozr-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-generated-files.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-own-target-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-all-target-headers.hmap -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-project-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources/i386 -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources -F/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-bzkykrribkfddxhiarimsbuxyayl/Snoozr-Prefix.pch.dia -MMD -MT dependencies -MF /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-bzkykrribkfddxhiarimsbuxyayl/Snoozr-Prefix.pch.d -c /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Prefix.pch -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-bzkykrribkfddxhiarimsbuxyayl/Snoozr-Prefix.pch.pch36"FB83D9AC-1527-4AD4-8600-28F6DA4B7741-
+bDC7AB0F8-CF3B-4A08-9502-5CB375E6E12A
+
+CProcessPCH /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch.pch Snoozr/Snoozr-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s403385238.694408
+e403385240.532468
+r1
+xProcessPCH
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch.pch
+xSnoozr/Snoozr-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile Snoozr/Snoozr-Prefix.pch228"ProcessPCH DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch.pch Snoozr/Snoozr-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler20ebb1962b0bb841^875188982b0bb841^---0#0#1#-19%DVTDocumentLocation2@112"file://localhost/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Prefix.pch0000000000000000^4182"ProcessPCH DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch.pch Snoozr/Snoozr-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-generated-files.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-own-target-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-all-target-headers.hmap -iquote /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/Snoozr-project-headers.hmap -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources/x86_64 -I/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/Snoozr.build/Debug-iphonesimulator/Snoozr.build/DerivedSources -F/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch.dia -MMD -MT dependencies -MF /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch.d -c /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/Snoozr/Snoozr-Prefix.pch -o /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Intermediates/PrecompiledHeaders/Snoozr-Prefix-cjknpgbhwwtymdeexdozyjhkljmp/Snoozr-Prefix.pch.pch36"F7F56455-DBCB-4C4D-8E2C-EB061CA7BA1B-
+bBB26649A-2463-4BF3-99B9-BFB3AFD03159
+
+CProcessPCH /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Index/PrecompiledHeaders/Snoozr-Prefix-cggrclmrfjghbfhazmmhtcqjutvc_ast/Snoozr-Prefix.pch.pch Snoozr/Snoozr-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Index/PrecompiledHeaders/Snoozr-Prefix-dkxdfkpnbamoizecjujpyrymytac_ast/Snoozr-Prefix.pch.pch Snoozr/Snoozr-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CTouch /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app
+s403390559.317669
+e403390559.324902
+r1
+xTouch
+x/Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection144"Touch /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app72"Touch DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.appbb63515f400bb841^1b2d535f400bb841^---0#0#1#--508"Touch DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app    cd /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/devongovett/Documents/School/College/Junior/AI/snoozr/iOS/Snoozr/DerivedData/Snoozr/Build/Products/Debug-iphonesimulator/Snoozr.app36"CCBF3D09-B3A5-403C-904D-E67C6B1E7340-
+bA63356CA-4C59-4A77-8A13-4748AB333034
+
