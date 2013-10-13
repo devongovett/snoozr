@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aVv-hi-H9i">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -107,7 +107,7 @@
             </objects>
             <point key="canvasLocation" x="135" y="37"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Set Alarm-->
         <scene sceneID="CcC-bh-imY">
             <objects>
                 <viewController id="r8B-vF-eMp" sceneMemberID="viewController">
@@ -151,13 +151,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="228" y="308" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2S-ud-nJh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Set Alarm" id="isT-Re-pxZ"/>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn from this Alarm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDx-u3-d6M">
                                 <rect key="frame" x="44" y="313" width="165" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -167,10 +160,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Set Alarm" id="6EQ-3T-B15">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="qN5-JA-OzI"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="Ojn-9I-wbe"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SM8-l2-xdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="533" y="37"/>
+            <point key="canvasLocation" x="998" y="37"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="cAd-ej-yBH">
@@ -308,7 +305,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oh-CD-Var" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="703"/>
+            <point key="canvasLocation" x="960" y="703"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c61-tu-ck5">
@@ -327,6 +324,135 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9y-ub-ywk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="703"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mj2-HP-53Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hhm-aX-v6m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vWQ-r9-LXa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r8B-vF-eMp" kind="relationship" relationship="rootViewController" id="M5n-XH-Ar4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KH6-B5-XK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623" y="37"/>
+        </scene>
+        <!--Wake View Controller-->
+        <scene sceneID="m6o-CP-5sc">
+            <objects>
+                <viewController id="aVv-hi-H9i" customClass="SNWakeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NTl-gy-zA4"/>
+                        <viewControllerLayoutGuide type="bottom" id="1j9-LY-efp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yYJ-Bq-iJw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Good morning!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Juw-EH-QnQ">
+                                <rect key="frame" x="18" y="72" width="284" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="45"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jt-e2-MNR">
+                                <rect key="frame" x="25" y="172" width="269" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="8">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="120" name="HelveticaNeue-UltraLight"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=":">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="120" name="AvenirNextCondensed-UltraLight"/>
+                                            <font key="NSOriginalFont" size="120" name="AvenirNextCondensed-UltraLight"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="00">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="120" name="HelveticaNeue-UltraLight"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="AM">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="23" name="HelveticaNeue-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tuesday, February 4th 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S25-Qu-TUg">
+                                <rect key="frame" x="23" y="305" width="274" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjX-yJ-3FA" customClass="SNButton">
+                                <rect key="frame" x="20" y="492" width="128" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="ceJ-7t-hXZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="jW4-fq-jwK"/>
+                                    <constraint firstAttribute="width" constant="128" id="tt5-1M-u1b"/>
+                                </constraints>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzv-SC-1vY" customClass="SNButton">
+                                <rect key="frame" x="172" y="492" width="128" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="2B4-Yj-P4k"/>
+                                    <constraint firstAttribute="width" constant="128" id="r6r-Aw-6pe"/>
+                                </constraints>
+                                <state key="normal" title="Snooze">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="S25-Qu-TUg" secondAttribute="centerX" id="EEJ-ID-kxS"/>
+                            <constraint firstAttribute="centerX" secondItem="Juw-EH-QnQ" secondAttribute="centerX" id="ScN-rB-Jl3"/>
+                            <constraint firstItem="1j9-LY-efp" firstAttribute="top" secondItem="WjX-yJ-3FA" secondAttribute="bottom" constant="20" id="gNM-AM-5Vb"/>
+                            <constraint firstItem="7Jt-e2-MNR" firstAttribute="top" secondItem="Juw-EH-QnQ" secondAttribute="bottom" constant="45" id="o16-Ci-ogc"/>
+                            <constraint firstAttribute="centerX" secondItem="7Jt-e2-MNR" secondAttribute="centerX" id="pYg-Fk-JR6"/>
+                            <constraint firstItem="1j9-LY-efp" firstAttribute="top" secondItem="qzv-SC-1vY" secondAttribute="bottom" constant="20" id="rDq-qK-Teu"/>
+                            <constraint firstItem="WjX-yJ-3FA" firstAttribute="leading" secondItem="yYJ-Bq-iJw" secondAttribute="leading" constant="20" id="wAh-zf-Bo0"/>
+                            <constraint firstItem="Juw-EH-QnQ" firstAttribute="top" secondItem="NTl-gy-zA4" secondAttribute="bottom" constant="52" id="xNR-dh-Omf"/>
+                            <constraint firstAttribute="trailing" secondItem="qzv-SC-1vY" secondAttribute="trailing" constant="20" id="y9w-RB-VFJ"/>
+                            <constraint firstItem="S25-Qu-TUg" firstAttribute="top" secondItem="7Jt-e2-MNR" secondAttribute="bottom" constant="-31" id="zRA-so-PMG"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="S25-Qu-TUg" id="Oq2-8X-1jq"/>
+                        <outlet property="dismissButton" destination="WjX-yJ-3FA" id="q8S-Yq-XSQ"/>
+                        <outlet property="snoozeButton" destination="qzv-SC-1vY" id="T3E-UF-06l"/>
+                        <outlet property="timeLabel" destination="7Jt-e2-MNR" id="9gz-jj-twg"/>
+                        <outlet property="titleLabel" destination="Juw-EH-QnQ" id="HdH-gg-2HJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2z-3i-iZ1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="1365"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

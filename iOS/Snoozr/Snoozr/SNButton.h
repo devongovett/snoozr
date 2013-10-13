@@ -1,5 +1,5 @@
 //
-//  SNViewController.h
+//  SNButton.h
 //  Snoozr
 //
 //  Created by Devon Govett on 10/13/13.
@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SNBlurredViewController.h"
 
-@interface SNViewController : SNBlurredViewController
+@interface SNButton : UIButton
+
+@property (nonatomic, copy) UIColor *backgroundColor;
 
 @end

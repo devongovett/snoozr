@@ -26,6 +26,9 @@
 		0D84215A180B4E52005AB0D0 /* SNSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842159180B4E52005AB0D0 /* SNSettingsViewController.m */; };
 		0D84215C180B5734005AB0D0 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 0D84215B180B5734005AB0D0 /* about.html */; };
 		0D84215F180B581F005AB0D0 /* SNAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D84215E180B581F005AB0D0 /* SNAboutViewController.m */; };
+		0D842162180B61B3005AB0D0 /* SNButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842161180B61B3005AB0D0 /* SNButton.m */; };
+		0D842165180B6218005AB0D0 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842164180B6218005AB0D0 /* UIColor+Hex.m */; };
+		0D842168180B6392005AB0D0 /* SNWakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842167180B6392005AB0D0 /* SNWakeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,12 @@
 		0D84215B180B5734005AB0D0 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		0D84215D180B581F005AB0D0 /* SNAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNAboutViewController.h; sourceTree = "<group>"; };
 		0D84215E180B581F005AB0D0 /* SNAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNAboutViewController.m; sourceTree = "<group>"; };
+		0D842160180B61B3005AB0D0 /* SNButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNButton.h; sourceTree = "<group>"; };
+		0D842161180B61B3005AB0D0 /* SNButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNButton.m; sourceTree = "<group>"; };
+		0D842163180B6218005AB0D0 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		0D842164180B6218005AB0D0 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		0D842166180B6392005AB0D0 /* SNWakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNWakeViewController.h; sourceTree = "<group>"; };
+		0D842167180B6392005AB0D0 /* SNWakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNWakeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +147,12 @@
 				0D842159180B4E52005AB0D0 /* SNSettingsViewController.m */,
 				0D842133180B2887005AB0D0 /* SNViewController.h */,
 				0D842134180B2887005AB0D0 /* SNViewController.m */,
+				0D842160180B61B3005AB0D0 /* SNButton.h */,
+				0D842161180B61B3005AB0D0 /* SNButton.m */,
+				0D842166180B6392005AB0D0 /* SNWakeViewController.h */,
+				0D842167180B6392005AB0D0 /* SNWakeViewController.m */,
+				0D842163180B6218005AB0D0 /* UIColor+Hex.h */,
+				0D842164180B6218005AB0D0 /* UIColor+Hex.m */,
 				0D842136180B2887005AB0D0 /* Images.xcassets */,
 				0D842125180B2887005AB0D0 /* Supporting Files */,
 			);
@@ -277,6 +292,9 @@
 				0D84212B180B2887005AB0D0 /* main.m in Sources */,
 				0D84215A180B4E52005AB0D0 /* SNSettingsViewController.m in Sources */,
 				0D842135180B2887005AB0D0 /* SNViewController.m in Sources */,
+				0D842162180B61B3005AB0D0 /* SNButton.m in Sources */,
+				0D842168180B6392005AB0D0 /* SNWakeViewController.m in Sources */,
+				0D842165180B6218005AB0D0 /* UIColor+Hex.m in Sources */,
 				0D84212F180B2887005AB0D0 /* SNAppDelegate.m in Sources */,
 				0D84215F180B581F005AB0D0 /* SNAboutViewController.m in Sources */,
 			);
