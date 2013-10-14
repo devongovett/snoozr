@@ -43,7 +43,10 @@
     NSDate *date = [NSDate date];
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDateComponents *components = [cal components:NSHourCalendarUnit fromDate:date];
-    if (components.hour >= 12) {
+    
+    if (components.hour >= 17) { // 5pm
+        self.titleLabel.text = @"Good evening!";
+    } else if (components.hour >= 12) {
         self.titleLabel.text = @"Good afternoon!";
     } else {
         self.titleLabel.text = @"Good morning!";
@@ -51,7 +54,7 @@
 }
 
 - (void)updateEveryMinute
-{    
+{
     NSDate *date = [NSDate date];
     NSTimeInterval timeInterval = floor([date timeIntervalSinceReferenceDate] / 60) * 60 + 60;
     date = [NSDate dateWithTimeIntervalSinceReferenceDate:timeInterval];
