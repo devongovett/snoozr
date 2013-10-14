@@ -12,6 +12,9 @@
 #import <sys/time.h>
 
 @implementation SNWakeViewController
+{
+    NSTimer *_timer;
+}
 
 - (void)viewDidLoad
 {
@@ -48,20 +51,19 @@
 }
 
 - (void)updateEveryMinute
-{
-    [self update];
+{    
+    NSDate *date = [NSDate date];
+    NSTimeInterval timeInterval = floor([date timeIntervalSinceReferenceDate] / 60) * 60 + 60;
+    date = [NSDate dateWithTimeIntervalSinceReferenceDate:timeInterval];
     
-    // get the current time
-    struct timespec startPopTime;
-    gettimeofday((struct timeval *) &startPopTime, NULL);
+    _timer = [[NSTimer alloc] initWithFireDate:date
+                                      interval:60
+                                        target:self
+                                      selector:@selector(update)
+                                      userInfo:nil
+                                       repeats:YES];
     
-    startPopTime.tv_sec -= startPopTime.tv_sec % 60;
-    startPopTime.tv_sec += 60;
-    
-    dispatch_time_t after = dispatch_walltime(&startPopTime, 0);
-    dispatch_after(after, dispatch_get_main_queue(), ^(void) {
-        [self updateEveryMinute];
-    });
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
 }
 
 @end
