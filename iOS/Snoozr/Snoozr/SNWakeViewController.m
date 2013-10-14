@@ -55,11 +55,9 @@
     struct timespec startPopTime;
     gettimeofday((struct timeval *) &startPopTime, NULL);
     
-    // trim the time
-    startPopTime.tv_sec -= (startPopTime.tv_sec % 60);
-    startPopTime.tv_sec += 60;
-    
+    startPopTime.tv_sec = (startPopTime.tv_sec + 60) % 60;
     dispatch_time_t time = dispatch_walltime(&startPopTime, 0);
+
     dispatch_after(time, dispatch_get_main_queue(), ^(void) {
         [self updateEveryMinute];
     });
