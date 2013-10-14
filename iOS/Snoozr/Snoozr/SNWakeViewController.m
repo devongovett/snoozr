@@ -22,8 +22,16 @@
     
     self.dismissButton.backgroundColor = [UIColor colorWithHex:0xBF2E2D];
     self.snoozeButton.backgroundColor = [UIColor colorWithHex:0x42C54F];
-    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
     [self updateEveryMinute];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [_timer invalidate];
 }
 
 - (void)didReceiveMemoryWarning
