@@ -28,9 +28,7 @@
     self.timeLabel.textColor = self.view.tintColor;
     self.dateLabel.textColor = self.view.tintColor;
     
-    [self updateTime];
-    [self updateDate];
-    
+    [self update];
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
@@ -45,9 +43,15 @@
     return UIStatusBarStyleLightContent;
 }
 
-- (void)updateTime
+- (void)update
 {
     NSDate *date = [NSDate date];
+    [self updateTime:date];
+    [self updateDate:date];
+}
+
+- (void)updateTime:(NSDate *)date
+{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateStyle = NSDateFormatterNoStyle;
     formatter.timeStyle = NSDateFormatterShortStyle;
@@ -67,9 +71,8 @@
     self.timeLabel.attributedText = string;
 }
 
-- (void)updateDate
+- (void)updateDate:(NSDate *)date
 {
-    NSDate *date = [NSDate date];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.timeStyle = NSDateFormatterNoStyle;
     formatter.dateStyle = NSDateFormatterFullStyle;
