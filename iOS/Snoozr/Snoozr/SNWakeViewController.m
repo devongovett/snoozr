@@ -22,6 +22,8 @@
     
     self.dismissButton.backgroundColor = [UIColor colorWithHex:0xBF2E2D];
     self.snoozeButton.backgroundColor = [UIColor colorWithHex:0x42C54F];
+    
+    [self.dismissButton addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -75,6 +77,11 @@
                                        repeats:YES];
     
     [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
+}
+
+- (void)dismiss
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
