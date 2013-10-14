@@ -11,8 +11,6 @@
 #import "UIColor+Hex.h"
 #import <sys/time.h>
 
-void runBlockEveryMinute(dispatch_block_t block);
-
 @implementation SNWakeViewController
 
 - (void)viewDidLoad
@@ -22,9 +20,7 @@ void runBlockEveryMinute(dispatch_block_t block);
     self.dismissButton.backgroundColor = [UIColor colorWithHex:0xBF2E2D];
     self.snoozeButton.backgroundColor = [UIColor colorWithHex:0x42C54F];
     
-    runBlockEveryMinute(^{
-        [self update];
-    });
+    [self updateEveryMinute];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,11 +47,9 @@ void runBlockEveryMinute(dispatch_block_t block);
     }
 }
 
-@end
-
-void runBlockEveryMinute(dispatch_block_t block)
+- (void)updateEveryMinute
 {
-    block(); // initial block call
+    [self update];
     
     // get the current time
     struct timespec startPopTime;
@@ -66,11 +60,9 @@ void runBlockEveryMinute(dispatch_block_t block)
     startPopTime.tv_sec += 60;
     
     dispatch_time_t time = dispatch_walltime(&startPopTime, 0);
-    
-    __block dispatch_block_t afterBlock = ^(void) {
-        block();
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 60), dispatch_get_main_queue(), afterBlock);
-    };
-    
-    dispatch_after(time, dispatch_get_main_queue(), afterBlock); // start the 'timer' going
+    dispatch_after(time, dispatch_get_main_queue(), ^(void) {
+        [self updateEveryMinute];
+    });
 }
+
+@end
