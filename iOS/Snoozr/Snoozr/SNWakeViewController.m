@@ -20,8 +20,8 @@
 {
     [super viewDidLoad];
     
-    self.dismissButton.backgroundColor = [UIColor colorWithHex:0xBF2E2D];
-    self.snoozeButton.backgroundColor = [UIColor colorWithHex:0x42C54F];
+    self.dismissButton.backgroundColor = [UIColor colorWithHex:0x42C54F];
+    self.snoozeButton.backgroundColor = [UIColor colorWithHex:0xBF2E2D];
     
     [self.dismissButton addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
 }
