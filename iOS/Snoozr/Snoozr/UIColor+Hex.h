@@ -11,5 +11,6 @@
 @interface UIColor (Hex)
 
 + (UIColor *) colorWithHex:(UInt32)hex;
+- (UIColor *) darken:(double)amount;
 
 @end

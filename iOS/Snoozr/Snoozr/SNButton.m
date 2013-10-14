@@ -16,11 +16,25 @@
     [super awakeFromNib];
     self.backgroundColor = [UIColor clearColor];
     self.layer.cornerRadius = 5;
+    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self setTitleColor:[UIColor colorWithHex:0xdddddd] forState:UIControlStateHighlighted];
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor
 {
-    self.layer.backgroundColor = [backgroundColor CGColor];
+    _backgroundColor = backgroundColor;
+    [self setHighlighted:self.highlighted];
+}
+
+- (void)setHighlighted:(BOOL)highlighted
+{
+    [super setHighlighted:highlighted];
+    
+    if (highlighted) {
+        self.layer.backgroundColor = [[self.backgroundColor darken:0.15] CGColor];
+    } else {
+        self.layer.backgroundColor = [self.backgroundColor CGColor];
+    }
 }
 
 @end

@@ -18,4 +18,11 @@
                            alpha:1.0];
 }
 
+- (UIColor *) darken:(CGFloat)amount
+{
+    CGFloat h, s, b, a;
+    [self getHue:&h saturation:&s brightness:&b alpha:&a];
+    return [UIColor colorWithHue:h saturation:s brightness:b - amount alpha:a];
+}
+
 @end
