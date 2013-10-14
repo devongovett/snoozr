@@ -13,6 +13,9 @@
 @end
 
 @implementation SNSettingsViewController
+{
+    NSDictionary *_data;
+}
 
 - (void)viewDidLoad
 {
@@ -20,6 +23,32 @@
 
     self.navigationItem.rightBarButtonItem.target = self;
     self.navigationItem.rightBarButtonItem.action = @selector(dismiss);
+    
+    _data = @{
+       @"Settings": @[@{
+           @"text": @"Number of Allowed Snoozes",
+           @"detail": @"5"
+       }, @{
+           @"text": @"Sleep Cycle",
+           @"detail": @"90 minutes"
+       }, @{
+           @"text": @"Sound",
+           @"detail": @"Alarm"
+       }],
+       @"About": @[@{
+           @"cell": @"InfoCell",
+           @"text": @"Version",
+           @"detail": @"0.0.1"
+       }, @{
+           @"cell": @"AboutCell",
+           @"text": @"About"
+       }],
+       @"Danger Zone": @[@{
+           @"cell": @"ResetCell",
+           @"text": @"Reset Schedule",
+           @"footer": @"Copyright © 2013 Snoozr"
+       }]
+    };
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,66 +66,32 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    switch (section) {
-        case 0:
-        case 1: return 2;
-        case 2: return 1;
-    }
-    
-    return 0;
+    NSArray *items = _data[[_data allKeys][section]];
+    return items.count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    switch (section) {
-        case 0: return @"Settings";
-        case 1: return @"About";
-        case 2: return @"Danger Zone";
-    }
-    
-    return nil;
+    return [_data allKeys][section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
     
-    if (indexPath.section == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-        
-        switch (indexPath.row) {
-            case 0:
-                cell.textLabel.text = @"Number of Allowed Snoozes";
-                cell.detailTextLabel.text = @"5";
-                break;
-            case 1:
-                cell.textLabel.text = @"Sleep Cycle";
-                cell.detailTextLabel.text = @"90 minutes";
-                break;
-                
-        }
-    } else if (indexPath.section == 1) {
-        switch (indexPath.row) {
-            case 0:
-                cell = [tableView dequeueReusableCellWithIdentifier:@"InfoCell" forIndexPath:indexPath];
-                cell.textLabel.text = @"Version";
-                cell.detailTextLabel.text = @"0.0.1";
-                break;
-            case 1:
-                cell = [tableView dequeueReusableCellWithIdentifier:@"AboutCell" forIndexPath:indexPath];
-                cell.textLabel.text = @"About";
-                break;
-        }
-    } else {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"ResetCell" forIndexPath:indexPath];
-    }
+    NSDictionary *row = _data[[_data allKeys][indexPath.section]][indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:row[@"cell"] ? row[@"cell"] : @"Cell" forIndexPath:indexPath];
+    
+    cell.textLabel.text = row[@"text"];
+    if (row[@"detail"])
+        cell.detailTextLabel.text = row[@"detail"];
     
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
-    return section == 2 ? @"Copyright © 2013 Snoozr" : nil;
+    NSArray *items = _data[[_data allKeys][section]];
+    return [items lastObject][@"footer"];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

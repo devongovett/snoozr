@@ -29,6 +29,7 @@
 		0D842162180B61B3005AB0D0 /* SNButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842161180B61B3005AB0D0 /* SNButton.m */; };
 		0D842165180B6218005AB0D0 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842164180B6218005AB0D0 /* UIColor+Hex.m */; };
 		0D842168180B6392005AB0D0 /* SNWakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842167180B6392005AB0D0 /* SNWakeViewController.m */; };
+		0D84216B180B6460005AB0D0 /* SNBlurredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D84216A180B6460005AB0D0 /* SNBlurredViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		0D842164180B6218005AB0D0 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		0D842166180B6392005AB0D0 /* SNWakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNWakeViewController.h; sourceTree = "<group>"; };
 		0D842167180B6392005AB0D0 /* SNWakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNWakeViewController.m; sourceTree = "<group>"; };
+		0D842169180B6460005AB0D0 /* SNBlurredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNBlurredViewController.h; sourceTree = "<group>"; };
+		0D84216A180B6460005AB0D0 /* SNBlurredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNBlurredViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 				0D842159180B4E52005AB0D0 /* SNSettingsViewController.m */,
 				0D842133180B2887005AB0D0 /* SNViewController.h */,
 				0D842134180B2887005AB0D0 /* SNViewController.m */,
+				0D842169180B6460005AB0D0 /* SNBlurredViewController.h */,
+				0D84216A180B6460005AB0D0 /* SNBlurredViewController.m */,
 				0D842160180B61B3005AB0D0 /* SNButton.h */,
 				0D842161180B61B3005AB0D0 /* SNButton.m */,
 				0D842166180B6392005AB0D0 /* SNWakeViewController.h */,
@@ -296,6 +301,7 @@
 				0D842168180B6392005AB0D0 /* SNWakeViewController.m in Sources */,
 				0D842165180B6218005AB0D0 /* UIColor+Hex.m in Sources */,
 				0D84212F180B2887005AB0D0 /* SNAppDelegate.m in Sources */,
+				0D84216B180B6460005AB0D0 /* SNBlurredViewController.m in Sources */,
 				0D84215F180B581F005AB0D0 /* SNAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
