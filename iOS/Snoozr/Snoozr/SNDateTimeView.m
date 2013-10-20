@@ -12,6 +12,9 @@
 {
     UILabel *timeLabel;
     UILabel *dateLabel;
+    UIFont *timeFont;
+    UIFont *colonFont;
+    UIFont *amPmFont;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -32,6 +35,12 @@
 {
     self.backgroundColor = [UIColor clearColor];
     
+    // load fonts
+    timeFont = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:110];
+    colonFont = [UIFont fontWithName:@"AvenirNextCondensed-UltraLight" size:110];
+    amPmFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:23];
+
+    // setup labels
     timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 164)];
     timeLabel.adjustsFontSizeToFitWidth = YES;
     timeLabel.textAlignment = NSTextAlignmentCenter;
@@ -63,12 +72,7 @@
     formatter.dateStyle = NSDateFormatterNoStyle;
     formatter.timeStyle = NSDateFormatterShortStyle;
     
-    NSString *text = [formatter stringFromDate:date];
-    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text];
-    
-    UIFont *timeFont = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:110];
-    UIFont *colonFont = [UIFont fontWithName:@"AvenirNextCondensed-UltraLight" size:110];
-    UIFont *amPmFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:23];
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:[formatter stringFromDate:date]];
     NSRange colonRange = [string.string rangeOfString:@":"];
     
     [string addAttribute:NSFontAttributeName value:timeFont range:NSMakeRange(0, string.length - 3)];
