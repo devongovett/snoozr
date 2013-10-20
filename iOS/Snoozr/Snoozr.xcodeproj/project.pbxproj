@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D7697DF1814978900155B92 /* SNDateTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7697DE1814978900155B92 /* SNDateTimeView.m */; };
 		0D84211F180B2887005AB0D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D84211E180B2887005AB0D0 /* Foundation.framework */; };
 		0D842121180B2887005AB0D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D842120180B2887005AB0D0 /* CoreGraphics.framework */; };
 		0D842123180B2887005AB0D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D842122180B2887005AB0D0 /* UIKit.framework */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D7697DD1814978900155B92 /* SNDateTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNDateTimeView.h; sourceTree = "<group>"; };
+		0D7697DE1814978900155B92 /* SNDateTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNDateTimeView.m; sourceTree = "<group>"; };
 		0D84211B180B2887005AB0D0 /* Snoozr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snoozr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D84211E180B2887005AB0D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0D842120180B2887005AB0D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,6 +146,8 @@
 				0D84212D180B2887005AB0D0 /* SNAppDelegate.h */,
 				0D84212E180B2887005AB0D0 /* SNAppDelegate.m */,
 				0D842130180B2887005AB0D0 /* Main.storyboard */,
+				0D7697DD1814978900155B92 /* SNDateTimeView.h */,
+				0D7697DE1814978900155B92 /* SNDateTimeView.m */,
 				0D84215D180B581F005AB0D0 /* SNAboutViewController.h */,
 				0D84215E180B581F005AB0D0 /* SNAboutViewController.m */,
 				0D84215B180B5734005AB0D0 /* about.html */,
@@ -299,6 +304,7 @@
 				0D842135180B2887005AB0D0 /* SNViewController.m in Sources */,
 				0D842162180B61B3005AB0D0 /* SNButton.m in Sources */,
 				0D842168180B6392005AB0D0 /* SNWakeViewController.m in Sources */,
+				0D7697DF1814978900155B92 /* SNDateTimeView.m in Sources */,
 				0D842165180B6218005AB0D0 /* UIColor+Hex.m in Sources */,
 				0D84212F180B2887005AB0D0 /* SNAppDelegate.m in Sources */,
 				0D84216B180B6460005AB0D0 /* SNBlurredViewController.m in Sources */,
@@ -511,6 +517,7 @@
 				0D84214F180B2887005AB0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D842150180B2887005AB0D0 /* Build configuration list for PBXNativeTarget "SnoozrTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +526,7 @@
 				0D842152180B2887005AB0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

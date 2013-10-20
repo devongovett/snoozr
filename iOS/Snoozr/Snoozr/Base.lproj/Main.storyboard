@@ -16,53 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Snoozr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybv-Aa-RP5">
-                                <rect key="frame" x="101" y="69" width="119" height="41"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snoozr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybv-Aa-RP5">
+                                <rect key="frame" x="105" y="69" width="111" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWD-iR-OwN">
-                                <rect key="frame" x="26" y="142" width="269" height="164"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="8">
-                                        <attributes>
-                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="120" name="HelveticaNeue-UltraLight"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=":">
-                                        <attributes>
-                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="120" name="AvenirNextCondensed-UltraLight"/>
-                                            <font key="NSOriginalFont" size="120" name="AvenirNextCondensed-UltraLight"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="00">
-                                        <attributes>
-                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="120" name="HelveticaNeue-UltraLight"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="AM">
-                                        <attributes>
-                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="23" name="HelveticaNeue-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tuesday, February 4th 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqy-Mc-FfF">
-                                <rect key="frame" x="23" y="275" width="274" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m42-2Q-AaY">
@@ -85,24 +43,28 @@
                                     <segue destination="aVv-hi-H9i" kind="modal" id="Uz3-5c-yab"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="489-MD-fIm" customClass="SNDateTimeView">
+                                <rect key="frame" x="33" y="175" width="255" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SWD-iR-OwN" firstAttribute="top" secondItem="ybv-Aa-RP5" secondAttribute="bottom" constant="32" id="1QF-az-Abi"/>
-                            <constraint firstItem="rqy-Mc-FfF" firstAttribute="top" secondItem="SWD-iR-OwN" secondAttribute="bottom" constant="-31" id="Hsi-Fz-Q4e"/>
                             <constraint firstItem="Pup-lR-8L8" firstAttribute="top" secondItem="m42-2Q-AaY" secondAttribute="bottom" constant="5" id="JiH-ye-ucw"/>
                             <constraint firstItem="ybv-Aa-RP5" firstAttribute="top" secondItem="Rp9-mp-XpJ" secondAttribute="bottom" constant="49" id="VUb-rM-oUn"/>
-                            <constraint firstAttribute="centerX" secondItem="SWD-iR-OwN" secondAttribute="centerX" id="XH5-PM-1Vh"/>
-                            <constraint firstAttribute="centerX" secondItem="rqy-Mc-FfF" secondAttribute="centerX" id="bNf-HD-dhH"/>
                             <constraint firstAttribute="trailing" secondItem="m42-2Q-AaY" secondAttribute="trailing" constant="20" id="d6W-Rm-52O"/>
+                            <constraint firstAttribute="centerX" secondItem="489-MD-fIm" secondAttribute="centerX" id="dD0-sg-RMa"/>
                             <constraint firstItem="My3-P9-Gre" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="dkQ-Ch-5lV"/>
+                            <constraint firstAttribute="centerX" secondItem="ybv-Aa-RP5" secondAttribute="centerX" constant="-0.5" id="lpD-7F-gP3"/>
                             <constraint firstItem="Pup-lR-8L8" firstAttribute="top" secondItem="My3-P9-Gre" secondAttribute="bottom" constant="5" id="vqn-Wu-4Rm"/>
+                            <constraint firstItem="489-MD-fIm" firstAttribute="top" secondItem="ybv-Aa-RP5" secondAttribute="bottom" constant="63" id="wuM-Kc-PoT"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="dateLabel" destination="rqy-Mc-FfF" id="akc-XW-WJm"/>
-                        <outlet property="timeLabel" destination="SWD-iR-OwN" id="ThA-Dd-usp"/>
+                        <outlet property="dateTimeView" destination="489-MD-fIm" id="TwG-CT-ciP"/>
                         <outlet property="titleLabel" destination="ybv-Aa-RP5" id="1YS-TS-Bdb"/>
                     </connections>
                 </viewController>
@@ -358,52 +320,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Good morning!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Juw-EH-QnQ">
-                                <rect key="frame" x="18" y="72" width="284" height="55"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good morning!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Juw-EH-QnQ">
+                                <rect key="frame" x="47" y="72" width="226" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="45"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jt-e2-MNR">
-                                <rect key="frame" x="25" y="172" width="269" height="164"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="8">
-                                        <attributes>
-                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="120" name="HelveticaNeue-UltraLight"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=":">
-                                        <attributes>
-                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="120" name="AvenirNextCondensed-UltraLight"/>
-                                            <font key="NSOriginalFont" size="120" name="AvenirNextCondensed-UltraLight"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="00">
-                                        <attributes>
-                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="120" name="HelveticaNeue-UltraLight"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="AM">
-                                        <attributes>
-                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="23" name="HelveticaNeue-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tuesday, February 4th 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S25-Qu-TUg">
-                                <rect key="frame" x="23" y="305" width="274" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjX-yJ-3FA" customClass="SNButton">
@@ -433,27 +353,30 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47n-3w-kIw" customClass="SNDateTimeView">
+                                <rect key="frame" x="33" y="179" width="255" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="S25-Qu-TUg" secondAttribute="centerX" id="EEJ-ID-kxS"/>
+                            <constraint firstItem="47n-3w-kIw" firstAttribute="top" secondItem="Juw-EH-QnQ" secondAttribute="bottom" constant="64" id="8cZ-oa-nq2"/>
+                            <constraint firstAttribute="centerX" secondItem="47n-3w-kIw" secondAttribute="centerX" constant="-0.5" id="HIw-cr-eZl"/>
                             <constraint firstAttribute="centerX" secondItem="Juw-EH-QnQ" secondAttribute="centerX" id="ScN-rB-Jl3"/>
                             <constraint firstItem="1j9-LY-efp" firstAttribute="top" secondItem="WjX-yJ-3FA" secondAttribute="bottom" constant="20" id="gNM-AM-5Vb"/>
-                            <constraint firstItem="7Jt-e2-MNR" firstAttribute="top" secondItem="Juw-EH-QnQ" secondAttribute="bottom" constant="45" id="o16-Ci-ogc"/>
-                            <constraint firstAttribute="centerX" secondItem="7Jt-e2-MNR" secondAttribute="centerX" id="pYg-Fk-JR6"/>
                             <constraint firstItem="1j9-LY-efp" firstAttribute="top" secondItem="qzv-SC-1vY" secondAttribute="bottom" constant="20" id="rDq-qK-Teu"/>
                             <constraint firstItem="WjX-yJ-3FA" firstAttribute="leading" secondItem="yYJ-Bq-iJw" secondAttribute="leading" constant="20" id="wAh-zf-Bo0"/>
                             <constraint firstItem="Juw-EH-QnQ" firstAttribute="top" secondItem="NTl-gy-zA4" secondAttribute="bottom" constant="52" id="xNR-dh-Omf"/>
                             <constraint firstAttribute="trailing" secondItem="qzv-SC-1vY" secondAttribute="trailing" constant="20" id="y9w-RB-VFJ"/>
-                            <constraint firstItem="S25-Qu-TUg" firstAttribute="top" secondItem="7Jt-e2-MNR" secondAttribute="bottom" constant="-31" id="zRA-so-PMG"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="dateLabel" destination="S25-Qu-TUg" id="Oq2-8X-1jq"/>
+                        <outlet property="dateTimeView" destination="47n-3w-kIw" id="JkV-FQ-pVf"/>
                         <outlet property="dismissButton" destination="qzv-SC-1vY" id="r7j-p7-Wdf"/>
                         <outlet property="snoozeButton" destination="WjX-yJ-3FA" id="RSH-zz-aFC"/>
-                        <outlet property="timeLabel" destination="7Jt-e2-MNR" id="9gz-jj-twg"/>
                         <outlet property="titleLabel" destination="Juw-EH-QnQ" id="HdH-gg-2HJ"/>
                     </connections>
                 </viewController>

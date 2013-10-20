@@ -23,6 +23,7 @@
     self.dismissButton.backgroundColor = [UIColor colorWithHex:0x42C54F];
     self.snoozeButton.backgroundColor = [UIColor colorWithHex:0xBF2E2D];
     
+    [self update];
     [self.dismissButton addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -44,7 +45,7 @@
 
 - (void)update
 {
-    [super update];
+    self.dateTimeView.date = [NSDate date];
     [self updateTitle];
 }
 

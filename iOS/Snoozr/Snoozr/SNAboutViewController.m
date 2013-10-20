@@ -18,8 +18,7 @@
 {
     [super viewDidLoad];
 	NSString *aboutPath = [[NSBundle mainBundle] pathForResource:@"about" ofType:@"html" inDirectory:nil];
-    NSString* htmlString = [NSString stringWithContentsOfFile:aboutPath encoding:NSUTF8StringEncoding error:nil];
-    [self.webView loadHTMLString:htmlString baseURL:nil];
+    [self.webView loadRequest:[[NSURLRequest alloc] initWithURL:[NSURL fileURLWithPath:aboutPath]]];
 }
 
 - (void)didReceiveMemoryWarning
