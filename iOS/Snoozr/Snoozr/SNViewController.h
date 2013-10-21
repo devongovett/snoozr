@@ -11,4 +11,6 @@
 
 @interface SNViewController : SNBlurredViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+
 @end

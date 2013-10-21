@@ -62,6 +62,7 @@
 
 - (void)setDate:(NSDate *)date
 {
+    _date = date;
     [self updateTime:date];
     [self updateDate:date];
 }
