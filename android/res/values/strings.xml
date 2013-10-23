@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Snoozr</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="snooze">Snooze</string>
+    <string name="cycle">Sleep Cycle</string>
+    
+    <string-array name="settings">
+        <item>@string/snooze</item>
+        <item>@string/cycle</item>
+    </string-array>
+</resources>
