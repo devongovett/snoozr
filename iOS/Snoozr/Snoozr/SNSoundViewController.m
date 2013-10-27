@@ -25,6 +25,11 @@
     _selectedSound = [SNSettings alarmSound];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [SNSettings setAlarmSound:self.selectedSound];
+}
+
 - (void)viewDidDisappear:(BOOL)animated
 {
     [SNSound stop];
@@ -72,7 +77,6 @@
     } else {
         [sound play];
         _selectedSound = sound;
-        [SNSettings setAlarmSound:sound];
         [self.tableView reloadData];
     }
 }
