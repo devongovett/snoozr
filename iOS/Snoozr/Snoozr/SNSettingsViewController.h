@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SNSettingsViewController : UITableViewController <UIActionSheetDelegate>
+@interface SNSettingsViewController : UITableViewController <UIActionSheetDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
 @end
