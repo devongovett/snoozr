@@ -8,6 +8,8 @@
 
 #import "SNViewController.h"
 #import "SNDateTimeView.h"
+#import "NSDate+Greeting.h"
+#import "SNSettings.h"
 
 #define STATUS_ALPHA 0.6
 #define SETTINGS_WIDTH 220
@@ -145,6 +147,7 @@
 {
     if (recognizer.state == UIGestureRecognizerStateEnded) {
         [self hideStatus];
+        [self scheduleNotification];
     } else {
         CGPoint location = [recognizer locationInView:self.view];
         int section = [self sectionForPoint:location];
@@ -177,6 +180,29 @@
     [UIView commitAnimations];
     
     _gestureRecognizer.enabled = sender.on;
+    
+    // update notifications
+    if (sender.on) {
+        [self scheduleNotification];
+    } else {
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    }
+}
+
+- (void)scheduleNotification
+{
+    UIApplication *app = [UIApplication sharedApplication];
+    [app cancelAllLocalNotifications];
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.fireDate = self.dateTimeView.date;
+    notification.timeZone = [NSTimeZone localTimeZone];
+    notification.alertBody = [NSString stringWithFormat:@"%@ It's time to wake up!", self.dateTimeView.date.greeting];
+    notification.soundName = [[SNSettings alarmSound] filename];
+    notification.repeatInterval = NSCalendarUnitMinute;
+    
+    NSLog(@"%@", notification.fireDate);
+    [app scheduleLocalNotification:notification];
 }
 
 @end

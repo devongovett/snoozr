@@ -7,6 +7,7 @@
 //
 
 #import "SNAppDelegate.h"
+#import "SNWakeViewController.h"
 
 @implementation SNAppDelegate
 
@@ -41,6 +42,14 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    UIViewController *root = self.window.rootViewController;
+    UIStoryboard *storyboard = root.storyboard;
+    SNWakeViewController *wakeView = (SNWakeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"wakeView"];
+    [root presentViewController:wakeView animated:YES completion:nil];
 }
 
 @end

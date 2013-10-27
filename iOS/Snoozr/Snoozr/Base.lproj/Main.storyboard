@@ -252,7 +252,7 @@
         <!--Wake View Controller-->
         <scene sceneID="m6o-CP-5sc">
             <objects>
-                <viewController id="aVv-hi-H9i" customClass="SNWakeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wakeView" id="aVv-hi-H9i" customClass="SNWakeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NTl-gy-zA4"/>
                         <viewControllerLayoutGuide type="bottom" id="1j9-LY-efp"/>

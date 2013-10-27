@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D645AFC181DD42E00337ADB /* NSDate+Greeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D645AFB181DD42E00337ADB /* NSDate+Greeting.m */; };
 		0D7697DF1814978900155B92 /* SNDateTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7697DE1814978900155B92 /* SNDateTimeView.m */; };
 		0D84211F180B2887005AB0D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D84211E180B2887005AB0D0 /* Foundation.framework */; };
 		0D842121180B2887005AB0D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D842120180B2887005AB0D0 /* CoreGraphics.framework */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D645AFA181DD42E00337ADB /* NSDate+Greeting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Greeting.h"; sourceTree = "<group>"; };
+		0D645AFB181DD42E00337ADB /* NSDate+Greeting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Greeting.m"; sourceTree = "<group>"; };
 		0D7697DD1814978900155B92 /* SNDateTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNDateTimeView.h; sourceTree = "<group>"; };
 		0D7697DE1814978900155B92 /* SNDateTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNDateTimeView.m; sourceTree = "<group>"; };
 		0D84211B180B2887005AB0D0 /* Snoozr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snoozr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +237,8 @@
 				0D842156180B3A85005AB0D0 /* UIImage+ImageEffects.m */,
 				0D842163180B6218005AB0D0 /* UIColor+Hex.h */,
 				0D842164180B6218005AB0D0 /* UIColor+Hex.m */,
+				0D645AFA181DD42E00337ADB /* NSDate+Greeting.h */,
+				0D645AFB181DD42E00337ADB /* NSDate+Greeting.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				0D842135180B2887005AB0D0 /* SNViewController.m in Sources */,
 				0D842162180B61B3005AB0D0 /* SNButton.m in Sources */,
 				0D842168180B6392005AB0D0 /* SNWakeViewController.m in Sources */,
+				0D645AFC181DD42E00337ADB /* NSDate+Greeting.m in Sources */,
 				0D7697DF1814978900155B92 /* SNDateTimeView.m in Sources */,
 				0DD1C87D181C786600830678 /* SNSound.m in Sources */,
 				0DD1C880181C88B600830678 /* SNSettings.m in Sources */,
