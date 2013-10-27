@@ -31,6 +31,13 @@
 		0D842165180B6218005AB0D0 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842164180B6218005AB0D0 /* UIColor+Hex.m */; };
 		0D842168180B6392005AB0D0 /* SNWakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D842167180B6392005AB0D0 /* SNWakeViewController.m */; };
 		0D84216B180B6460005AB0D0 /* SNBlurredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D84216A180B6460005AB0D0 /* SNBlurredViewController.m */; };
+		0DD1C86F181C6DA700830678 /* SNSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1C86E181C6DA700830678 /* SNSoundViewController.m */; };
+		0DD1C877181C736A00830678 /* alarm_clock_ringing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0DD1C873181C736A00830678 /* alarm_clock_ringing.wav */; };
+		0DD1C878181C736A00830678 /* card_reader_alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0DD1C874181C736A00830678 /* card_reader_alarm.wav */; };
+		0DD1C879181C736A00830678 /* church_bells.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0DD1C875181C736A00830678 /* church_bells.wav */; };
+		0DD1C87A181C736A00830678 /* police.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0DD1C876181C736A00830678 /* police.wav */; };
+		0DD1C87D181C786600830678 /* SNSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1C87C181C786600830678 /* SNSound.m */; };
+		0DD1C880181C88B600830678 /* SNSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1C87F181C88B600830678 /* SNSettings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +88,16 @@
 		0D842167180B6392005AB0D0 /* SNWakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNWakeViewController.m; sourceTree = "<group>"; };
 		0D842169180B6460005AB0D0 /* SNBlurredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNBlurredViewController.h; sourceTree = "<group>"; };
 		0D84216A180B6460005AB0D0 /* SNBlurredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNBlurredViewController.m; sourceTree = "<group>"; };
+		0DD1C86D181C6DA700830678 /* SNSoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSoundViewController.h; sourceTree = "<group>"; };
+		0DD1C86E181C6DA700830678 /* SNSoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSoundViewController.m; sourceTree = "<group>"; };
+		0DD1C873181C736A00830678 /* alarm_clock_ringing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm_clock_ringing.wav; sourceTree = "<group>"; };
+		0DD1C874181C736A00830678 /* card_reader_alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = card_reader_alarm.wav; sourceTree = "<group>"; };
+		0DD1C875181C736A00830678 /* church_bells.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = church_bells.wav; sourceTree = "<group>"; };
+		0DD1C876181C736A00830678 /* police.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = police.wav; sourceTree = "<group>"; };
+		0DD1C87B181C786600830678 /* SNSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSound.h; sourceTree = "<group>"; };
+		0DD1C87C181C786600830678 /* SNSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSound.m; sourceTree = "<group>"; };
+		0DD1C87E181C88B600830678 /* SNSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSettings.h; sourceTree = "<group>"; };
+		0DD1C87F181C88B600830678 /* SNSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSettings.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +157,6 @@
 		0D842124180B2887005AB0D0 /* Snoozr */ = {
 			isa = PBXGroup;
 			children = (
-				0D842155180B3A85005AB0D0 /* UIImage+ImageEffects.h */,
-				0D842156180B3A85005AB0D0 /* UIImage+ImageEffects.m */,
 				0D842153180B39A6005AB0D0 /* background@2x.jpg */,
 				0D84212D180B2887005AB0D0 /* SNAppDelegate.h */,
 				0D84212E180B2887005AB0D0 /* SNAppDelegate.m */,
@@ -150,19 +165,16 @@
 				0D842134180B2887005AB0D0 /* SNViewController.m */,
 				0D7697DD1814978900155B92 /* SNDateTimeView.h */,
 				0D7697DE1814978900155B92 /* SNDateTimeView.m */,
-				0D84215D180B581F005AB0D0 /* SNAboutViewController.h */,
-				0D84215E180B581F005AB0D0 /* SNAboutViewController.m */,
 				0D84215B180B5734005AB0D0 /* about.html */,
-				0D842158180B4E52005AB0D0 /* SNSettingsViewController.h */,
-				0D842159180B4E52005AB0D0 /* SNSettingsViewController.m */,
 				0D842169180B6460005AB0D0 /* SNBlurredViewController.h */,
 				0D84216A180B6460005AB0D0 /* SNBlurredViewController.m */,
 				0D842160180B61B3005AB0D0 /* SNButton.h */,
 				0D842161180B61B3005AB0D0 /* SNButton.m */,
 				0D842166180B6392005AB0D0 /* SNWakeViewController.h */,
 				0D842167180B6392005AB0D0 /* SNWakeViewController.m */,
-				0D842163180B6218005AB0D0 /* UIColor+Hex.h */,
-				0D842164180B6218005AB0D0 /* UIColor+Hex.m */,
+				0DD1C871181C722C00830678 /* Categories */,
+				0DD1C870181C721900830678 /* Settings */,
+				0DD1C872181C735100830678 /* Sounds */,
 				0D842136180B2887005AB0D0 /* Images.xcassets */,
 				0D842125180B2887005AB0D0 /* Supporting Files */,
 			);
@@ -196,6 +208,45 @@
 				0D842146180B2887005AB0D0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0DD1C870181C721900830678 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0DD1C87E181C88B600830678 /* SNSettings.h */,
+				0DD1C87F181C88B600830678 /* SNSettings.m */,
+				0D842158180B4E52005AB0D0 /* SNSettingsViewController.h */,
+				0D842159180B4E52005AB0D0 /* SNSettingsViewController.m */,
+				0D84215D180B581F005AB0D0 /* SNAboutViewController.h */,
+				0D84215E180B581F005AB0D0 /* SNAboutViewController.m */,
+				0DD1C86D181C6DA700830678 /* SNSoundViewController.h */,
+				0DD1C86E181C6DA700830678 /* SNSoundViewController.m */,
+				0DD1C87B181C786600830678 /* SNSound.h */,
+				0DD1C87C181C786600830678 /* SNSound.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		0DD1C871181C722C00830678 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0D842155180B3A85005AB0D0 /* UIImage+ImageEffects.h */,
+				0D842156180B3A85005AB0D0 /* UIImage+ImageEffects.m */,
+				0D842163180B6218005AB0D0 /* UIColor+Hex.h */,
+				0D842164180B6218005AB0D0 /* UIColor+Hex.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		0DD1C872181C735100830678 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				0DD1C873181C736A00830678 /* alarm_clock_ringing.wav */,
+				0DD1C874181C736A00830678 /* card_reader_alarm.wav */,
+				0DD1C875181C736A00830678 /* church_bells.wav */,
+				0DD1C876181C736A00830678 /* police.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +328,11 @@
 			files = (
 				0D842137180B2887005AB0D0 /* Images.xcassets in Resources */,
 				0D842129180B2887005AB0D0 /* InfoPlist.strings in Resources */,
+				0DD1C879181C736A00830678 /* church_bells.wav in Resources */,
+				0DD1C878181C736A00830678 /* card_reader_alarm.wav in Resources */,
+				0DD1C877181C736A00830678 /* alarm_clock_ringing.wav in Resources */,
 				0D842132180B2887005AB0D0 /* Main.storyboard in Resources */,
+				0DD1C87A181C736A00830678 /* police.wav in Resources */,
 				0D84215C180B5734005AB0D0 /* about.html in Resources */,
 				0D842154180B39A6005AB0D0 /* background@2x.jpg in Resources */,
 			);
@@ -301,10 +356,13 @@
 				0D842157180B3A85005AB0D0 /* UIImage+ImageEffects.m in Sources */,
 				0D84212B180B2887005AB0D0 /* main.m in Sources */,
 				0D84215A180B4E52005AB0D0 /* SNSettingsViewController.m in Sources */,
+				0DD1C86F181C6DA700830678 /* SNSoundViewController.m in Sources */,
 				0D842135180B2887005AB0D0 /* SNViewController.m in Sources */,
 				0D842162180B61B3005AB0D0 /* SNButton.m in Sources */,
 				0D842168180B6392005AB0D0 /* SNWakeViewController.m in Sources */,
 				0D7697DF1814978900155B92 /* SNDateTimeView.m in Sources */,
+				0DD1C87D181C786600830678 /* SNSound.m in Sources */,
+				0DD1C880181C88B600830678 /* SNSettings.m in Sources */,
 				0D842165180B6218005AB0D0 /* UIColor+Hex.m in Sources */,
 				0D84212F180B2887005AB0D0 /* SNAppDelegate.m in Sources */,
 				0D84216B180B6460005AB0D0 /* SNBlurredViewController.m in Sources */,

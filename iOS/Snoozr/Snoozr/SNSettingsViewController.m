@@ -7,10 +7,8 @@
 //
 
 #import "SNSettingsViewController.h"
-
-@interface SNSettingsViewController ()
-
-@end
+#import "SNSoundViewController.h"
+#import "SNSettings.h"
 
 @implementation SNSettingsViewController
 {
@@ -24,31 +22,9 @@
     self.navigationItem.rightBarButtonItem.target = self;
     self.navigationItem.rightBarButtonItem.action = @selector(dismiss);
     
-    _data = @{
-       @"Settings": @[@{
-           @"text": @"Number of Allowed Snoozes",
-           @"detail": @"5"
-       }, @{
-           @"text": @"Sleep Cycle",
-           @"detail": @"90 minutes"
-       }, @{
-           @"text": @"Sound",
-           @"detail": @"Alarm"
-       }],
-       @"About": @[@{
-           @"cell": @"InfoCell",
-           @"text": @"Version",
-           @"detail": @"0.0.1"
-       }, @{
-           @"cell": @"AboutCell",
-           @"text": @"About"
-       }],
-       @"Danger Zone": @[@{
-           @"cell": @"ResetCell",
-           @"text": @"Reset Schedule",
-           @"footer": @"Copyright © 2013 Snoozr"
-       }]
-    };
+    [self reloadData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadData) name:@"SNSettingsChanged" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,17 +72,38 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 1 && indexPath.row == 0) {
-        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    } else if (indexPath.section == 2) {
-        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Are you sure you want to reset your schedule?"
-                                                           delegate:self
-                                                  cancelButtonTitle:@"Cancel"
-                                             destructiveButtonTitle:@"Reset Schedule"
-                                                  otherButtonTitles:nil];
-        [sheet showInView:self.view];
+    switch (indexPath.section) {
+        case 0:
+            [self showSettingsForRow:indexPath.row];
+            break;
+        case 1:
+            if (indexPath.row == 0)
+                [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+            break;
+        case 2:
+            [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+            [self resetSchedule];
+            break;
     }
+}
+
+- (void)showSettingsForRow:(NSInteger)row
+{
+    if (row == 2) {
+        SNSoundViewController *soundPicker = (SNSoundViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"SNSoundViewController"];
+        [self.navigationController pushViewController:soundPicker animated:YES];
+    }
+}
+
+- (void)resetSchedule
+{
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Are you sure you want to reset your schedule?"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                         destructiveButtonTitle:@"Reset Schedule"
+                                              otherButtonTitles:nil];
+    [sheet showInView:self.view];
+
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
@@ -125,6 +122,37 @@
 - (void)dismiss
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)reloadData
+{
+    _data = @{
+       @"Settings": @[@{
+           @"text": @"Number of Allowed Snoozes",
+           @"detail": [NSString stringWithFormat:@"%ld", [SNSettings numSnoozes]]
+       }, @{
+           @"text": @"Sleep Cycle",
+           @"detail": [NSString stringWithFormat:@"%ld minutes", [SNSettings sleepCycle]]
+       }, @{
+           @"text": @"Sound",
+           @"detail": [SNSettings alarmSound].name
+       }],
+       @"About": @[@{
+           @"cell": @"InfoCell",
+           @"text": @"Version",
+           @"detail": @"0.0.1"
+       }, @{
+           @"cell": @"AboutCell",
+           @"text": @"About"
+       }],
+       @"Danger Zone": @[@{
+           @"cell": @"ResetCell",
+           @"text": @"Reset Schedule",
+           @"footer": @"Copyright © 2013 Snoozr"
+       }]
+    };
+
+    [self.tableView reloadData];
 }
 
 @end

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -43,23 +43,14 @@
                                     <segue destination="aVv-hi-H9i" kind="modal" id="Uz3-5c-yab"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="489-MD-fIm" customClass="SNDateTimeView">
-                                <rect key="frame" x="33" y="175" width="255" height="179"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ff-ew-HD7">
+                                <rect key="frame" x="0.0" y="175" width="320" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe to set alarm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUD-a2-E62">
+                                <rect key="frame" x="33" y="353" width="255" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzN-9Y-mx3">
-                                <rect key="frame" x="239" y="373" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="switchChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="5wC-fL-8dp"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe to set alarm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUD-a2-E62">
-                                <rect key="frame" x="33" y="378" width="198" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -69,16 +60,14 @@
                             <constraint firstItem="Pup-lR-8L8" firstAttribute="top" secondItem="m42-2Q-AaY" secondAttribute="bottom" constant="5" id="JiH-ye-ucw"/>
                             <constraint firstItem="ybv-Aa-RP5" firstAttribute="top" secondItem="Rp9-mp-XpJ" secondAttribute="bottom" constant="49" id="VUb-rM-oUn"/>
                             <constraint firstAttribute="trailing" secondItem="m42-2Q-AaY" secondAttribute="trailing" constant="20" id="d6W-Rm-52O"/>
-                            <constraint firstAttribute="centerX" secondItem="489-MD-fIm" secondAttribute="centerX" id="dD0-sg-RMa"/>
                             <constraint firstItem="My3-P9-Gre" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="dkQ-Ch-5lV"/>
                             <constraint firstAttribute="centerX" secondItem="ybv-Aa-RP5" secondAttribute="centerX" constant="-0.5" id="lpD-7F-gP3"/>
                             <constraint firstItem="Pup-lR-8L8" firstAttribute="top" secondItem="My3-P9-Gre" secondAttribute="bottom" constant="5" id="vqn-Wu-4Rm"/>
-                            <constraint firstItem="489-MD-fIm" firstAttribute="top" secondItem="ybv-Aa-RP5" secondAttribute="bottom" constant="63" id="wuM-Kc-PoT"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="dateTimeView" destination="489-MD-fIm" id="TwG-CT-ciP"/>
+                        <outlet property="scrollView" destination="0ff-ew-HD7" id="sRH-6f-ww3"/>
                         <outlet property="statusLabel" destination="YUD-a2-E62" id="XMx-se-DBb"/>
                         <outlet property="titleLabel" destination="ybv-Aa-RP5" id="1YS-TS-Bdb"/>
                     </connections>
@@ -398,6 +387,46 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2z-3i-iZ1" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="1365"/>
+        </scene>
+        <!--Sound View Controller - Alarm Sound-->
+        <scene sceneID="PnH-nj-AnM">
+            <objects>
+                <tableViewController storyboardIdentifier="SNSoundViewController" id="6au-a1-7BX" customClass="SNSoundViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ixg-G5-P6o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="mJI-sc-jS7" style="IBUITableViewCellStyleDefault" id="Nno-C0-wZK">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nno-C0-wZK" id="she-Qo-ut4">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mJI-sc-jS7">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6au-a1-7BX" id="Y4n-XO-U7Y"/>
+                            <outlet property="delegate" destination="6au-a1-7BX" id="gHU-Dd-XAE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Alarm Sound" id="iAQ-Ro-PSW"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2d7-qk-gj1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="531" y="1364"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
