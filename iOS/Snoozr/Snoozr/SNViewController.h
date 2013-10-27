@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SNBlurredViewController.h"
 
-@interface SNViewController : SNBlurredViewController
+@interface SNViewController : SNBlurredViewController <UIGestureRecognizerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end

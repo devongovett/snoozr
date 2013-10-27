@@ -93,4 +93,11 @@
     dateLabel.text = [formatter stringFromDate:date];
 }
 
+- (void)setTintColor:(UIColor *)tintColor
+{
+    [super setTintColor:tintColor];
+    timeLabel.textColor = tintColor;
+    dateLabel.textColor = tintColor;
+}
+
 @end

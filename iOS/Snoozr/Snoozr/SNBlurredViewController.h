@@ -12,6 +12,6 @@
 @interface SNBlurredViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet SNDateTimeView *dateTimeView;
+@property (nonatomic) IBOutlet SNDateTimeView *dateTimeView;
 
 @end

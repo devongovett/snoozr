@@ -7,20 +7,87 @@
 //
 
 #import "SNViewController.h"
+#import "SNDateTimeView.h"
+
+#define STATUS_ALPHA 0.6
+#define SETTINGS_WIDTH 220
 
 @implementation SNViewController
 {
     NSDate *_startDate;
+    UIPanGestureRecognizer *_gestureRecognizer;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-    [self.view addGestureRecognizer:recognizer];
+    _gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    [self.view addGestureRecognizer:_gestureRecognizer];
     
     self.statusLabel.textColor = [UIColor whiteColor];
+    
+    // setup scrollview for settings panel
+    int width = CGRectGetWidth(self.view.bounds);
+    int height = CGRectGetHeight(self.scrollView.bounds);
+    self.scrollView.contentSize = CGSizeMake(width + SETTINGS_WIDTH, height);
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.pagingEnabled = YES;
+    
+    // datetime view on main page
+    self.dateTimeView = [[SNDateTimeView alloc] initWithFrame:CGRectMake(width / 2 - 255 / 2, 0, 255, height)];
+    self.dateTimeView.tintColor = [UIColor whiteColor];
+    [self.scrollView addSubview:self.dateTimeView];
+    
+    // settings container
+    UIView *settingsView = [[UIView alloc] initWithFrame:CGRectMake(width, 0, SETTINGS_WIDTH + width, height)];
+    [self.scrollView addSubview:settingsView];
+    
+    // background gradient
+    CAGradientLayer *bgLayer = [CAGradientLayer layer];
+    bgLayer.colors = @[(id)[[UIColor colorWithRed:0 green:0 blue:0 alpha:0] CGColor], (id)[[UIColor colorWithRed:0 green:0 blue:0 alpha:0.2] CGColor]];
+    bgLayer.locations = @[@0, @0.15];
+    bgLayer.startPoint = CGPointMake(0, 0);
+    bgLayer.endPoint = CGPointMake(1, 0);
+    bgLayer.frame = settingsView.bounds;
+    [settingsView.layer insertSublayer:bgLayer atIndex:0];
+    
+    // settings labels and switches
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(SETTINGS_WIDTH - 130, 50, 0, 0)];
+    label.text = @"Enable";
+    label.textColor = [UIColor whiteColor];
+    [label sizeToFit];
+    [settingsView addSubview:label];
+    
+    UISwitch *enableSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(SETTINGS_WIDTH - 60, 45, 0, 0)];
+    enableSwitch.on = YES;
+    [enableSwitch addTarget:self action:@selector(enableSwitchChanged:) forControlEvents:UIControlEventValueChanged];
+    [enableSwitch sizeToFit];
+    [settingsView addSubview:enableSwitch];
+    
+    label = [[UILabel alloc] initWithFrame:CGRectMake(SETTINGS_WIDTH - 120, 120, 0, 0)];
+    label.text = @"Learn";
+    label.textColor = [UIColor whiteColor];
+    [label sizeToFit];
+    [settingsView addSubview:label];
+    
+    UISwitch *learnSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(SETTINGS_WIDTH - 60, 115, 0, 0)];
+    learnSwitch.on = YES;
+//    [learnSwitch addTarget:self action:@selector(learnSwitchChanged:) forControlEvents:UIControlEventValueChanged];
+    [learnSwitch sizeToFit];
+    [settingsView addSubview:learnSwitch];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.statusLabel.alpha = 0;
+    
+    __weak typeof(self) weakSelf = self;
+    [self setStatusShowing:YES afterDelay:animated ? 0 : 0.5 completion:^(BOOL done) {
+        [weakSelf setStatusShowing:NO afterDelay:2 completion:nil];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,35 +118,41 @@
         default:
             self.statusLabel.text = @"Swipe to set alarm";
     }
-
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)setStatusShowing:(BOOL)showing afterDelay:(NSTimeInterval)delay completion:(void (^)(BOOL done))block
 {
-    [super touchesBegan:touches withEvent:event];
-    
-    UITouch *touch = [touches anyObject];
-    CGPoint point = [touch locationInView:self.view];
-    int section = [self sectionForPoint:point];
-    [self updateStatusForSection:section];
+    [UIView animateWithDuration:0.25 delay:delay options:0 animations:^{
+        self.statusLabel.alpha = showing ? STATUS_ALPHA : 0.0;
+    } completion:block];
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)showStatus
 {
-    [self updateStatusForSection:0];
+    [self setStatusShowing:YES afterDelay:0 completion:nil];
+}
+
+- (void)hideStatus
+{
+    __weak id selfWeak = self;
+    [self setStatusShowing:NO afterDelay:0 completion:^(BOOL done) {
+        [selfWeak updateStatusForSection:0];
+//        [selfWeak showStatus];
+    }];
 }
 
 - (void)pan:(UIPanGestureRecognizer *)recognizer
 {
     if (recognizer.state == UIGestureRecognizerStateEnded) {
-        [self updateStatusForSection:0];
+        [self hideStatus];
     } else {
         CGPoint location = [recognizer locationInView:self.view];
         int section = [self sectionForPoint:location];
     
         if (recognizer.state == UIGestureRecognizerStateBegan) {
+            [self showStatus];
             _startDate = [self.dateTimeView.date copy];
-        }  else {
+        } else {
             CGPoint translatedPoint = [recognizer translationInView:self.view];
             int sectionInverse = 3 - section + 1;
             int velocity = sectionInverse * sectionInverse * 7;
@@ -90,7 +163,7 @@
     }
 }
 
-- (IBAction)switchChanged:(UISwitch *)sender
+- (void)enableSwitchChanged:(UISwitch *)sender
 {
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.25];
@@ -102,6 +175,8 @@
     }
     
     [UIView commitAnimations];
+    
+    _gestureRecognizer.enabled = sender.on;
 }
 
 @end
