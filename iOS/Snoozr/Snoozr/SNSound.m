@@ -48,7 +48,7 @@ static void completionCallback(SystemSoundID soundID, void *data) {
     
     [SNSound stop];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)(url), &_soundID);
-    AudioServicesPlayAlertSound(_soundID);
+    AudioServicesPlaySystemSound(_soundID);
     AudioServicesAddSystemSoundCompletion(_soundID, NULL, NULL, &completionCallback, NULL);
     isPlaying = YES;
 }
