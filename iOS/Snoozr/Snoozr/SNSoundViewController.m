@@ -28,10 +28,6 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [SNSettings setAlarmSound:self.selectedSound];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
     [SNSound stop];
 }
 
