@@ -9,11 +9,13 @@
 #import "SNWakeViewController.h"
 #import "UIImage+ImageEffects.h"
 #import "UIColor+Hex.h"
-#import <sys/time.h>
+#import "SNSettings.h"
+#import "NSDate+Greeting.h"
 
 @implementation SNWakeViewController
 {
     NSTimer *_timer;
+    NSInteger numSnoozes;
 }
 
 - (void)viewDidLoad
@@ -24,17 +26,20 @@
     self.snoozeButton.backgroundColor = [UIColor colorWithHex:0xBF2E2D];
     
     [self update];
+    [self.snoozeButton addTarget:self action:@selector(snooze) forControlEvents:UIControlEventTouchUpInside];
     [self.dismissButton addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [self updateEveryMinute];
+    [[SNSettings alarmSound] play];
 }
 
-- (void)viewDidDisappear:(BOOL)animated
+- (void)viewWillDisappear:(BOOL)animated
 {
     [_timer invalidate];
+    [SNSound stop];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,24 +56,12 @@
 
 - (void)updateTitle
 {
-    NSDate *date = [NSDate date];
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDateComponents *components = [cal components:NSHourCalendarUnit fromDate:date];
-    
-    if (components.hour >= 17) { // 5pm
-        self.titleLabel.text = @"Good evening!";
-    } else if (components.hour >= 12) {
-        self.titleLabel.text = @"Good afternoon!";
-    } else {
-        self.titleLabel.text = @"Good morning!";
-    }
+    self.titleLabel.text = [[NSDate date] greeting];
 }
 
 - (void)updateEveryMinute
 {
-    NSDate *date = [NSDate date];
-    NSTimeInterval timeInterval = floor([date timeIntervalSinceReferenceDate] / 60) * 60 + 60;
-    date = [NSDate dateWithTimeIntervalSinceReferenceDate:timeInterval];
+    NSDate *date = [[[NSDate date] dateRoundedToMinutes] dateByAddingTimeInterval:60];
     
     _timer = [[NSTimer alloc] initWithFireDate:date
                                       interval:60
@@ -83,6 +76,13 @@
 - (void)dismiss
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+}
+
+- (void)snooze
+{
+    [self.snoozeButton setTitle:[NSString stringWithFormat:@"Snooze (%ld)", ++numSnoozes] forState:UIControlStateNormal];
+    [SNSound stop];
 }
 
 @end

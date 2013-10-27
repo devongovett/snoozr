@@ -7,6 +7,7 @@
 //
 
 #import "SNDateTimeView.h"
+#import "NSDate+Greeting.h"
 
 @implementation SNDateTimeView
 {
@@ -62,18 +63,18 @@
 
 - (void)setDate:(NSDate *)date
 {
-    _date = date;
-    [self updateTime:date];
-    [self updateDate:date];
+    _date = [date dateRoundedToMinutes];
+    [self updateTime];
+    [self updateDate];
 }
 
-- (void)updateTime:(NSDate *)date
+- (void)updateTime
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateStyle = NSDateFormatterNoStyle;
     formatter.timeStyle = NSDateFormatterShortStyle;
     
-    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:[formatter stringFromDate:date]];
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:[formatter stringFromDate:_date]];
     NSRange colonRange = [string.string rangeOfString:@":"];
     
     [string addAttribute:NSFontAttributeName value:timeFont range:NSMakeRange(0, string.length - 3)];
@@ -84,13 +85,13 @@
     timeLabel.attributedText = string;
 }
 
-- (void)updateDate:(NSDate *)date
+- (void)updateDate
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.timeStyle = NSDateFormatterNoStyle;
     formatter.dateStyle = NSDateFormatterFullStyle;
     
-    dateLabel.text = [formatter stringFromDate:date];
+    dateLabel.text = [formatter stringFromDate:_date];
 }
 
 - (void)setTintColor:(UIColor *)tintColor
