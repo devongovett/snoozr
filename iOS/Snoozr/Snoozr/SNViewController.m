@@ -187,4 +187,66 @@
     _alarm.enabled = sender.on;
 }
 
+- (NSDate *)dateAdjustedForSleepCycle
+{
+    // adjust alarm time backwards to match sleep cycle
+    NSInteger sleepCycle = [SNSettings sleepCycle] * 60;
+    NSDate *now = [[NSDate date] dateRoundedToMinutes];
+    NSDate *alarmTime = self.dateTimeView.date;
+    
+    // add 14 minutes for time to fall asleep for now, this could be controlled by neural network or average number of snoozes
+    NSTimeInterval wakeTime = [now timeIntervalSinceReferenceDate] + 14 * 60;
+    NSTimeInterval latestTime = [alarmTime timeIntervalSinceReferenceDate];
+    
+    // find nearest 90 minute interval from now up to wake time
+    while (wakeTime + sleepCycle <= latestTime)
+        wakeTime += sleepCycle;
+    
+    return [NSDate dateWithTimeIntervalSinceReferenceDate:wakeTime];
+}
+
+- (IBAction)sleep:(id)sender
+{
+    NSDate *wakeDate = [self dateAdjustedForSleepCycle];
+    if (![wakeDate isEqualToDate:self.dateTimeView.date]) {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateStyle = NSDateFormatterNoStyle;
+        formatter.timeStyle = NSDateFormatterShortStyle;
+
+        NSString *dateString = [formatter stringFromDate:wakeDate];
+        NSString *message = [NSString stringWithFormat:@"Would you like to adjust your wake up time to %@ to account for your sleep cycle?", dateString];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Adjust for sleep cycle?"
+                                                        message:message
+                                                       delegate:self
+                                              cancelButtonTitle:@"No"
+                                              otherButtonTitles:@"Yes", nil];
+        [alert show];
+    } else {
+        [self showSleepWell];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        NSDate *adjustedDate = [self dateAdjustedForSleepCycle];
+        self.dateTimeView.date = adjustedDate;
+        _alarm.date = adjustedDate;
+    }
+    
+    [self showSleepWell];
+}
+
+- (void)showSleepWell
+{
+    __weak typeof(self) weakSelf = self;
+    
+    self.statusLabel.text = @"Sleep well!";
+    [self setStatusShowing:YES afterDelay:0 completion:^(BOOL done) {
+        [weakSelf setStatusShowing:NO afterDelay:1.5 completion:^(BOOL done) {
+            [weakSelf updateStatusForSection:0];
+        }];
+    }];
+}
+
 @end
