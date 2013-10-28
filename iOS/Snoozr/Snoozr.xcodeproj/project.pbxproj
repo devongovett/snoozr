@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D645AFC181DD42E00337ADB /* NSDate+Greeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D645AFB181DD42E00337ADB /* NSDate+Greeting.m */; };
+		0D645AFF181DE1CF00337ADB /* SNAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D645AFE181DE1CF00337ADB /* SNAlarm.m */; };
 		0D7697DF1814978900155B92 /* SNDateTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7697DE1814978900155B92 /* SNDateTimeView.m */; };
 		0D84211F180B2887005AB0D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D84211E180B2887005AB0D0 /* Foundation.framework */; };
 		0D842121180B2887005AB0D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D842120180B2887005AB0D0 /* CoreGraphics.framework */; };
@@ -54,6 +55,8 @@
 /* Begin PBXFileReference section */
 		0D645AFA181DD42E00337ADB /* NSDate+Greeting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Greeting.h"; sourceTree = "<group>"; };
 		0D645AFB181DD42E00337ADB /* NSDate+Greeting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Greeting.m"; sourceTree = "<group>"; };
+		0D645AFD181DE1CF00337ADB /* SNAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNAlarm.h; sourceTree = "<group>"; };
+		0D645AFE181DE1CF00337ADB /* SNAlarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNAlarm.m; sourceTree = "<group>"; };
 		0D7697DD1814978900155B92 /* SNDateTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNDateTimeView.h; sourceTree = "<group>"; };
 		0D7697DE1814978900155B92 /* SNDateTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNDateTimeView.m; sourceTree = "<group>"; };
 		0D84211B180B2887005AB0D0 /* Snoozr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snoozr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +178,8 @@
 				0D842161180B61B3005AB0D0 /* SNButton.m */,
 				0D842166180B6392005AB0D0 /* SNWakeViewController.h */,
 				0D842167180B6392005AB0D0 /* SNWakeViewController.m */,
+				0D645AFD181DE1CF00337ADB /* SNAlarm.h */,
+				0D645AFE181DE1CF00337ADB /* SNAlarm.m */,
 				0DD1C871181C722C00830678 /* Categories */,
 				0DD1C870181C721900830678 /* Settings */,
 				0DD1C872181C735100830678 /* Sounds */,
@@ -360,6 +365,7 @@
 			files = (
 				0D842157180B3A85005AB0D0 /* UIImage+ImageEffects.m in Sources */,
 				0D84212B180B2887005AB0D0 /* main.m in Sources */,
+				0D645AFF181DE1CF00337ADB /* SNAlarm.m in Sources */,
 				0D84215A180B4E52005AB0D0 /* SNSettingsViewController.m in Sources */,
 				0DD1C86F181C6DA700830678 /* SNSoundViewController.m in Sources */,
 				0D842135180B2887005AB0D0 /* SNViewController.m in Sources */,

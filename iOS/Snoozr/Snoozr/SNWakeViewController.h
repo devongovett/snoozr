@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SNButton.h"
 #import "SNBlurredViewController.h"
+#import "SNAlarm.h"
 
 @interface SNWakeViewController : SNBlurredViewController
 
