@@ -7,6 +7,9 @@
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="18" />
+    
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -25,6 +28,8 @@
             android:name="snoozr.android.SettingsActivity"
             android:theme="@android:style/Theme.NoTitleBar"
             android:noHistory="true"/>
+        
+        <receiver android:name="snoozr.android.AlarmReciever"/>
     </application>
 
 </manifest>
