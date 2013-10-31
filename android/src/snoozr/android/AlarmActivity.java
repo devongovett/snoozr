@@ -1,9 +1,13 @@
 package snoozr.android;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.util.Calendar;
 
 import android.app.Activity;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -44,5 +48,25 @@ public class AlarmActivity extends Activity{
 				finish();
 			}
         });
+        
+        try {
+            MediaPlayer mPlayer = new MediaPlayer();
+        mPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
+            mPlayer.setDataSource(this, Uri.parse("android.resource://snoozr.android/" + R.raw.church_bells));
+            mPlayer.prepare();
+        mPlayer.start();
+            } catch (IllegalArgumentException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+            } catch (SecurityException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+            } catch (IllegalStateException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+            } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+            }
 	}
 }
