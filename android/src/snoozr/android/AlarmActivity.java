@@ -33,6 +33,7 @@ public class AlarmActivity extends Activity{
         try {
             mPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
             mPlayer.setDataSource(this, Uri.parse("android.resource://snoozr.android/" + R.raw.church_bells));
+            mPlayer.setLooping(true);
             mPlayer.prepare();
             mPlayer.start();
         } catch (IllegalArgumentException e) {
