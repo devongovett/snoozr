@@ -10,6 +10,8 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
+import android.view.Display;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.GestureDetector;
 import android.view.Menu;
@@ -76,24 +78,12 @@ public class MainActivity extends Activity implements OnGestureListener{
     
     public void setupAlarm(){    	
 		Intent intentAlarm = new Intent(context, AlarmReciever.class);
-		Calendar dateSet = Calendar.getInstance();
-		dateSet.setTime(alarmTime);
-		int hour = dateSet.get(Calendar.HOUR);
-		int minute = dateSet.get(Calendar.MINUTE);
-		
 		Calendar cal = Calendar.getInstance();
+		cal.setTime(alarmTime);
 		int currHour = cal.get(Calendar.HOUR_OF_DAY);
 		int currMin = cal.get(Calendar.MINUTE);
 		
-		long extra = 0;
-		if (hour < currHour || (hour == currHour && minute < currMin))
-			extra = 24 * 60 *60 * 1000;
-		
-		cal.set(Calendar.HOUR_OF_DAY, hour);
-		cal.set(Calendar.MINUTE, minute);
-		cal.set(Calendar.SECOND, 0);
-		
-		long time = cal.getTimeInMillis() + extra;
+		long time = cal.getTimeInMillis();
 		
 		AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 		
@@ -158,7 +148,12 @@ public class MainActivity extends Activity implements OnGestureListener{
 
     public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
     	//clock.setText("-" + "SCROLL" + "-");
-    	updateTime((int) distanceY);
+    	Display display = getWindowManager().getDefaultDisplay();
+    	int width = display.getWidth(), factor = (int)((width - e2.getX()) / width * distanceY); 
+		if(factor == 0 && (distanceY > 0 || distanceY < 0))
+			factor = distanceY > 0 ? 1 : -1;
+		
+    	updateTime(factor);
         return true;
     }
 
