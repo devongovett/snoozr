@@ -15,6 +15,7 @@ public class Utilities {
 		Intent intentAlarm = new Intent(context, AlarmReciever.class);
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(alarmTime);
+		cal.set(Calendar.SECOND, 0);
 		cal.set(Calendar.MILLISECOND, 0);
 		long time = cal.getTimeInMillis();
 		
