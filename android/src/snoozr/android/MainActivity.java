@@ -46,6 +46,7 @@ public class MainActivity extends Activity implements OnGestureListener{
         day = (TextView) findViewById(R.id.day);
         
         gestureScanner = new GestureDetector(this);
+        updateTime(0);
         
         sleep.setOnClickListener(new OnClickListener(){
 			@Override

@@ -28,6 +28,10 @@
             android:name="snoozr.android.SettingsActivity"
             android:theme="@android:style/Theme.NoTitleBar"
             android:noHistory="true"/>
+        <activity
+            android:name="snoozr.android.AlarmActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:noHistory="true"/>
         
         <receiver android:name="snoozr.android.AlarmReciever"/>
     </application>
