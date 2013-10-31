@@ -1,4 +1,7 @@
 *.class
+android/bin/*
+android/gen/*
+
 
 # Package Files #
 *.jar

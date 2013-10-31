@@ -7,6 +7,8 @@
     
     <string name="snooze">Snooze</string>
     <string name="cycle">Sleep Cycle</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
     
     <string-array name="settings">
         <item>@string/snooze</item>

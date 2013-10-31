@@ -6,18 +6,46 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context=".MainActivity" >
 
-    <LinearLayout 
+    <RelativeLayout 
         android:layout_height = "wrap_content"
         android:layout_width = "wrap_content"
         android:layout_centerInParent="true">
-    	<TimePicker
-     	   android:id="@+id/clock"
+    	<TextView
+     	   android:id="@+id/hrMin"
      	   android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-     	   android:text="Thugnificent" />
-   	</LinearLayout>
+     	   android:textColor="#ffffff"
+     	   android:text="@string/app_name"
+     	   android:textSize="50sp"/>
+    	<TextView
+           android:id="@+id/amPm"
+           android:layout_toRightOf="@id/hrMin"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#ffffff"
+           android:text="@string/app_name"
+           android:textSize="50sp"/>
+    	<TextView
+           android:id="@+id/month"
+           android:layout_below="@id/hrMin"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#ffffff"
+           android:text="@string/app_name"
+           android:textSize="50sp"/>
+    	<TextView
+           android:id="@+id/day"
+           android:layout_below="@id/hrMin"
+           android:layout_toRightOf="@id/month"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#ffffff"
+           android:text="@string/app_name"
+           android:textSize="50sp"/>
+   	</RelativeLayout>
     
     <RelativeLayout
         android:layout_height="wrap_content"
