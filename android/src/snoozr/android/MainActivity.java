@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnGestureListener{
 
+	int slowScrollCount = 0;
 	private GestureDetector gestureScanner;
 	TextView hrMin, amPm, month, day;
 	SimpleDateFormat timeParse = new SimpleDateFormat("hh:mm");
@@ -115,8 +116,10 @@ public class MainActivity extends Activity implements OnGestureListener{
     	//clock.setText("-" + "SCROLL" + "-");
     	Display display = getWindowManager().getDefaultDisplay();
     	int width = display.getWidth(), factor = (int)((width - e2.getX()) / width * distanceY); 
-		if(factor == 0 && (distanceY > 0 || distanceY < 0))
+		if(factor == 0 && (distanceY > 0 || distanceY < 0) && ++slowScrollCount > 4){
 			factor = distanceY > 0 ? 1 : -1;
+			slowScrollCount = 0;
+		}
 		
     	updateTime(factor);
         return true;

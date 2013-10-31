@@ -31,7 +31,6 @@ public class AlarmActivity extends Activity{
         time.setText(DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT).format(cal.getTime()));
         
         try {
-
             mPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
             mPlayer.setDataSource(this, Uri.parse("android.resource://snoozr.android/" + R.raw.church_bells));
             mPlayer.prepare();
