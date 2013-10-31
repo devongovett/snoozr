@@ -26,7 +26,6 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnGestureListener{
 
-	Context context = MainActivity.this;
 	private GestureDetector gestureScanner;
 	TextView hrMin, amPm, month, day;
 	SimpleDateFormat timeParse = new SimpleDateFormat("hh:mm");
@@ -52,9 +51,9 @@ public class MainActivity extends Activity implements OnGestureListener{
 			@Override
 			public void onClick(View arg0) {
 				
-				setupAlarm();
+				Utilities.setupAlarm(alarmTime, MainActivity.this);
 
-                Toast toast = Toast.makeText(context,
+                Toast toast = Toast.makeText(MainActivity.this,
                         "Sleep tight!", Toast.LENGTH_LONG);
                 toast.show();
                 finish();
@@ -76,41 +75,6 @@ public class MainActivity extends Activity implements OnGestureListener{
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-    
-    public void setupAlarm(){    	
-		Intent intentAlarm = new Intent(context, AlarmReciever.class);
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(alarmTime);
-		int currHour = cal.get(Calendar.HOUR_OF_DAY);
-		int currMin = cal.get(Calendar.MINUTE);
-		
-		long time = cal.getTimeInMillis();
-		
-		AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-		
-		alarmManager.set(AlarmManager.RTC_WAKEUP, time, PendingIntent.getBroadcast(context, 1,  intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT));
-		
-		Toast.makeText(context, new Date(time).toString(), Toast.LENGTH_LONG).show();
-		
-    }
-    
-    private String monthText(int i){
-    	switch(i){
-    		case 1: return "January";
-    		case 2: return "Febuary";
-    		case 3: return "March";
-    		case 4: return "April";
-    		case 5: return "May";
-    		case 6: return "June";
-    		case 7: return "July";
-    		case 8: return "August";
-    		case 9: return "September";
-    		case 10: return "October";
-    		case 11: return "November";
-    		case 12: return "December";
-    		default: return "wtf";
-    	}
-    }
 
 	private void updateTime(int addMin){
     	Calendar cal = Calendar.getInstance();
@@ -122,7 +86,7 @@ public class MainActivity extends Activity implements OnGestureListener{
     	amPm.setText(cal.get(Calendar.AM_PM) == Calendar.AM 
     			? getResources().getString(R.string.am) : getResources().getString(R.string.pm));
     	day.setText("" + cal.get(Calendar.DATE));
-    	month.setText(monthText(cal.get(Calendar.MONTH) + 1));
+    	month.setText(Utilities.monthText(cal.get(Calendar.MONTH) + 1));
     }
     
     @Override

@@ -15,8 +15,6 @@ public class AlarmReciever extends BroadcastReceiver {
         //SmsManager sms = SmsManager.getDefault(); 
         //sms.sendTextMessage(phoneNumberReciver, null, message, null, null);
         // Show the toast  like in above screen shot
-        Toast.makeText(context, "Alarm Triggered", Toast.LENGTH_LONG).show();
-		
         Intent i = new Intent();
         i.setClass(context, AlarmActivity.class);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
