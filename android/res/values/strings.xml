@@ -5,13 +5,30 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     
-    <string name="cycle">Sleep Cycle</string>
     <string name="am">AM</string>
     <string name="pm">PM</string>
     <string name="snooze">Snooze</string>
     <string name="dismiss">Dismiss</string>
+
+    <string name="settings">Settings</string>
+    <string name="allowedSnoozes">Number of Allowed Snoozes</string>
+    <string name="sleepCycle">Sleep Cycle</string>
+    <string name="sound">Sound</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="dangerZone">Danger Zone</string>
+    <string name="resetSchedule">Reset Schedule</string>
+    <string name="copyright">Copyright © 2013 Snoozr</string>
+    
     <string-array name="settings">
-        <item>@string/snooze</item>
-        <item>@string/cycle</item>
+        <item>@string/settings</item>
+        <item>@string/allowedSnoozes</item>
+        <item>@string/sleepCycle</item>
+        <item>@string/sound</item>
+        <item>@string/about</item>
+        <item>@string/version</item>
+        <item>@string/dangerZone</item>
+        <item>@string/resetSchedule</item>
+        <item>@string/copyright</item>   
     </string-array>
 </resources>

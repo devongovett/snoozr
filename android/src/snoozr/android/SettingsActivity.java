@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -33,31 +34,17 @@ public class SettingsActivity extends ListActivity {
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-			View item = inflater.inflate(layoutResourceId, parent, false);
+			boolean isCategory;
+			int resId = (isCategory = (position == 0 || position == 4 || position == 7 || position == 9)) 
+					? R.layout.settings_row_category : R.layout.settings_row_selectable;
+			View item = inflater.inflate(resId, parent, false);
 
-			TextView rowText = (TextView)item.findViewById(R.id.settingsRowText); // title
-			ImageView rowImage = (ImageView)item.findViewById(R.id.settingsRowImage); // thumb image
-
-			rowText.setText(entries[position]);
-        
-			Drawable d;
-        
-			switch(position){
-                case 0:
-                        d = item.getResources().getDrawable(R.drawable.alarm_icon);
-                        break;
-                case 1:
-                        d = item.getResources().getDrawable(R.drawable.cycle_icon);
-                        break;
-                default:
-                        d = item.getResources().getDrawable(R.drawable.ic_launcher);
-                        break;
-			}
-        
-			rowImage.setImageDrawable(d);              
+			TextView rightText = (TextView)(isCategory ? 
+					 item.findViewById(R.id.settingsRowCategoryDescription) : item.findViewById(R.id.settingsRowSelectableDescription));
+			
+			rightText.setText(entries[position]);	
 			return item;
-		}
-		
+		}	
 	}
 	
     @Override
@@ -67,7 +54,7 @@ public class SettingsActivity extends ListActivity {
         
         ListView lv = getListView();
         
-    	SettingsAdapter adapter = new SettingsAdapter(SettingsActivity.this, R.layout.settings_row, 
+    	SettingsAdapter adapter = new SettingsAdapter(SettingsActivity.this, R.layout.settings_row_image, 
     			getResources().getStringArray(R.array.settings));
     	lv.setAdapter(adapter);
     	

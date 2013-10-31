@@ -10,9 +10,10 @@
     tools:context=".MainActivity" >
 
     <RelativeLayout 
-        android:layout_height = "wrap_content"
-        android:layout_width = "wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/TextStyle">
     	<TextView
      	   android:id="@+id/hrMin"
      	   android:layout_width="wrap_content"
