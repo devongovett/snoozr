@@ -81,8 +81,9 @@ public class MainActivity extends Activity implements OnGestureListener{
 		Intent intentAlarm = new Intent(context, AlarmReciever.class);
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(alarmTime);
-		int currHour = cal.get(Calendar.HOUR_OF_DAY);
-		int currMin = cal.get(Calendar.MINUTE);
+		
+		cal.set(Calendar.MINUTE, 0);
+		cal.set(Calendar.MILLISECOND, 0);
 		
 		long time = cal.getTimeInMillis();
 		
