@@ -5,6 +5,7 @@ import java.io.IOException;
 import android.app.Activity;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 
 public class AlarmActivity extends Activity{
@@ -12,11 +13,19 @@ public class AlarmActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm);
-		
-        MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.church_bells);
-        mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        
         try {
-			mPlayer.prepare();
+        	MediaPlayer mPlayer = new MediaPlayer();
+            mPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
+        	mPlayer.setDataSource(this, Uri.parse("android.resource://snoozr.android/" + R.raw.church_bells));
+        	mPlayer.prepare();
+            mPlayer.start();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} catch (IllegalStateException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -24,7 +33,5 @@ public class AlarmActivity extends Activity{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        
-        mPlayer.start();
 	}
 }
