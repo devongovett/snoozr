@@ -22,6 +22,7 @@ public class AlarmActivity extends Activity{
         setContentView(R.layout.activity_alarm);
 		
         final Calendar cal = Calendar.getInstance();
+        final MediaPlayer mPlayer = new MediaPlayer();
         
         final TextView time = (TextView) findViewById(R.id.curAlarmTime);
         final Button dismiss = (Button) findViewById(R.id.dismissButton);
@@ -29,9 +30,30 @@ public class AlarmActivity extends Activity{
 		
         time.setText(DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT).format(cal.getTime()));
         
+        try {
+
+            mPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
+            mPlayer.setDataSource(this, Uri.parse("android.resource://snoozr.android/" + R.raw.church_bells));
+            mPlayer.prepare();
+            mPlayer.start();
+        } catch (IllegalArgumentException e) {
+                    // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (SecurityException e) {
+                    // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IllegalStateException e) {
+                    // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+                    // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
         dismiss.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
+				mPlayer.stop();
 				finish();
 			}
         });
@@ -39,6 +61,7 @@ public class AlarmActivity extends Activity{
         snooze.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
+				mPlayer.stop();
 				cal.add(Calendar.MINUTE, 5);
 				Utilities.setupAlarm(cal.getTime(), AlarmActivity.this);
 				
@@ -48,25 +71,5 @@ public class AlarmActivity extends Activity{
 				finish();
 			}
         });
-        
-        try {
-            MediaPlayer mPlayer = new MediaPlayer();
-        mPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
-            mPlayer.setDataSource(this, Uri.parse("android.resource://snoozr.android/" + R.raw.church_bells));
-            mPlayer.prepare();
-        mPlayer.start();
-            } catch (IllegalArgumentException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-            } catch (SecurityException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-            } catch (IllegalStateException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-            } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-            }
 	}
 }
