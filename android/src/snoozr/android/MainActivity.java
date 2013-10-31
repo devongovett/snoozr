@@ -10,7 +10,6 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Point;
 import android.view.Display;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.GestureDetector;
@@ -18,15 +17,13 @@ import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.DigitalClock;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnGestureListener{
 
-	Context context = MainActivity.this;
+	int slowScrollCount = 0;
 	private GestureDetector gestureScanner;
 	TextView hrMin, amPm, month, day;
 	SimpleDateFormat timeParse = new SimpleDateFormat("hh:mm");
@@ -52,9 +49,9 @@ public class MainActivity extends Activity implements OnGestureListener{
 			@Override
 			public void onClick(View arg0) {
 				
-				setupAlarm();
+				Utilities.setupAlarm(alarmTime, MainActivity.this);
 
-                Toast toast = Toast.makeText(context,
+                Toast toast = Toast.makeText(MainActivity.this,
                         "Sleep tight!", Toast.LENGTH_LONG);
                 toast.show();
                 finish();
@@ -77,8 +74,8 @@ public class MainActivity extends Activity implements OnGestureListener{
         return true;
     }
     
-    public void setupAlarm(){    	
-		Intent intentAlarm = new Intent(context, AlarmReciever.class);
+    public void setupAlarm() {	
+		Intent intentAlarm = new Intent(this, AlarmReciever.class);
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(alarmTime);
 		
@@ -89,9 +86,9 @@ public class MainActivity extends Activity implements OnGestureListener{
 		
 		AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 		
-		alarmManager.set(AlarmManager.RTC_WAKEUP, time, PendingIntent.getBroadcast(context, 1,  intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT));
+		alarmManager.set(AlarmManager.RTC_WAKEUP, time, PendingIntent.getBroadcast(this, 1,  intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT));
 		
-		Toast.makeText(context, new Date(time).toString(), Toast.LENGTH_LONG).show();
+		Toast.makeText(this, new Date(time).toString(), Toast.LENGTH_LONG).show();
 		
     }
     
@@ -123,7 +120,7 @@ public class MainActivity extends Activity implements OnGestureListener{
     	amPm.setText(cal.get(Calendar.AM_PM) == Calendar.AM 
     			? getResources().getString(R.string.am) : getResources().getString(R.string.pm));
     	day.setText("" + cal.get(Calendar.DATE));
-    	month.setText(monthText(cal.get(Calendar.MONTH) + 1));
+    	month.setText(Utilities.monthText(cal.get(Calendar.MONTH) + 1));
     }
     
     @Override
@@ -152,8 +149,10 @@ public class MainActivity extends Activity implements OnGestureListener{
     	//clock.setText("-" + "SCROLL" + "-");
     	Display display = getWindowManager().getDefaultDisplay();
     	int width = display.getWidth(), factor = (int)((width - e2.getX()) / width * distanceY); 
-		if(factor == 0 && (distanceY > 0 || distanceY < 0))
+		if(factor == 0 && (distanceY > 0 || distanceY < 0) && ++slowScrollCount > 4){
 			factor = distanceY > 0 ? 1 : -1;
+			slowScrollCount = 0;
+		}
 		
     	updateTime(factor);
         return true;

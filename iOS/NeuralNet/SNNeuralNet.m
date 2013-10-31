@@ -1,13 +1,14 @@
 #import "SNNeuralNet.h"
-#include <math.h>
+#import <math.h>
+#import <Accelerate/Accelerate.h>
 
 typedef struct {
     double *deltas;
     double *errors;
     double *outputs;
     double *biases;
-    double **weights;
-    double **changes;
+    double *weights;
+    double *changes;
 } SNLayer;
 
 #define zeros(size) calloc(size, sizeof(double))
@@ -24,6 +25,7 @@ double *randos(int size) {
     int *sizes;
     int outputLayer;
     SNLayer *layers;
+    double *buf;
 }
 
 - (instancetype)initWithTrainingData:(NSData *)data numInputs:(int)numInputs numOutputs:(int)numOutputs
@@ -45,6 +47,8 @@ double *randos(int size) {
             }
             error = sum / numElements;
         }
+        
+        printf("iterations = %d, error = %f\n", i, error);
     }
     
     return self;
@@ -60,25 +64,28 @@ double *randos(int size) {
     sizes[2] = numOutputs;
     
     layers = malloc((outputLayer + 1) * sizeof(SNLayer));
+    int maxSize = 0;
+    
     for (int layer = 0; layer <= outputLayer; layer++) {
         int size = sizes[layer];
-        
+                
         layers[layer].deltas = zeros(size);
         layers[layer].errors = zeros(size);
         layers[layer].outputs = zeros(size);
         
         if (layer > 0) {
             layers[layer].biases = randos(size);
-            layers[layer].weights = malloc(size * sizeof(double *));
-            layers[layer].changes = malloc(size * sizeof(double *));
+            layers[layer].weights = randos(size * sizes[layer - 1]);
+            layers[layer].changes = zeros(size * sizes[layer - 1]);
             
-            for (int node = 0; node < size; node++) {
-                int prevSize = sizes[layer - 1];
-                layers[layer].weights[node] = randos(prevSize);
-                layers[layer].changes[node] = zeros(prevSize);
-            }
+            int bufSize = sizes[layer] * sizes[layer - 1];
+            if (bufSize > maxSize)
+                maxSize = bufSize;
         }
     }
+    
+    // intermediary buffer used in adjustWeights
+    buf = malloc(maxSize * sizeof(double));
 }
 
 - (void)dealloc
@@ -90,12 +97,6 @@ double *randos(int size) {
         
         if (layer > 0) {
             free(layers[layer].biases);
-            
-            for (int node = 0; node < sizes[layer]; node++) {
-                free(layers[layer].weights[node]);
-                free(layers[layer].changes[node]);
-            }
-            
             free(layers[layer].weights);
             free(layers[layer].changes);
         }
@@ -103,6 +104,7 @@ double *randos(int size) {
     
     free(layers);
     free(sizes);
+    free(buf);
 }
 
 - (double *)runInput:(double *)input
@@ -110,18 +112,27 @@ double *randos(int size) {
     memcpy(layers[0].outputs, input, sizes[0] * sizeof(double));
     
     for (int layer = 1; layer <= outputLayer; layer++) {
-        for (int node = 0; node < sizes[layer]; node++) {
-            double *weights = layers[layer].weights[node];
-            double sum = layers[layer].biases[node];
-            
-            for (int k = 0; k < sizes[layer - 1]; k++) {
-                sum += weights[k] * input[k];
-            }
-            
-            layers[layer].outputs[node] = 1 / (1 + exp(-sum));
+        vDSP_mmulD(layers[layer].weights, 1, layers[layer - 1].outputs, 1, layers[layer].outputs, 1, sizes[layer], 1, sizes[layer - 1]);
+        
+        // Activation function (http://en.wikipedia.org/wiki/Activation_function)
+        for (int i = 0; i < sizes[layer]; i++) {
+            double sum = layers[layer].outputs[i] + layers[layer].biases[i];
+            layers[layer].outputs[i] = 1 / (1 + exp(-sum));
         }
         
-        input = layers[layer].outputs;
+        // Option 1. 1 / (1 + exp(-sum))
+        // layers[layer].outputs = 1 / (1 + exp(-sum));
+        // vDSP_vaddD(layers[layer].outputs, 1, layers[layer].biases, 1, layers[layer].outputs, 1, sizes[layer]);
+        // vDSP_vnegD(layers[layer].outputs, 1, layers[layer].outputs, 1, sizes[layer]);
+        // vvexp(layers[layer].outputs, layers[layer].outputs, &sizes[layer]);
+        // 
+        // double one = 1;
+        // vDSP_vsaddD(layers[layer].outputs, 1, &one, layers[layer].outputs, 1, sizes[layer]);
+        // 
+        // vvrec(layers[layer].outputs, layers[layer].outputs, &sizes[layer]);
+        
+        // Option 2. tanh(sum)
+        // vvtanh(layers[layer].outputs, layers[layer].outputs, &sizes[layer]);
     }
     
     return layers[outputLayer].outputs;
@@ -137,56 +148,55 @@ double *randos(int size) {
     [self adjustWeights];
     
     // mean squared error
-    double *errors = layers[outputLayer].errors;
-    double sum = 0;
-    for (int i = 0; i < sizes[outputLayer]; i++) {
-        sum += errors[i] * errors[i];
-    }
-    
-    return sum / sizes[outputLayer];
+    double error;
+    vDSP_measqvD(layers[outputLayer].errors, 1, &error, sizes[outputLayer]);
+    return error;
 }
 
 - (void)calculateDeltas:(double *)target
 {
     for (int layer = outputLayer; layer >= 0; layer--) {
-        for (int node = 0; node < sizes[layer]; node++) {
-            double output = layers[layer].outputs[node];
-            
-            double error = 0;
-            if (layer == outputLayer) {
-                error = target[node] - output;
-            } else {
-                double *deltas = layers[layer + 1].deltas;
-                for (int k = 0; k < sizes[layer + 1]; k++) {
-                    error += deltas[k] * layers[layer + 1].weights[k][node];
-                }
-            }
-            
-            layers[layer].errors[node] = error;
-            layers[layer].deltas[node] = error * output * (1 - output);
+        if (layer == outputLayer) {
+            // layers[layer].errors = target - layers[layer].outputs
+            vDSP_vsubD(layers[layer].outputs, 1, target, 1, layers[layer].errors, 1, sizes[layer]);
+        } else {
+            // layers[layer].errors = layers[layer + 1].deltas * layers[layer + 1].weights
+            vDSP_mmulD(layers[layer + 1].deltas, 1, layers[layer + 1].weights, 1, layers[layer].errors, 1, 1, sizes[layer], sizes[layer + 1]);
         }
+        
+        // layers[layer].deltas = layers[layer].errors * layers[layer].outputs * (1 - layers[layer].outputs)
+        // simplifying since x * (1 - x) == x - x^2
+        vDSP_vsqD(layers[layer].outputs, 1, layers[layer].deltas, 1, sizes[layer]);                           // deltas = x^2
+        vDSP_vsubD(layers[layer].deltas, 1, layers[layer].outputs, 1, layers[layer].deltas, 1, sizes[layer]); // deltas = x - x^2
+        vDSP_vmulD(layers[layer].errors, 1, layers[layer].deltas, 1, layers[layer].deltas, 1, sizes[layer]);  // deltas = errors * x - x^2
     }
 }
 
 - (void)adjustWeights
 {
+    double learningRate = LEARNING_RATE;
+    double momentum = MOMENTUM;
+    
     for (int layer = 1; layer <= outputLayer; layer++) {
-        double *incoming = layers[layer - 1].outputs;
+        // 1. Update changes
+        // layers[layer].changes = (LEARNING_RATE * layers[layer].deltas * layers[layer - 1].outputs) + (MOMENTUM * layers[layer].changes)
         
-        for (int node = 0; node < sizes[layer]; node++) {
-            double delta = layers[layer].deltas[node];
-            
-            for (int k = 0; k < sizes[layer - 1]; k++) {
-                double change = layers[layer].changes[node][k];
-                
-                change = (LEARNING_RATE * delta * incoming[k]) + (MOMENTUM * change);
-                
-                layers[layer].changes[node][k] = change;
-                layers[layer].weights[node][k] += change;
-            }
-            
-            layers[layer].biases[node] += LEARNING_RATE * delta;
-        }
+        // buf = layers[layer].deltas * layers[layer - 1].outputs
+        vDSP_mmulD(layers[layer].deltas, 1, layers[layer - 1].outputs, 1, buf, 1, sizes[layer], sizes[layer - 1], 1);
+        
+        // buf = buf * LEARNING_RATE
+        vDSP_vsmulD(buf, 1, &learningRate, buf, 1, sizes[layer] * sizes[layer - 1]);
+        
+        // layers[layer].changes = layers[layer].changes * MOMENTUM + buf
+        vDSP_vsmaD(layers[layer].changes, 1, &momentum, buf, 1, layers[layer].changes, 1, sizes[layer] * sizes[layer - 1]);
+        
+        // 2. Update weights
+        // layers[layer].weights += layers[layer].changes
+        vDSP_vaddD(layers[layer].weights, 1, layers[layer].changes, 1, layers[layer].weights, 1, sizes[layer] * sizes[layer - 1]);
+        
+        // 3. Update biases
+        // layers[layer].biases += layers[layer].deltas * LEARNING_RATE
+        vDSP_vsmaD(layers[layer].deltas, 1, &learningRate, layers[layer].biases, 1, layers[layer].biases, 1, sizes[layer]);
     }
 }
 
