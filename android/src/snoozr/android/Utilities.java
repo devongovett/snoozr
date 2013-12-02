@@ -4,13 +4,20 @@ import java.util.Calendar;
 import java.util.Date;
 
 import android.app.AlarmManager;
+import android.app.Dialog;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.NumberPicker;
 import android.widget.Toast;
 
 public class Utilities {
-
+	public static enum NumtoChange {NUMSNOOZES, SLEEPCYCLE};
+	
     public static void setupAlarm(Date alarmTime, Context context, int numSnoozes) {    	
 		Intent intentAlarm = new Intent(context, AlarmReciever.class);
 		intentAlarm.putExtra("snoozes", numSnoozes);
@@ -45,4 +52,38 @@ public class Utilities {
     		default: return "wtf";
     	}
     }
+    
+    /*public static void setupNumPickDialog(Context context, NumtoChange toChange){
+    	final Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.dialog_numpicker);
+        
+        NumberPicker number = (NumberPicker) dialog.findViewById(R.id.dialogNumber);
+        Button cancel = (Button) dialog.findViewById(R.id.dialogCancel);
+        Button ok = (Button) dialog.findViewById(R.id.dialogOk);
+        
+        Settings s = new Settings(context);
+        
+        if(toChange == NumtoChange.NUMSNOOZES)
+        	number.setValue(s.numSnoozesAllowed);
+        if(toChange == NumtoChange.SLEEPCYCLE)
+        	number.setValue(s.sleepCycleMins);
+        
+        cancel.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				dialog.dismiss();
+			}  	
+        }); 
+        
+        ok.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				
+				
+				dialog.dismiss();
+			}  	
+        }); 
+        
+        dialog.show();
+    }*/
 }
