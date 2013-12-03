@@ -6,7 +6,10 @@ import java.util.Arrays;
 import com.cedarsoftware.util.io.JsonReader;
 import com.cedarsoftware.util.io.JsonWriter;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 public class Layer {	
 	private ArrayList<Double> deltas;
@@ -43,16 +46,42 @@ public class Layer {
 	
 	public static Layer fromDB(Context context, String key) {
 		try {
-			String json = "";
+			DatabaseHelper dbHelper = new DatabaseHelper(context);
+			SQLiteDatabase db = dbHelper.getReadableDatabase();
+			
+			Cursor cursor = db.query(DatabaseHelper.TABLE_NAME,
+					new String[] {DatabaseHelper.VALUE},
+					DatabaseHelper.KEY + " = ?",
+					new String[] {key}, null, null, null);
+			
+			String json = null;
+			if (cursor.moveToFirst()) {
+				json = cursor.getString(cursor.getColumnIndex(DatabaseHelper.VALUE));
+			}
+			
+			cursor.close();
+			db.close();
+			
 			return (Layer) JsonReader.jsonToJava(json);
 		} catch (Exception e) {
 			return new Layer();
 		}
 	}
 	
-	public boolean writeToDB(String key) {
+	public boolean writeToDB(Context context, String key) {
 		try {
 			String json = JsonWriter.objectToJson(this);
+			
+			ContentValues values = new ContentValues();
+			values.put(DatabaseHelper.KEY, key);
+			values.put(DatabaseHelper.VALUE, json);
+			
+			DatabaseHelper dbHelper = new DatabaseHelper(context);
+			SQLiteDatabase db = dbHelper.getWritableDatabase();
+			
+			db.insertOrThrow(DatabaseHelper.TABLE_NAME, null, values);
+			
+			db.close();
 			
 			return true;
 		} catch (Exception e) {
