@@ -7,7 +7,7 @@ public class Points {
 		this.points = points;
 	}
 	
-	public Points(Double... points) {
+	public Points(boolean obj, Double... points) {
 		Double[] tmp = points;
 		System.arraycopy(tmp, 0, points, 0, tmp.length);
 	}

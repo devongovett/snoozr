@@ -118,7 +118,7 @@ public class NeuralNet {
 			input = layers[layer].getOutputs();
 		}
 		
-		return new Points(layers[outputLayer].getOutputs());
+		return new Points(true, layers[outputLayer].getOutputs());
 	}
 	
 	private void calculateDeltas(double[] target) {
