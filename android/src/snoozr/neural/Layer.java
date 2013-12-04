@@ -49,7 +49,7 @@ public class Layer {
 			DatabaseHelper dbHelper = new DatabaseHelper(context);
 			SQLiteDatabase db = dbHelper.getReadableDatabase();
 			
-			Cursor cursor = db.query(DatabaseHelper.TABLE_NAME,
+			Cursor cursor = db.query(DatabaseHelper.LAYER_NAME,
 					new String[] {DatabaseHelper.VALUE},
 					DatabaseHelper.KEY + " = ?",
 					new String[] {key}, null, null, null);
@@ -79,7 +79,7 @@ public class Layer {
 			DatabaseHelper dbHelper = new DatabaseHelper(context);
 			SQLiteDatabase db = dbHelper.getWritableDatabase();
 			
-			db.insertOrThrow(DatabaseHelper.TABLE_NAME, null, values);
+			db.insertOrThrow(DatabaseHelper.LAYER_NAME, null, values);
 			
 			db.close();
 			
