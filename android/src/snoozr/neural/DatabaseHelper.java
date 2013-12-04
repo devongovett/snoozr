@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	}
 	
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL("CREATA TABLE " + TABLE_NAME + " (" + KEY + " TEXT, " + VALUE + " TEXT)");
+		db.execSQL("CREATE TABLE " + TABLE_NAME + " (" + KEY + " TEXT, " + VALUE + " TEXT)");
 	}
 	
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

@@ -92,4 +92,57 @@ public class Layer {
 	public int size() {
 		return deltas.size();
 	}
+	
+	public Double[] getDeltas() {
+		return deltas.toArray(new Double[deltas.size()]);
+	}
+	
+	public Double[] getErrors() {
+		return errors.toArray(new Double[errors.size()]);
+	}
+	
+	public Double[] getOutputs() {
+		return outputs.toArray(new Double[outputs.size()]);
+	}
+	
+	public Double[] getWeights() {
+		return weights.toArray(new Double[weights.size()]);
+	}
+	
+	public Double[] getChanges() {
+		return changes.toArray(new Double[changes.size()]);
+	}
+	
+	public double getBias(int ndx) {
+		return biases.get(ndx);
+	}
+	
+	public void setDelta(int index, double delta) {
+		deltas.set(index, delta);
+	}
+	
+	public void setError(int index, double error) {
+		errors.set(index, error);
+	}
+	
+	public void setChange(int index, double change) {
+		changes.set(index, change);
+	}
+	
+	public void setOutput(int index, double output) {
+		outputs.set(index, output);
+	}
+	
+	public void incrememntWeight(int index, double delta) {
+		weights.set(index, weights.get(index) + delta);
+	}
+	
+	public void incrememntBias(int index, double delta) {
+		biases.set(index, biases.get(index) + delta);
+	}
+	
+	public void replaceOutputs(Double[] vals) {
+		for (int i = 0; i < vals.length; i++)
+			outputs.set(i, vals[i]);
+	}
 }
