@@ -196,7 +196,8 @@
     [UIView commitAnimations];
     
     _gestureRecognizer.enabled = sender.on;
-    alarm.enabled = sender.on;
+    if (alarm.enabled && !sender.on)
+        alarm.enabled = NO;
 }
 
 - (void)learnSwitchChanged:(UISwitch *)sender
