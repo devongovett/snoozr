@@ -7,7 +7,7 @@
 //
 
 #import "SNDateTimeView.h"
-#import "NSDate+Greeting.h"
+#import "NSDate+Snoozr.h"
 
 @implementation SNDateTimeView
 {

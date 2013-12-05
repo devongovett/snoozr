@@ -8,7 +8,7 @@
 
 #import "SNAlarm.h"
 #import "SNSettings.h"
-#import "NSDate+Greeting.h"
+#import "NSDate+Snoozr.h"
 
 @implementation SNAlarm
 
