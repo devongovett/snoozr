@@ -10,6 +10,7 @@
 
 @interface SNAlarm : NSObject <NSCoding>
 
+@property (nonatomic, copy) NSDate *originalDate;
 @property (nonatomic, copy) NSDate *date;
 @property (nonatomic) BOOL enabled;
 @property (nonatomic) BOOL learn;

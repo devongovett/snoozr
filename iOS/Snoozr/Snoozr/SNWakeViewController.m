@@ -81,7 +81,7 @@
     
     // Learn from the alarm time, unless the user selected not to learn
     if (self.alarm.learn)
-        [[SNAlarmPredictor shared] learnAlarmTimeForDate:self.alarm.date];
+        [[SNAlarmPredictor shared] learnAlarmTimeForDate:self.alarm.originalDate];
     
 }
 
@@ -89,6 +89,8 @@
 {
     [self.snoozeButton setTitle:[NSString stringWithFormat:@"Snooze (%ld)", ++numSnoozes] forState:UIControlStateNormal];
     [SNSound stop];
+    
+    self.alarm.date = [[[NSDate date] dateByAddingTimeInterval:5 * 60] dateRoundedToMinutes];
     
     if (numSnoozes > [SNSettings numSnoozes])
         self.snoozeButton.enabled = NO;

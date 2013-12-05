@@ -48,6 +48,7 @@
 - (void)cancel
 {
     _enabled = NO;
+    self.originalDate = nil;
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
 }
 
@@ -57,6 +58,10 @@
         [self cancel];
     
     _enabled = YES;
+    
+    // Save the original fire date so we can learn from it later
+    if (self.originalDate == nil)
+        self.originalDate = self.date;
     
     UILocalNotification *notification = [[UILocalNotification alloc] init];
     notification.fireDate = self.date;
