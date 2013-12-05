@@ -11,7 +11,7 @@ public class TrainingRecord {
 	public Points input;
 	public Points output;
 	
-	TrainingRecord(Points input, Points output) {
+	public TrainingRecord(Points input, Points output) {
 		this.input = input;
 		this.output = output;
 	}

@@ -2,7 +2,13 @@ package snoozr.neural;
 
 import java.util.Random;
 
-import snoozr.neural.Points;
+import com.cedarsoftware.util.io.JsonReader;
+import com.cedarsoftware.util.io.JsonWriter;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 public class NeuralNet {
 	public static final int DEFAULT_MAX_ITERATIONS = 20000;
@@ -19,6 +25,51 @@ public class NeuralNet {
 	public double minError;
 	public double learningRate;
 	public double momentum;
+	
+	public static NeuralNet fromDB(Context context) {
+		try {
+			DatabaseHelper dbHelper = new DatabaseHelper(context);
+			SQLiteDatabase db = dbHelper.getReadableDatabase();
+			
+			Cursor cursor = db.query(DatabaseHelper.NET_NAME,
+					new String[] {DatabaseHelper.VALUE},
+					null, null, null, null, null);
+					
+			String json = null;
+			if (cursor.moveToFirst()) {
+				json = cursor.getString(cursor.getColumnIndex(DatabaseHelper.VALUE));
+			}
+			
+			cursor.close();
+			db.close();
+			
+			return (NeuralNet) JsonReader.jsonToJava(json);
+		} catch (Exception e) {
+			return null;
+		}
+	}
+	
+	public boolean writeToDB(Context context) {
+		try {
+			String json = JsonWriter.objectToJson(this);
+			
+			ContentValues values = new ContentValues();
+			values.put(DatabaseHelper.VALUE, json);
+			
+			DatabaseHelper dbHelper = new DatabaseHelper(context);
+			SQLiteDatabase db = dbHelper.getWritableDatabase();
+			
+			db.delete(DatabaseHelper.NET_NAME, null, null);
+			
+			db.insertOrThrow(DatabaseHelper.NET_NAME, null, values);
+			
+			db.close();
+			
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
 	
 	public NeuralNet(int numInputs, int numOutputs) {
 		this(numInputs, null, numOutputs);
@@ -97,7 +148,7 @@ public class NeuralNet {
 		return sum / sizes[outputLayer];
 	}
 	
-	public double[] runInput(double[] input) {
+	public double[] runInput(double... input) {
 		System.arraycopy(input, 0, layers[0].outputs, 0, input.length);
 		
 		for (int layer = 1; layer <= outputLayer; layer++) {

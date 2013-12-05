@@ -8,7 +8,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	public static final int DATABASE_VERSION = 1;
 	public static final String DATABASE_NAME = "Snoozr.db";
 	
-	public static final String LAYER_NAME = "Layers";
+	public static final String NET_NAME = "Net";
 	public static final String RECORD_NAME = "Records";
 	public static final String KEY = "key";
 	public static final String VALUE = "value";
@@ -18,12 +18,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	}
 	
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL("CREATE TABLE " + LAYER_NAME + " (" + KEY + " TEXT, " + VALUE + " TEXT)");
+		db.execSQL("CREATE TABLE " + NET_NAME + " (" + VALUE + " TEXT)");
 		db.execSQL("CREATE TABLE " + RECORD_NAME + " (" + KEY + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + VALUE + " TEXT)");
 	}
 	
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		db.execSQL("DROP TABLE IF EXISTS " + LAYER_NAME);
+		db.execSQL("DROP TABLE IF EXISTS " + NET_NAME);
 		db.execSQL("DROP TABLE IF EXISTS " + RECORD_NAME);
 		onCreate(db);
 	}
