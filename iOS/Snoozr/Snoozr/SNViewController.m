@@ -97,6 +97,9 @@
     [self setStatusShowing:YES afterDelay:animated ? 0 : 0.5 completion:^(BOOL done) {
         [weakSelf setStatusShowing:NO afterDelay:2 completion:nil];
     }];
+    
+    alarm.date = [[SNAlarmPredictor shared] predictAlarmTimeForDate:[NSDate tomorrow]];
+    self.dateTimeView.date = alarm.date;
 }
 
 - (void)didReceiveMemoryWarning
