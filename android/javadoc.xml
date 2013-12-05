@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="libs/json-io-2.3.0.jar;libs/junit-4.10.jar;../../../../android-sdks/platforms/android-18/android.jar" destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" source="1.6" sourcefiles="src/snoozr/android/MainActivity.java" sourcepath="gen;src" splitindex="true" use="true" version="true">
+            <link href="file:/C:/Users/Donovan/Documents/CPE480/snoozr/android/doc/"/>
+            <link href="file:/C:/Users/Donovan/android-sdks/docs/reference"/>
+        </javadoc>
+    </target>
+</project>
