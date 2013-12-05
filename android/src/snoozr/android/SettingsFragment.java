@@ -20,6 +20,8 @@ public class SettingsFragment extends PreferenceFragment {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.layout.activity_settings);
         
+        final Context context = this.getActivity();
+        
         Preference resetPreference = (Preference) getPreferenceScreen().findPreference("resetSchedule");
         resetPreference.setOnPreferenceClickListener(new OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
@@ -45,8 +47,8 @@ public class SettingsFragment extends PreferenceFragment {
                 confirm.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                    	AlarmPredictor.getInstance(context).reset();
                     	
-                    	//TODO: delete neural network
                         dialog.dismiss();
                     }
                 });
