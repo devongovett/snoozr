@@ -16,13 +16,15 @@ import android.widget.NumberPicker;
 import android.widget.Toast;
 
 public class Utilities {
-
 	public static enum NumtoChange {NUMSNOOZES, SLEEPCYCLE};
 	
-    public static void setupAlarm(Date alarmTime, Context context){    	
+    public static void setupAlarm(Date alarmTime, Context context, int numSnoozes) {    	
 		Intent intentAlarm = new Intent(context, AlarmReciever.class);
+		intentAlarm.putExtra("snoozes", numSnoozes);
+		
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(alarmTime);
+		cal.set(Calendar.SECOND, 0);
 		cal.set(Calendar.MILLISECOND, 0);
 		long time = cal.getTimeInMillis();
 		

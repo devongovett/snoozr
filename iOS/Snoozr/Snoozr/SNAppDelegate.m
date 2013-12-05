@@ -49,6 +49,7 @@
     UIViewController *root = self.window.rootViewController;
     UIStoryboard *storyboard = root.storyboard;
     SNWakeViewController *wakeView = (SNWakeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"wakeView"];
+    wakeView.alarm = [NSKeyedUnarchiver unarchiveObjectWithData:notification.userInfo[@"SNAlarm"]];
     [root presentViewController:wakeView animated:YES completion:nil];
 }
 

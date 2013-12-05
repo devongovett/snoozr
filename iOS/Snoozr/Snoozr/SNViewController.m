@@ -11,6 +11,7 @@
 #import "NSDate+Greeting.h"
 #import "SNSettings.h"
 #import "SNAlarm.h"
+#import "SNAlarmPredictor.h"
 
 #define STATUS_ALPHA 0.6
 #define SETTINGS_WIDTH 220
@@ -19,14 +20,15 @@
 {
     NSDate *_startDate;
     UIPanGestureRecognizer *_gestureRecognizer;
-    SNAlarm *_alarm;
+    SNAlarm *alarm;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    _alarm = [[SNAlarm alloc] init];
+    alarm = [[SNAlarm alloc] init];
+    alarm.date = [[SNAlarmPredictor shared] predictAlarmTimeForDate:[NSDate tomorrow]];
     
     _gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [self.view addGestureRecognizer:_gestureRecognizer];
@@ -43,6 +45,7 @@
     // datetime view on main page
     self.dateTimeView = [[SNDateTimeView alloc] initWithFrame:CGRectMake(width / 2 - 255 / 2, 0, 255, height)];
     self.dateTimeView.tintColor = [UIColor whiteColor];
+    self.dateTimeView.date = alarm.date;
     [self.scrollView addSubview:self.dateTimeView];
     
     // settings container
@@ -151,7 +154,7 @@
 {
     if (recognizer.state == UIGestureRecognizerStateEnded) {
         [self hideStatus];
-        _alarm.date = self.dateTimeView.date;
+        alarm.date = self.dateTimeView.date;
     } else {
         CGPoint location = [recognizer locationInView:self.view];
         int section = [self sectionForPoint:location];
@@ -163,7 +166,8 @@
             CGPoint translatedPoint = [recognizer translationInView:self.view];
             int sectionInverse = 3 - section + 1;
             int velocity = sectionInverse * sectionInverse * 7;
-            self.dateTimeView.date = [_startDate dateByAddingTimeInterval:translatedPoint.y * velocity];
+            alarm.date = [_startDate dateByAddingTimeInterval:translatedPoint.y * velocity];
+            self.dateTimeView.date = alarm.date;
         }
         
         [self updateStatusForSection:section];
@@ -184,31 +188,13 @@
     [UIView commitAnimations];
     
     _gestureRecognizer.enabled = sender.on;
-    _alarm.enabled = sender.on;
-}
-
-- (NSDate *)dateAdjustedForSleepCycle
-{
-    // adjust alarm time backwards to match sleep cycle
-    NSInteger sleepCycle = [SNSettings sleepCycle] * 60;
-    NSDate *now = [[NSDate date] dateRoundedToMinutes];
-    NSDate *alarmTime = self.dateTimeView.date;
-    
-    // add 14 minutes for time to fall asleep for now, this could be controlled by neural network or average number of snoozes
-    NSTimeInterval wakeTime = [now timeIntervalSinceReferenceDate] + 14 * 60;
-    NSTimeInterval latestTime = [alarmTime timeIntervalSinceReferenceDate];
-    
-    // find nearest 90 minute interval from now up to wake time
-    while (wakeTime + sleepCycle <= latestTime)
-        wakeTime += sleepCycle;
-    
-    return [NSDate dateWithTimeIntervalSinceReferenceDate:wakeTime];
+    alarm.enabled = sender.on;
 }
 
 - (IBAction)sleep:(id)sender
 {
-    NSDate *wakeDate = [self dateAdjustedForSleepCycle];
-    if (![wakeDate isEqualToDate:self.dateTimeView.date]) {
+    NSDate *wakeDate = [alarm dateAdjustedForSleepCycle];
+    if (![wakeDate isEqualToDate:alarm.date]) {
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateStyle = NSDateFormatterNoStyle;
         formatter.timeStyle = NSDateFormatterShortStyle;
@@ -222,23 +208,24 @@
                                               otherButtonTitles:@"Yes", nil];
         [alert show];
     } else {
-        [self showSleepWell];
+        [self sleepWell];
     }
 }
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1) {
-        NSDate *adjustedDate = [self dateAdjustedForSleepCycle];
-        self.dateTimeView.date = adjustedDate;
-        _alarm.date = adjustedDate;
+        [alarm adjustForSleepCycle];
+        self.dateTimeView.date = alarm.date;
     }
     
-    [self showSleepWell];
+    [self sleepWell];
 }
 
-- (void)showSleepWell
+- (void)sleepWell
 {
+    [alarm schedule];
+    
     __weak typeof(self) weakSelf = self;
     
     self.statusLabel.text = @"Sleep well!";

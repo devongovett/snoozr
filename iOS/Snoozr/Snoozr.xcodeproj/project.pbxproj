@@ -40,6 +40,8 @@
 		0DD1C87A181C736A00830678 /* police.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0DD1C876181C736A00830678 /* police.wav */; };
 		0DD1C87D181C786600830678 /* SNSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1C87C181C786600830678 /* SNSound.m */; };
 		0DD1C880181C88B600830678 /* SNSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1C87F181C88B600830678 /* SNSettings.m */; };
+		0DD39725184FA7F100D11929 /* SNAlarmPredictor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD39724184FA7F100D11929 /* SNAlarmPredictor.m */; };
+		AFCFD73804044257A9DC3CE5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9828713DD79B4D6685EAB1D1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,10 @@
 		0DD1C87C181C786600830678 /* SNSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSound.m; sourceTree = "<group>"; };
 		0DD1C87E181C88B600830678 /* SNSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSettings.h; sourceTree = "<group>"; };
 		0DD1C87F181C88B600830678 /* SNSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSettings.m; sourceTree = "<group>"; };
+		0DD39723184FA7F100D11929 /* SNAlarmPredictor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNAlarmPredictor.h; sourceTree = "<group>"; };
+		0DD39724184FA7F100D11929 /* SNAlarmPredictor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNAlarmPredictor.m; sourceTree = "<group>"; };
+		9828713DD79B4D6685EAB1D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93E78ECA8CE4E09B787D9E9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 				0D842121180B2887005AB0D0 /* CoreGraphics.framework in Frameworks */,
 				0D842123180B2887005AB0D0 /* UIKit.framework in Frameworks */,
 				0D84211F180B2887005AB0D0 /* Foundation.framework in Frameworks */,
+				AFCFD73804044257A9DC3CE5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +144,7 @@
 				0D842143180B2887005AB0D0 /* SnoozrTests */,
 				0D84211D180B2887005AB0D0 /* Frameworks */,
 				0D84211C180B2887005AB0D0 /* Products */,
+				F93E78ECA8CE4E09B787D9E9 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +164,7 @@
 				0D842120180B2887005AB0D0 /* CoreGraphics.framework */,
 				0D842122180B2887005AB0D0 /* UIKit.framework */,
 				0D84213D180B2887005AB0D0 /* XCTest.framework */,
+				9828713DD79B4D6685EAB1D1 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,6 +189,8 @@
 				0D842167180B6392005AB0D0 /* SNWakeViewController.m */,
 				0D645AFD181DE1CF00337ADB /* SNAlarm.h */,
 				0D645AFE181DE1CF00337ADB /* SNAlarm.m */,
+				0DD39723184FA7F100D11929 /* SNAlarmPredictor.h */,
+				0DD39724184FA7F100D11929 /* SNAlarmPredictor.m */,
 				0DD1C871181C722C00830678 /* Categories */,
 				0DD1C870181C721900830678 /* Settings */,
 				0DD1C872181C735100830678 /* Sounds */,
@@ -266,9 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D84214D180B2887005AB0D0 /* Build configuration list for PBXNativeTarget "Snoozr" */;
 			buildPhases = (
+				7E6D6FB964C549F4A821C920 /* Check Pods Manifest.lock */,
 				0D842117180B2887005AB0D0 /* Sources */,
 				0D842118180B2887005AB0D0 /* Frameworks */,
 				0D842119180B2887005AB0D0 /* Resources */,
+				8768987874434AC4927E3CF2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,6 +371,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7E6D6FB964C549F4A821C920 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8768987874434AC4927E3CF2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D842117180B2887005AB0D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -365,6 +411,7 @@
 			files = (
 				0D842157180B3A85005AB0D0 /* UIImage+ImageEffects.m in Sources */,
 				0D84212B180B2887005AB0D0 /* main.m in Sources */,
+				0DD39725184FA7F100D11929 /* SNAlarmPredictor.m in Sources */,
 				0D645AFF181DE1CF00337ADB /* SNAlarm.m in Sources */,
 				0D84215A180B4E52005AB0D0 /* SNSettingsViewController.m in Sources */,
 				0DD1C86F181C6DA700830678 /* SNSoundViewController.m in Sources */,
@@ -502,6 +549,7 @@
 		};
 		0D84214E180B2887005AB0D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F93E78ECA8CE4E09B787D9E9 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -515,6 +563,7 @@
 		};
 		0D84214F180B2887005AB0D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F93E78ECA8CE4E09B787D9E9 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -11,6 +11,7 @@
 #import "UIColor+Hex.h"
 #import "SNSettings.h"
 #import "NSDate+Greeting.h"
+#import "SNAlarmPredictor.h"
 
 @implementation SNWakeViewController
 {
@@ -76,7 +77,12 @@
 - (void)dismiss
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    [self.alarm cancel];
+    
+    // Learn from the alarm time, unless the user selected not to learn
+    if (self.alarm.learn)
+        [[SNAlarmPredictor shared] learnAlarmTimeForDate:self.alarm.date];
+    
 }
 
 - (void)snooze

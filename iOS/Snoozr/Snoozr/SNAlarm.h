@@ -8,12 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNAlarm : NSObject
+@interface SNAlarm : NSObject <NSCoding>
 
 @property (nonatomic, copy) NSDate *date;
 @property (nonatomic) BOOL enabled;
+@property (nonatomic) BOOL learn;
 
 - (void)cancel;
 - (void)schedule;
+
+- (NSDate *)dateAdjustedForSleepCycle;
+- (void)adjustForSleepCycle;
 
 @end

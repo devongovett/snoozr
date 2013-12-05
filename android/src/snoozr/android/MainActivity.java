@@ -6,11 +6,7 @@ import java.util.Date;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Point;
 import android.view.Display;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.GestureDetector;
@@ -18,10 +14,8 @@ import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.DigitalClock;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnGestureListener{
@@ -36,6 +30,8 @@ public class MainActivity extends Activity implements OnGestureListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        alarmTime = AlarmPredictor.getInstance(this).getPrediction();
         
         final ImageButton sleep = (ImageButton) findViewById(R.id.sleep_button);
         final ImageButton settings = (ImageButton) findViewById(R.id.settings_button);
@@ -52,7 +48,7 @@ public class MainActivity extends Activity implements OnGestureListener{
 			@Override
 			public void onClick(View arg0) {
 				
-				Utilities.setupAlarm(alarmTime, MainActivity.this);
+				Utilities.setupAlarm(alarmTime, MainActivity.this, 0);
 
                 Toast toast = Toast.makeText(MainActivity.this,
                         "Sleep tight!", Toast.LENGTH_LONG);

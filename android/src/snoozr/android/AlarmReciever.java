@@ -16,4 +16,8 @@ public class AlarmReciever extends BroadcastReceiver {
         context.startActivity(i);
 	}
 	
+	public void buildNeuralNet(double input, double day, double output) {
+		
+	}
+	
 }
