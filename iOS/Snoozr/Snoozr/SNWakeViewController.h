@@ -15,5 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet SNButton *dismissButton;
 @property (weak, nonatomic) IBOutlet SNButton *snoozeButton;
+@property (nonatomic) SNAlarm *alarm;
 
 @end
