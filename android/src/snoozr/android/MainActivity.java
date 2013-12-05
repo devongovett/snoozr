@@ -27,7 +27,7 @@ public class MainActivity extends Activity implements OnGestureListener{
 	int slowScrollCount = 0;
 	private GestureDetector gestureScanner;
 	TextView hrMin, amPm, month, day;
-	SimpleDateFormat timeParse = new SimpleDateFormat("hh:mm");
+	SimpleDateFormat timeParse = new SimpleDateFormat("h:mm");
 	Date alarmTime = new Date();
 	
     @Override
@@ -149,8 +149,9 @@ public class MainActivity extends Activity implements OnGestureListener{
     	hrMin.setText(timeParse.format(alarmTime));
     	amPm.setText(cal.get(Calendar.AM_PM) == Calendar.AM 
     			? getResources().getString(R.string.am) : getResources().getString(R.string.pm));
-    	day.setText("" + cal.get(Calendar.DATE));
-    	month.setText(Utilities.monthText(cal.get(Calendar.MONTH) + 1));
+    	day.setText(cal.get(Calendar.DATE) +  ", " + cal.get(Calendar.YEAR)); //ULTRA JANK
+    	month.setText(Utilities.monthText(cal.get(Calendar.MONTH) + 1) + " ");
+    	
     }
     
     @Override

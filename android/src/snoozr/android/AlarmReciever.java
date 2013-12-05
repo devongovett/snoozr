@@ -13,6 +13,7 @@ public class AlarmReciever extends BroadcastReceiver {
         Intent i = new Intent();
         i.setClass(context, AlarmActivity.class);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.putExtra("snoozes", intent.getIntExtra("snoozes", 0));
         context.startActivity(i);
 	}
 	
