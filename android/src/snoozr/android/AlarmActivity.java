@@ -6,10 +6,13 @@ import java.util.Calendar;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -63,9 +66,19 @@ public class AlarmActivity extends Activity{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		int maxSnoozes = getSharedPreferences("snoozr.android", Context.MODE_PRIVATE).getInt("allowedSnoozes", 5);
-		final int numSnoozes = getIntent().getIntExtra("snoozes", maxSnoozes);
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		int maxSnoozes = Integer.parseInt(prefs.getString("allowedSnoozes", "5"));
+		
+		final int numSnoozes = getIntent().getIntExtra("snoozes", 0);
+		Log.w("NUM SNOOZES", "" + numSnoozes);
+		Log.w("NUM SNOOZES", "" + numSnoozes);
+		Log.w("NUM SNOOZES", "" + numSnoozes);
+		Log.w("NUM SNOOZES", "" + numSnoozes);
+		Log.w("NUM SNOOZES", "" + numSnoozes);
+		Log.w("NUM SNOOZES", "" + numSnoozes);
+		Log.w("NUM SNOOZES", "" + numSnoozes);
+		Log.w("NUM SNOOZES", "" + numSnoozes);
+		Log.w("NUM SNOOZES", "" + numSnoozes);
 
 		if (numSnoozes >= maxSnoozes)
 			snooze.setVisibility(View.GONE);
@@ -82,7 +95,7 @@ public class AlarmActivity extends Activity{
 			@Override
 			public void onClick(View v) {
 				mPlayer.stop();
-				cal.add(Calendar.MINUTE, 5);
+				cal.add(Calendar.MINUTE, 0);
 				Utilities.setupAlarm(cal.getTime(), AlarmActivity.this, numSnoozes + 1);
 
 				Toast toast = Toast.makeText(AlarmActivity.this,
