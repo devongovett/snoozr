@@ -171,8 +171,8 @@
             int velocity = sectionInverse * sectionInverse * 7;
             
             NSDate *newDate = [_startDate dateByAddingTimeInterval:translatedPoint.y * velocity];
-            if ([newDate compare:[NSDate date]] < 0)
-                newDate = [NSDate date];
+            if ([newDate compare:[NSDate nextMinute]] < 0)
+                newDate = [NSDate nextMinute];
             
             alarm.date = newDate;
             self.dateTimeView.date = alarm.date;

@@ -91,7 +91,7 @@
         wakeTime += sleepCycle;
     
     NSDate *res = [NSDate dateWithTimeIntervalSinceReferenceDate:wakeTime];
-    if ([res compare:[NSDate date]] < 0)
+    if ([res compare:[NSDate nextMinute]] < 0)
         return self.date;
     
     return res;
