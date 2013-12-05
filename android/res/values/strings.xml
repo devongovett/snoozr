@@ -20,6 +20,12 @@
     <string name="resetSchedule">Reset Schedule</string>
     <string name="copyright">Copyright © 2013 Snoozr</string>
     
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    
+    <string name="confirmDelete">Are you sure you want to delete your setting configurations?</string>
+    <string name="Ok">OK</string>
+    
     <string-array name="settings">
         <item>@string/settings</item>
         <item>@string/allowedSnoozes</item>
@@ -31,4 +37,30 @@
         <item>@string/resetSchedule</item>
         <item>@string/copyright</item>   
     </string-array>
+    
+    <string-array name="numSnoozes">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    
+    <string-array name="sleepCycle">
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+        <item>110</item>
+    </string-array>
+    
+    <string-array name="alarmSounds">
+        <item>Alarm</item>
+        <item>Church Bells</item>
+        <item>Beep</item>
+        <item>Police</item>
+    </string-array>
+    
+    <string name="authors">Devon Govett\nNico Higuera\nDonovan McKelvey\nEric Thorndyke</string>
 </resources>

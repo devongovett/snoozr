@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <NumberPicker
+        android:id="@+id/dialogNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name" 
+        android:layout_centerInParent="true"
+        style="@style/TextStyle"
+        android:textColor="#ffffff"/>
+    <RelativeLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/dialogOk"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="@style/TextStyle"
+            android:background="@drawable/red_button_style"
+            android:layout_alignParentLeft="true"
+            android:text="OK">
+        </Button>
+        <Button
+            android:id="@+id/dialogCancel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="@style/TextStyle"
+            android:background="@drawable/blue_button_style"
+            android:layout_alignParentRight="true"
+            android:text="Cancel">
+        </Button>
+    </RelativeLayout>
+
+</RelativeLayout>
