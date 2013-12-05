@@ -81,14 +81,14 @@ public class NeuralNet {
 	
 	private double trainPattern(TrainingRecord record) {
 		// forward propogate
-		runInput(record.input);
+		runInput(record.getInputs());
 		
 		// back propogate
 		calculateDeltas(record.getOutputs());
 		adjustWeights();
 		
 		// mean squared error
-		Double[] errors = layers[outputLayer].getErrors();
+		double[] errors = layers[outputLayer].errors;
 		double sum = 0;
 		for (int i = 0; i < sizes[outputLayer]; i++) {
 			sum += errors[i] * errors[i];
@@ -97,33 +97,31 @@ public class NeuralNet {
 		return sum / sizes[outputLayer];
 	}
 	
-	public Points runInput(Points in) {
-		Double[] input = in.asObject();
-		
-		layers[0].replaceOutputs(input);
+	public double[] runInput(double[] input) {
+		System.arraycopy(input, 0, layers[0].outputs, 0, input.length);
 		
 		for (int layer = 1; layer <= outputLayer; layer++) {
 			for (int node = 0; node < sizes[layer]; node++) {
 				int idx = node * sizes[layer - 1];
-				Double[] weights = layers[layer].getWeights();
-				double sum = layers[layer].getBias(node);
+				double[] weights = layers[layer].weights;
+				double sum = layers[layer].biases[node];
 				
 				for (int k = 0; k < sizes[layer - 1]; k++) {
 					sum += weights[idx + k] * input[k];
 				}
 				
-				layers[layer].setOutput(node, 1.0 / (1.0 + Math.exp(-sum)));
+				layers[layer].outputs[node] =  1.0 / (1.0 + Math.exp(-sum));
 			}
 			
-			input = layers[layer].getOutputs();
+			input = layers[layer].outputs;
 		}
 		
-		return new Points(true, layers[outputLayer].getOutputs());
+		return layers[outputLayer].outputs;
 	}
 	
 	private void calculateDeltas(double[] target) {
 		for (int layer = outputLayer; layer >= 0; layer--) {
-			Double[] outputs = layers[layer].getOutputs();
+			double[] outputs = layers[layer].outputs;
 			
 			for (int node = 0; node < sizes[layer]; node++) {
 				double output = outputs[node];
@@ -133,25 +131,25 @@ public class NeuralNet {
 					error = target[node] - output;
 				}
 				else {
-					Double[] deltas = layers[layer + 1].getDeltas();
-					Double[] weights = layers[layer + 1].getWeights();
+					double[] deltas = layers[layer + 1].deltas;
+					double[] weights = layers[layer + 1].weights;
 					
 					for (int k = 0; k < sizes[layer + 1]; k++) {
 						error += deltas[k] * weights[node + k * sizes[layer]];
 					}
 				}
 				
-				layers[layer].setError(node, error);
-				layers[layer].setDelta(node, error * output * (1 - output));
+				layers[layer].errors[node] = error;
+				layers[layer].deltas[node] = error * output * (1 - output);
 			}
 		}
 	}
 	
 	private void adjustWeights() {
 		for (int layer = 1; layer <= outputLayer; layer++) {
-			Double[] incoming = layers[layer - 1].getOutputs();
-			Double[] deltas = layers[layer].getDeltas();
-			Double[] changes = layers[layer].getChanges();
+			double[] incoming = layers[layer - 1].outputs;
+			double[] deltas = layers[layer].deltas;
+			double[] changes = layers[layer].changes;
 			
 			for (int node = 0; node < sizes[layer]; node++) {
 				double delta = deltas[node];
@@ -162,19 +160,19 @@ public class NeuralNet {
 					
 					change = (learningRate * delta * incoming[k]) + (momentum * change);
 					
-					layers[layer].setChange(idx, change);
-					layers[layer].incrememntWeight(idx, change);
+					layers[layer].changes[idx] = change;
+					layers[layer].weights[idx] += change;
 				}
 				
-				layers[layer].incrememntBias(node, learningRate * delta);
+				layers[layer].biases[node] += learningRate * delta;
 			}
 		}
 	}
 	
-	private Double[] randos(int size) {
+	private double[] randos(int size) {
 		Random rand = new Random();
 		
-		Double[] rands = new Double[size];
+		double[] rands = new double[size];
 		
 		for (int i = 0; i < size; i++)
 			rands[i] = rand.nextDouble();
@@ -182,12 +180,7 @@ public class NeuralNet {
 		return rands;
 	}
 	
-	private Double[] zeros(int size) {
-		Double[] zeros = new Double[size];
-		
-		for (int i = 0; i < size; i++)
-			zeros[i] = Double.valueOf(0.0);
-		
-		return zeros;
+	private double[] zeros(int size) {
+		return new double[size];
 	}
 }

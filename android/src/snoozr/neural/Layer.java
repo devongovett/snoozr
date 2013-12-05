@@ -1,8 +1,5 @@
 package snoozr.neural;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import com.cedarsoftware.util.io.JsonReader;
 import com.cedarsoftware.util.io.JsonWriter;
 
@@ -12,36 +9,25 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 public class Layer {	
-	private ArrayList<Double> deltas;
-	private ArrayList<Double> errors;
-	private ArrayList<Double> outputs;
-	private ArrayList<Double> biases;
-	private ArrayList<Double> weights;
-	private ArrayList<Double> changes;
+	public double[] deltas;
+	public double[] errors;
+	public double[] outputs;
+	public double[] biases;
+	public double[] weights;
+	public double[] changes;
 	
-	public Layer() {		
-		deltas = new ArrayList<Double>();
-		errors = new ArrayList<Double>();
-		outputs = new ArrayList<Double>();
-		biases = new ArrayList<Double>();
-		weights = new ArrayList<Double>();
-		changes = new ArrayList<Double>();
+	public Layer(double[] deltas, double[] errors, double[] outputs) {
+		this.deltas = deltas;
+		this.errors = errors;
+		this.outputs = outputs;
 	}
 	
-	public Layer(Double[] deltas, Double[] errors, Double[] outputs) {
-		this();
-		
-		this.deltas.addAll(Arrays.asList(deltas));
-		this.errors.addAll(Arrays.asList(errors));
-		this.outputs.addAll(Arrays.asList(outputs));
-	}
-	
-	public Layer(Double[] deltas, Double[] errors, Double[] outputs, Double[] biases, Double[] weights, Double[] changes) {
+	public Layer(double[] deltas, double[] errors, double[] outputs, double[] biases, double[] weights, double[] changes) {
 		this(deltas, errors, outputs);
 
-		this.biases.addAll(Arrays.asList(biases));
-		this.weights.addAll(Arrays.asList(weights));
-		this.changes.addAll(Arrays.asList(changes));
+		this.biases = biases;
+		this.weights = weights;
+		this.changes = changes;
 	}
 	
 	public static Layer fromDB(Context context, String key) {
@@ -64,7 +50,7 @@ public class Layer {
 			
 			return (Layer) JsonReader.jsonToJava(json);
 		} catch (Exception e) {
-			return new Layer();
+			return null;
 		}
 	}
 	
@@ -90,59 +76,6 @@ public class Layer {
 	}
 	
 	public int size() {
-		return deltas.size();
-	}
-	
-	public Double[] getDeltas() {
-		return deltas.toArray(new Double[deltas.size()]);
-	}
-	
-	public Double[] getErrors() {
-		return errors.toArray(new Double[errors.size()]);
-	}
-	
-	public Double[] getOutputs() {
-		return outputs.toArray(new Double[outputs.size()]);
-	}
-	
-	public Double[] getWeights() {
-		return weights.toArray(new Double[weights.size()]);
-	}
-	
-	public Double[] getChanges() {
-		return changes.toArray(new Double[changes.size()]);
-	}
-	
-	public double getBias(int ndx) {
-		return biases.get(ndx);
-	}
-	
-	public void setDelta(int index, double delta) {
-		deltas.set(index, delta);
-	}
-	
-	public void setError(int index, double error) {
-		errors.set(index, error);
-	}
-	
-	public void setChange(int index, double change) {
-		changes.set(index, change);
-	}
-	
-	public void setOutput(int index, double output) {
-		outputs.set(index, output);
-	}
-	
-	public void incrememntWeight(int index, double delta) {
-		weights.set(index, weights.get(index) + delta);
-	}
-	
-	public void incrememntBias(int index, double delta) {
-		biases.set(index, biases.get(index) + delta);
-	}
-	
-	public void replaceOutputs(Double[] vals) {
-		for (int i = 0; i < vals.length; i++)
-			outputs.set(i, vals[i]);
+		return deltas.length;
 	}
 }
