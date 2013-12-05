@@ -18,7 +18,7 @@ public class SettingsFragment extends PreferenceFragment {
     @Override
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.layout.activity_settings);
+        addPreferencesFromResource(R.layout.settings);
         
         final Context context = this.getActivity();
         
@@ -30,7 +30,7 @@ public class SettingsFragment extends PreferenceFragment {
                 final Dialog dialog = new Dialog(getActivity());
                 dialog.setContentView(R.layout.simple_dialog);
                 dialog.setTitle("Confirmation");
-                //ImageView image = (ImageView) dialog.findViewById(R.drawable.adp_login_normal);
+
                 final TextView text = (TextView) dialog.findViewById(R.id.simple_dialot_text);
                 final Button cancel = (Button) dialog.findViewById(R.id.simple_dialog_cancel);
                 final Button confirm = (Button) dialog.findViewById(R.id.simple_dialog_confirm);
@@ -66,7 +66,7 @@ public class SettingsFragment extends PreferenceFragment {
                 final Dialog dialog = new Dialog(getActivity());
                 dialog.setContentView(R.layout.simple_dialog);
                 dialog.setTitle(getActivity().getResources().getString(R.string.about));
-                //ImageView image = (ImageView) dialog.findViewById(R.drawable.adp_login_normal);
+
                 final TextView text = (TextView) dialog.findViewById(R.id.simple_dialot_text);
                 ((Button) dialog.findViewById(R.id.simple_dialog_cancel)).setVisibility(View.GONE);
                 final Button confirm = (Button) dialog.findViewById(R.id.simple_dialog_confirm);

@@ -24,9 +24,6 @@
         <Preference
             android:key="about"
             android:title="@string/about"/>
-        <ListPreference
-            android:key="version"
-            android:title="@string/version" />
     </PreferenceCategory>
     <PreferenceCategory 
         android:title="@string/dangerZone"
