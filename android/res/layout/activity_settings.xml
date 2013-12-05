@@ -1,14 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
-
-    <ListView
-            android:id="@android:id/list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left|center_vertical"/>
-
-</LinearLayout>
+<PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory 
+        android:title="@string/settings"
+        android:key="settingsLabel">
+        <ListPreference 
+            android:key="allowedSnoozes"
+            android:title="@string/allowedSnoozes"
+            android:entries="@array/numSnoozes"
+            android:entryValues="@array/numSnoozes" />
+        <ListPreference
+            android:key="sleepCycle"
+            android:title="@string/sleepCycle"
+            android:entries="@array/sleepCycle"
+            android:entryValues="@array/sleepCycle" />
+        <ListPreference
+            android:key="sound"
+            android:title="@string/sound"
+            android:entries="@array/alarmSounds"
+            android:entryValues="@array/alarmSounds" />
+    </PreferenceCategory>
+    <PreferenceCategory 
+        android:title="@string/about"
+        android:key="aboutLabel">
+        <Preference
+            android:key="about"
+            android:title="@string/about"/>
+        <ListPreference
+            android:key="version"
+            android:title="@string/version" />
+    </PreferenceCategory>
+    <PreferenceCategory 
+        android:title="@string/dangerZone"
+        android:key="dangerLabel">  
+        <Preference
+            android:key="resetSchedule"
+            android:title="@string/resetSchedule" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/copyright"
+        android:key="copyRight"/>
+</PreferenceScreen>
