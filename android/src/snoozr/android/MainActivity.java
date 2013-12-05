@@ -31,6 +31,8 @@ public class MainActivity extends Activity implements OnGestureListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
+        alarmTime = AlarmPredictor.getInstance(this).getPrediction();
+        
         final ImageButton sleep = (ImageButton) findViewById(R.id.sleep_button);
         final ImageButton settings = (ImageButton) findViewById(R.id.settings_button);
         
