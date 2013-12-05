@@ -97,6 +97,9 @@
     [self setStatusShowing:YES afterDelay:animated ? 0 : 0.5 completion:^(BOOL done) {
         [weakSelf setStatusShowing:NO afterDelay:2 completion:nil];
     }];
+    
+    alarm.date = [[SNAlarmPredictor shared] predictAlarmTimeForDate:[NSDate tomorrow]];
+    self.dateTimeView.date = alarm.date;
 }
 
 - (void)didReceiveMemoryWarning
@@ -166,7 +169,12 @@
             CGPoint translatedPoint = [recognizer translationInView:self.view];
             int sectionInverse = 3 - section + 1;
             int velocity = sectionInverse * sectionInverse * 7;
-            alarm.date = [_startDate dateByAddingTimeInterval:translatedPoint.y * velocity];
+            
+            NSDate *newDate = [_startDate dateByAddingTimeInterval:translatedPoint.y * velocity];
+            if ([newDate compare:[NSDate nextMinute]] < 0)
+                newDate = [NSDate nextMinute];
+            
+            alarm.date = newDate;
             self.dateTimeView.date = alarm.date;
         }
         
@@ -188,7 +196,8 @@
     [UIView commitAnimations];
     
     _gestureRecognizer.enabled = sender.on;
-    alarm.enabled = sender.on;
+    if (alarm.enabled && !sender.on)
+        alarm.enabled = NO;
 }
 
 - (void)learnSwitchChanged:(UISwitch *)sender

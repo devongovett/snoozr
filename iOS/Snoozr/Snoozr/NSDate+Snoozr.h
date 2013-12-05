@@ -13,7 +13,7 @@
 @property (readonly) NSString *greeting;
 
 - (NSDate *)dateRoundedToMinutes;
-
 + (NSDate *)tomorrow;
++ (NSDate *)nextMinute;
 
 @end

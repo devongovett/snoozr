@@ -12,7 +12,6 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -37,7 +36,9 @@ public class AlarmActivity extends Activity{
 
 		time.setText(DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT).format(cal.getTime()));
 		
-		String sound = getSharedPreferences("snoozr.android", Context.MODE_PRIVATE).getString("sound", "");
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		
+		String sound = prefs.getString("sound", "");
 		int type = R.raw.church_bells;
 		
 		if (getString(R.string.alarm).equals(sound))
@@ -66,19 +67,9 @@ public class AlarmActivity extends Activity{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
 		int maxSnoozes = Integer.parseInt(prefs.getString("allowedSnoozes", "5"));
-		
-		final int numSnoozes = getIntent().getIntExtra("snoozes", 0);
-		Log.w("NUM SNOOZES", "" + numSnoozes);
-		Log.w("NUM SNOOZES", "" + numSnoozes);
-		Log.w("NUM SNOOZES", "" + numSnoozes);
-		Log.w("NUM SNOOZES", "" + numSnoozes);
-		Log.w("NUM SNOOZES", "" + numSnoozes);
-		Log.w("NUM SNOOZES", "" + numSnoozes);
-		Log.w("NUM SNOOZES", "" + numSnoozes);
-		Log.w("NUM SNOOZES", "" + numSnoozes);
-		Log.w("NUM SNOOZES", "" + numSnoozes);
+		final int numSnoozes = getIntent().getIntExtra("snoozes", maxSnoozes);
 
 		if (numSnoozes >= maxSnoozes)
 			snooze.setVisibility(View.GONE);

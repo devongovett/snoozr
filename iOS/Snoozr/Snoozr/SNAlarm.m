@@ -27,7 +27,7 @@
 
 - (void)setDate:(NSDate *)date
 {
-    _date = date;
+    _date = [date dateRoundedToMinutes];
     if (self.enabled)
         [self schedule];
 }
@@ -90,7 +90,11 @@
     while (wakeTime + sleepCycle <= latestTime)
         wakeTime += sleepCycle;
     
-    return [NSDate dateWithTimeIntervalSinceReferenceDate:wakeTime];
+    NSDate *res = [NSDate dateWithTimeIntervalSinceReferenceDate:wakeTime];
+    if ([res compare:[NSDate nextMinute]] < 0)
+        return self.date;
+    
+    return res;
 }
 
 - (void)adjustForSleepCycle
