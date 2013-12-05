@@ -82,7 +82,7 @@
     
     UISwitch *learnSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(SETTINGS_WIDTH - 60, 115, 0, 0)];
     learnSwitch.on = YES;
-//    [learnSwitch addTarget:self action:@selector(learnSwitchChanged:) forControlEvents:UIControlEventValueChanged];
+    [learnSwitch addTarget:self action:@selector(learnSwitchChanged:) forControlEvents:UIControlEventValueChanged];
     [learnSwitch sizeToFit];
     [settingsView addSubview:learnSwitch];
 
@@ -189,6 +189,11 @@
     
     _gestureRecognizer.enabled = sender.on;
     alarm.enabled = sender.on;
+}
+
+- (void)learnSwitchChanged:(UISwitch *)sender
+{
+    alarm.learn = sender.on;
 }
 
 - (IBAction)sleep:(id)sender
