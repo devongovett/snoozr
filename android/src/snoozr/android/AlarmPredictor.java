@@ -11,6 +11,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+/****
+ * Wrapper for the neural net calls
+ * 
+ * @author Donovan McKelvey
+ *
+ */
 public class AlarmPredictor {	
 	private static final double[] DAY_IN = {0.000, 0.167, 0.333, 0.50, 0.667, 0.833, 1.000};
 	private static final int ROUND_TIME = 5;
@@ -24,6 +30,12 @@ public class AlarmPredictor {
 	private int count[];
 	private double sum[];
 	
+	/****
+	 * Returns the singleton AlarmPredictor, instantiating it if needed
+	 * 
+	 * @param context
+	 * @return the singleton AlarmPredictor
+	 */
 	public static AlarmPredictor getInstance(Context context) {
 		if (predictor == null)
 			predictor = new AlarmPredictor(context);
@@ -31,6 +43,11 @@ public class AlarmPredictor {
 		return predictor;
 	}
 	
+	/****
+	 * Creates an AlarmPredictor and loads it with the data in the database
+	 * 
+	 * @param context
+	 */
 	private AlarmPredictor(Context context) {
 		this.context = context;
 		
@@ -75,6 +92,12 @@ public class AlarmPredictor {
 		}
 	}
 	
+	/****
+	 * Gets the day of week associated with the training record input
+	 * 
+	 * @param val The training record input value
+	 * @return The index for the day this value represents
+	 */
 	private int getDateFromFraction(double val) {
 		for (int i = 0; i < 7; i++)
 			if (DAY_IN[i] == val)
@@ -82,6 +105,9 @@ public class AlarmPredictor {
 		return 0;
 	}
 	
+	/****
+	 * Creates a new neural net and trains it with the current records
+	 */
 	private void getTrainedNet() {
 		net = new NeuralNet(1, 1);
 		net.minError = 0.0001;
@@ -90,6 +116,9 @@ public class AlarmPredictor {
 		net.train(records);
 	}
 	
+	/****
+	 * Saves the neural net and all of the training data to the database
+	 */
 	private void save() {
 		DatabaseHelper dbHelper = new DatabaseHelper(context);
 		SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -101,6 +130,9 @@ public class AlarmPredictor {
 		net.writeToDB(context);
 	}
 	
+	/****
+	 * Resets the neural net and clears all of the training data
+	 */
 	public void reset() {
 		records = new TrainingRecord[0];
 		count = new int[7];
@@ -109,6 +141,11 @@ public class AlarmPredictor {
 		save();
 	}
 	
+	/****
+	 * Add a training record
+	 * 
+	 * @param date The time the alarm was scheduled for
+	 */
 	public void addRecord(Date date) {
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(date);
@@ -126,6 +163,11 @@ public class AlarmPredictor {
 		save();
 	}
 	
+	/****
+	 * Gets the predicted time for the next alarm
+	 * 
+	 * @return The time predicted for the next alarm
+	 */
 	public Date getPrediction() {
 		Calendar cal = Calendar.getInstance();
 		

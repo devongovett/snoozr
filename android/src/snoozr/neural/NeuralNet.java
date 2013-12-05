@@ -10,6 +10,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+/****
+ * A Neural Net
+ * 
+ * @author Donovan McKelvey
+ *
+ */
 public class NeuralNet {
 	public static final int DEFAULT_MAX_ITERATIONS = 20000;
 	public static final double DEFAULT_MIN_ERROR = 0.005;
@@ -26,6 +32,12 @@ public class NeuralNet {
 	public double learningRate;
 	public double momentum;
 	
+	/****
+	 * Loads the neural net saved in the database
+	 * 
+	 * @param context
+	 * @return the Neural Net stored in the database
+	 */
 	public static NeuralNet fromDB(Context context) {
 		try {
 			DatabaseHelper dbHelper = new DatabaseHelper(context);
@@ -49,6 +61,12 @@ public class NeuralNet {
 		}
 	}
 	
+	/****
+	 * Saves this neural net to the database
+	 * 
+	 * @param context
+	 * @return whether or not the save was successful
+	 */
 	public boolean writeToDB(Context context) {
 		try {
 			String json = JsonWriter.objectToJson(this);
@@ -71,10 +89,23 @@ public class NeuralNet {
 		}
 	}
 	
+	/****
+	 * Creates a neural net with no specified hidden layers
+	 * 
+	 * @param numInputs
+	 * @param numOutputs
+	 */
 	public NeuralNet(int numInputs, int numOutputs) {
 		this(numInputs, null, numOutputs);
 	}
 	
+	/****
+	 * Creates a neural net with the specified hidden layers
+	 * 
+	 * @param numInputs
+	 * @param hiddenLayers
+	 * @param numOutputs
+	 */
 	public NeuralNet(int numInputs, Layer[] hiddenLayers, int numOutputs) {
 		maxIterations = DEFAULT_MAX_ITERATIONS;
 		minError = DEFAULT_MIN_ERROR;
@@ -113,6 +144,12 @@ public class NeuralNet {
 		}
 	}
 	
+	/****
+	 * Trains the neural net
+	 * 
+	 * @param records The data to train the Neural Net with
+	 * @return the error of the net
+	 */
 	public double train(TrainingRecord[] records) {
 		if (isTrained)
 			return -1;
@@ -130,6 +167,12 @@ public class NeuralNet {
 		return error;
 	}
 	
+	/****
+	 * Trains a single data point
+	 * 
+	 * @param record
+	 * @return the error
+	 */
 	private double trainPattern(TrainingRecord record) {
 		// forward propogate
 		runInput(record.getInputs());
@@ -148,6 +191,12 @@ public class NeuralNet {
 		return sum / sizes[outputLayer];
 	}
 	
+	/****
+	 * Runs input data and returns the neural net predicted output
+	 * 
+	 * @param input The input data
+	 * @return The output predicted by the neural net
+	 */
 	public double[] runInput(double... input) {
 		System.arraycopy(input, 0, layers[0].outputs, 0, input.length);
 		
@@ -170,6 +219,11 @@ public class NeuralNet {
 		return layers[outputLayer].outputs;
 	}
 	
+	/****
+	 * calculates the deltas during training
+	 * 
+	 * @param target
+	 */
 	private void calculateDeltas(double[] target) {
 		for (int layer = outputLayer; layer >= 0; layer--) {
 			double[] outputs = layers[layer].outputs;
@@ -196,6 +250,9 @@ public class NeuralNet {
 		}
 	}
 	
+	/****
+	 * properly adjusts the weights during training
+	 */
 	private void adjustWeights() {
 		for (int layer = 1; layer <= outputLayer; layer++) {
 			double[] incoming = layers[layer - 1].outputs;
@@ -220,6 +277,12 @@ public class NeuralNet {
 		}
 	}
 	
+	/****
+	 * creates an array of random numbers
+	 * 
+	 * @param size the size of the array
+	 * @return the random valued array
+	 */
 	private double[] randos(int size) {
 		Random rand = new Random();
 		
@@ -231,6 +294,12 @@ public class NeuralNet {
 		return rands;
 	}
 	
+	/****
+	 * creates an array of 0s
+	 * 
+	 * @param size the size of the array
+	 * @return the zeroed array
+	 */
 	private double[] zeros(int size) {
 		return new double[size];
 	}
