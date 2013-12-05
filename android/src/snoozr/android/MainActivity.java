@@ -6,6 +6,8 @@ import java.util.Date;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.view.Display;
 import android.view.GestureDetector.OnGestureListener;
@@ -14,6 +16,7 @@ import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,7 +34,9 @@ public class MainActivity extends Activity implements OnGestureListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        alarmTime = AlarmPredictor.getInstance(this).getPrediction();
+        final Context context = this;
+        
+        alarmTime = AlarmPredictor.getInstance(context).getPrediction();
         
         final ImageButton sleep = (ImageButton) findViewById(R.id.sleep_button);
         final ImageButton settings = (ImageButton) findViewById(R.id.settings_button);
@@ -48,12 +53,30 @@ public class MainActivity extends Activity implements OnGestureListener{
 			@Override
 			public void onClick(View arg0) {
 				
-				Utilities.setupAlarm(alarmTime, MainActivity.this, 0);
+				final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.simple_dialog);
+                dialog.setTitle("Sleep Cycle");
+                final TextView text = (TextView) dialog.findViewById(R.id.simple_dialot_text);
+                final Button cancel = (Button) dialog.findViewById(R.id.simple_dialog_cancel);
+                final Button confirm = (Button) dialog.findViewById(R.id.simple_dialog_confirm);
+                   
+                text.setText("Should change cycle?");
+                    
+                cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                       setAlarm();
+                    }
+                });
 
-                Toast toast = Toast.makeText(MainActivity.this,
-                        "Sleep tight!", Toast.LENGTH_LONG);
-                toast.show();
-                finish();
+                confirm.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                    	setAlarm();
+                    }
+                });
+
+                dialog.show();
 			}  	
         }); 
         
@@ -63,6 +86,15 @@ public class MainActivity extends Activity implements OnGestureListener{
 				startActivity(new Intent(MainActivity.this, SettingsActivity.class));
 			}  	
         }); 
+    }
+    
+    private void setAlarm() {
+    	Utilities.setupAlarm(alarmTime, MainActivity.this, 0);
+
+        Toast toast = Toast.makeText(MainActivity.this,
+                "Sleep tight!", Toast.LENGTH_LONG);
+        toast.show();
+        finish();
     }
 
 
