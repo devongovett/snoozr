@@ -26,6 +26,11 @@
     <string name="confirmDelete">Are you sure you want to delete your setting configurations?</string>
     <string name="Ok">OK</string>
     
+    <string name="alarm">Alarm</string>
+    <string name="beep">Beep</string>
+    <string name="church_bells">Church Bells</string>
+    <string name="police">Police</string>
+    
     <string-array name="settings">
         <item>@string/settings</item>
         <item>@string/allowedSnoozes</item>
@@ -56,10 +61,10 @@
     </string-array>
     
     <string-array name="alarmSounds">
-        <item>Alarm</item>
-        <item>Church Bells</item>
-        <item>Beep</item>
-        <item>Police</item>
+        <item>@string/alarm</item>
+        <item>@string/beep</item>
+        <item>@string/church_bells</item>
+        <item>@string/police</item>
     </string-array>
     
     <string name="authors">Devon Govett\nNico Higuera\nDonovan McKelvey\nEric Thorndyke\n\nCurrent Version: 1.0</string>

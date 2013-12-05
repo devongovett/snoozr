@@ -33,10 +33,20 @@ public class AlarmActivity extends Activity{
 		final Button snooze = (Button) findViewById(R.id.snoozeButton);
 
 		time.setText(DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT).format(cal.getTime()));
-
+		
+		String sound = getSharedPreferences("snoozr.android", Context.MODE_PRIVATE).getString("sound", "");
+		int type = R.raw.church_bells;
+		
+		if (getString(R.string.alarm).equals(sound))
+			type = R.raw.alarm;
+		else if (getString(R.string.beep).equals(sound))
+			type = R.raw.beep;
+		else if (getString(R.string.police).equals(sound))
+			type = R.raw.police;
+		
 		try {
 			mPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
-			mPlayer.setDataSource(this, Uri.parse("android.resource://snoozr.android/" + R.raw.church_bells));
+			mPlayer.setDataSource(this, Uri.parse("android.resource://snoozr.android/" + type));
 			mPlayer.setLooping(true);
 			mPlayer.prepare();
 			mPlayer.start();

@@ -111,10 +111,14 @@ public class MainActivity extends Activity implements OnGestureListener{
     	int cycleTime = getSharedPreferences("snoozr.android", Context.MODE_PRIVATE).getInt("sleepCycle", 90);
     	
     	cal.add(Calendar.MINUTE, 14);
-    	while (cal.getTime().before(alarmTime))
-    		cal.add(Calendar.MINUTE, cycleTime);
     	
-    	if (cal.getTime().after(alarmTime))
+    	boolean noCycles = true;
+    	while (cal.getTime().before(alarmTime)) {
+    		cal.add(Calendar.MINUTE, cycleTime);
+    		noCycles = false;
+    	}
+    	
+    	if (!noCycles && cal.getTime().after(alarmTime))
     		cal.add(Calendar.MINUTE, -cycleTime);
     	
     	return cal.getTime();
@@ -132,6 +136,14 @@ public class MainActivity extends Activity implements OnGestureListener{
     	cal.setTime(alarmTime);
     	cal.add(Calendar.MINUTE, addMin);
     	alarmTime = cal.getTime();
+    	
+    	if (alarmTime.before(new Date())) {
+    		cal = Calendar.getInstance();
+    		cal.set(Calendar.SECOND, 0);
+    		cal.set(Calendar.MILLISECOND, 0);
+    		cal.add(Calendar.MINUTE, 1);
+    		alarmTime = cal.getTime();
+    	}
 
     	hrMin.setText(timeParse.format(alarmTime));
     	amPm.setText(cal.get(Calendar.AM_PM) == Calendar.AM 
