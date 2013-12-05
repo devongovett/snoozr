@@ -6,6 +6,8 @@ import java.util.Date;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.view.Display;
 import android.view.GestureDetector.OnGestureListener;
@@ -14,6 +16,7 @@ import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,7 +34,9 @@ public class MainActivity extends Activity implements OnGestureListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        alarmTime = AlarmPredictor.getInstance(this).getPrediction();
+        final Context context = this;
+        
+        alarmTime = AlarmPredictor.getInstance(context).getPrediction();
         
         final ImageButton sleep = (ImageButton) findViewById(R.id.sleep_button);
         final ImageButton settings = (ImageButton) findViewById(R.id.settings_button);
@@ -48,12 +53,36 @@ public class MainActivity extends Activity implements OnGestureListener{
 			@Override
 			public void onClick(View arg0) {
 				
-				Utilities.setupAlarm(alarmTime, MainActivity.this, 0);
+				final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.simple_dialog);
+                dialog.setTitle("Sleep Cycle");
+                final TextView text = (TextView) dialog.findViewById(R.id.simple_dialot_text);
+                final Button cancel = (Button) dialog.findViewById(R.id.simple_dialog_cancel);
+                final Button confirm = (Button) dialog.findViewById(R.id.simple_dialog_confirm);
+                
+                cancel.setText("Use set time");
+                confirm.setText("Adjust for cycle");
+                
+                final Date cycle = getSleepCycleTime();
+                   
+                text.setText("Do you want to adjust your alarm to " + timeParse.format(cycle) + " to account for your sleep cycle?");
+                    
+                cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                       setAlarm();
+                    }
+                });
 
-                Toast toast = Toast.makeText(MainActivity.this,
-                        "Sleep tight!", Toast.LENGTH_LONG);
-                toast.show();
-                finish();
+                confirm.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                    	alarmTime = cycle;
+                    	setAlarm();
+                    }
+                });
+
+                dialog.show();
 			}  	
         }); 
         
@@ -64,7 +93,32 @@ public class MainActivity extends Activity implements OnGestureListener{
 			}  	
         }); 
     }
+    
+    private void setAlarm() {
+    	Utilities.setupAlarm(alarmTime, MainActivity.this, 0);
 
+        Toast toast = Toast.makeText(MainActivity.this,
+                "Sleep tight!", Toast.LENGTH_LONG);
+        toast.show();
+        finish();
+    }
+
+    private Date getSleepCycleTime() {
+    	Calendar cal = Calendar.getInstance();
+    	cal.set(Calendar.SECOND, 0);
+    	cal.set(Calendar.MILLISECOND, 0);
+    	
+    	int cycleTime = getSharedPreferences("snoozr.android", Context.MODE_PRIVATE).getInt("sleepCycle", 90);
+    	
+    	cal.add(Calendar.MINUTE, 14);
+    	while (cal.getTime().before(alarmTime))
+    		cal.add(Calendar.MINUTE, cycleTime);
+    	
+    	if (cal.getTime().after(alarmTime))
+    		cal.add(Calendar.MINUTE, -cycleTime);
+    	
+    	return cal.getTime();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

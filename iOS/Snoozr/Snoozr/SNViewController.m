@@ -8,7 +8,7 @@
 
 #import "SNViewController.h"
 #import "SNDateTimeView.h"
-#import "NSDate+Greeting.h"
+#import "NSDate+Snoozr.h"
 #import "SNSettings.h"
 #import "SNAlarm.h"
 #import "SNAlarmPredictor.h"

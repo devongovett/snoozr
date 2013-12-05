@@ -82,6 +82,7 @@
 {    
     if (self = [super init]) {
         records = [[NSMutableArray alloc] init];
+        [self initNeuralNet];
     }
     
     return self;

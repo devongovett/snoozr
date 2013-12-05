@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Snoozr. All rights reserved.
 //
 
-#import "NSDate+Greeting.h"
+#import "NSDate+Snoozr.h"
 
-@implementation NSDate (Greeting)
+@implementation NSDate (Snoozr)
 
 - (NSString *)greeting
 {
@@ -34,8 +34,14 @@
 {
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:now];
-    components.day++;
+    NSDateComponents *components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit |NSHourCalendarUnit) fromDate:now];
+    
+    // if past 5am, increase the day, otherwise "tomorrow" is
+    // technically the same day (after sleep)
+    if (components.hour > 5)
+        components.day++;
+    
+    components.hour = 0;
     return [calendar dateFromComponents:components];
 }
 
