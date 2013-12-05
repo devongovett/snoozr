@@ -62,5 +62,5 @@
         <item>Police</item>
     </string-array>
     
-    <string name="authors">Devon Govett\nNico Higuera\nDonovan McKelvey\nEric Thorndyke</string>
+    <string name="authors">Devon Govett\nNico Higuera\nDonovan McKelvey\nEric Thorndyke\n\nCurrent Version: 1.0</string>
 </resources>
