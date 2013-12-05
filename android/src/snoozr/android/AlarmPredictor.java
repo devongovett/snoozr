@@ -24,7 +24,7 @@ public class AlarmPredictor {
 	private int count[];
 	private double sum[];
 	
-	public AlarmPredictor getInstance(Context context) {
+	public static AlarmPredictor getInstance(Context context) {
 		if (predictor == null)
 			predictor = new AlarmPredictor(context);
 		

@@ -22,6 +22,9 @@ public class AlarmActivity extends Activity{
         setContentView(R.layout.activity_alarm);
 		
         final Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        
         final MediaPlayer mPlayer = new MediaPlayer();
         
         final TextView time = (TextView) findViewById(R.id.curAlarmTime);
@@ -63,7 +66,7 @@ public class AlarmActivity extends Activity{
 			public void onClick(View v) {
 				mPlayer.stop();
 				cal.add(Calendar.MINUTE, 5);
-				Utilities.setupAlarm(cal.getTime(), AlarmActivity.this);
+				Utilities.setupAlarm(cal.getTime(), AlarmActivity.this, true);
 				
                 Toast toast = Toast.makeText(AlarmActivity.this,
                         "Snoozing for 5 more minutes", Toast.LENGTH_LONG);
@@ -71,5 +74,8 @@ public class AlarmActivity extends Activity{
 				finish();
 			}
         });
+        
+        if (getIntent().getBooleanExtra("snooze", false))
+        	AlarmPredictor.getInstance(this).addRecord(cal.getTime());
 	}
 }
