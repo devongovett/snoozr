@@ -34,8 +34,14 @@
 {
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:now];
-    components.day++;
+    NSDateComponents *components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit |NSHourCalendarUnit) fromDate:now];
+    
+    // if past 5am, increase the day, otherwise "tomorrow" is
+    // technically the same day (after sleep)
+    if (components.hour > 5)
+        components.day++;
+    
+    components.hour = 0;
     return [calendar dateFromComponents:components];
 }
 
