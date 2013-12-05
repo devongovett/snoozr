@@ -111,10 +111,14 @@ public class MainActivity extends Activity implements OnGestureListener{
     	int cycleTime = getSharedPreferences("snoozr.android", Context.MODE_PRIVATE).getInt("sleepCycle", 90);
     	
     	cal.add(Calendar.MINUTE, 14);
-    	while (cal.getTime().before(alarmTime))
-    		cal.add(Calendar.MINUTE, cycleTime);
     	
-    	if (cal.getTime().after(alarmTime))
+    	boolean noCycles = true;
+    	while (cal.getTime().before(alarmTime)) {
+    		cal.add(Calendar.MINUTE, cycleTime);
+    		noCycles = false;
+    	}
+    	
+    	if (!noCycles && cal.getTime().after(alarmTime))
     		cal.add(Calendar.MINUTE, -cycleTime);
     	
     	return cal.getTime();
