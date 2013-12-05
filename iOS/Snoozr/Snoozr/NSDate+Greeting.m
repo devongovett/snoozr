@@ -30,4 +30,13 @@
     return [NSDate dateWithTimeIntervalSinceReferenceDate:timeInterval];
 }
 
++ (NSDate *)tomorrow
+{
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:now];
+    components.day++;
+    return [calendar dateFromComponents:components];
+}
+
 @end

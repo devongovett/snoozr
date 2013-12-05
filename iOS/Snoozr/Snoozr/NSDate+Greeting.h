@@ -14,4 +14,6 @@
 
 - (NSDate *)dateRoundedToMinutes;
 
++ (NSDate *)tomorrow;
+
 @end
