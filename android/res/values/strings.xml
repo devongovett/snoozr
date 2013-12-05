@@ -67,5 +67,5 @@
         <item>@string/police</item>
     </string-array>
     
-    <string name="authors">Devon Govett\nNico Higuera\nDonovan McKelvey\nEric Thorndyke\n\nCurrent Version: 1.0</string>
+    <string name="authors">Created By:\n\tDevon Govett\n\tNico Higuera\n\tDonovan McKelvey\n\tEric Thorndyke\n\nCurrent Version: 1.0</string>
 </resources>

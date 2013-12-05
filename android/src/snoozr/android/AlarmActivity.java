@@ -2,6 +2,7 @@ package snoozr.android;
 
 import java.io.IOException;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import android.app.Activity;
@@ -31,10 +32,14 @@ public class AlarmActivity extends Activity{
 		final MediaPlayer mPlayer = new MediaPlayer();
 
 		final TextView time = (TextView) findViewById(R.id.curAlarmTime);
+		final TextView timeOfDay = (TextView) findViewById(R.id.curAlarmTimeOfDay);
 		final Button dismiss = (Button) findViewById(R.id.dismissButton);
 		final Button snooze = (Button) findViewById(R.id.snoozeButton);
 
-		time.setText(DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT).format(cal.getTime()));
+		//time.setText(DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT).format(cal.getTime()));
+		time.setText(new SimpleDateFormat("h:mm").format(cal.getTime()));
+		timeOfDay.setText(new SimpleDateFormat("a").format(cal.getTime()));
+		
 		
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		
@@ -86,7 +91,7 @@ public class AlarmActivity extends Activity{
 			@Override
 			public void onClick(View v) {
 				mPlayer.stop();
-				cal.add(Calendar.MINUTE, 0);
+				cal.add(Calendar.MINUTE, 5);
 				Utilities.setupAlarm(cal.getTime(), AlarmActivity.this, numSnoozes + 1);
 
 				Toast toast = Toast.makeText(AlarmActivity.this,
