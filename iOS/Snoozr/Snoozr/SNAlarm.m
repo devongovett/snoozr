@@ -90,7 +90,11 @@
     while (wakeTime + sleepCycle <= latestTime)
         wakeTime += sleepCycle;
     
-    return [NSDate dateWithTimeIntervalSinceReferenceDate:wakeTime];
+    NSDate *res = [NSDate dateWithTimeIntervalSinceReferenceDate:wakeTime];
+    if ([res compare:[NSDate date]] < 0)
+        return self.date;
+    
+    return res;
 }
 
 - (void)adjustForSleepCycle
