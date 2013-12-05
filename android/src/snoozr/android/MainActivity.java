@@ -59,8 +59,13 @@ public class MainActivity extends Activity implements OnGestureListener{
                 final TextView text = (TextView) dialog.findViewById(R.id.simple_dialot_text);
                 final Button cancel = (Button) dialog.findViewById(R.id.simple_dialog_cancel);
                 final Button confirm = (Button) dialog.findViewById(R.id.simple_dialog_confirm);
+                
+                cancel.setText("Use set time");
+                confirm.setText("Adjust for cycle");
+                
+                final Date cycle = getSleepCycleTime();
                    
-                text.setText("Should change cycle?");
+                text.setText("Do you want to adjust your alarm to " + timeParse.format(cycle) + " to account for your sleep cycle?");
                     
                 cancel.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -72,6 +77,7 @@ public class MainActivity extends Activity implements OnGestureListener{
                 confirm.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                    	alarmTime = cycle;
                     	setAlarm();
                     }
                 });
@@ -97,6 +103,22 @@ public class MainActivity extends Activity implements OnGestureListener{
         finish();
     }
 
+    private Date getSleepCycleTime() {
+    	Calendar cal = Calendar.getInstance();
+    	cal.set(Calendar.SECOND, 0);
+    	cal.set(Calendar.MILLISECOND, 0);
+    	
+    	int cycleTime = getSharedPreferences("snoozr.android", Context.MODE_PRIVATE).getInt("sleepCycle", 90);
+    	
+    	cal.add(Calendar.MINUTE, 14);
+    	while (cal.getTime().before(alarmTime))
+    		cal.add(Calendar.MINUTE, cycleTime);
+    	
+    	if (cal.getTime().after(alarmTime))
+    		cal.add(Calendar.MINUTE, -cycleTime);
+    	
+    	return cal.getTime();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
