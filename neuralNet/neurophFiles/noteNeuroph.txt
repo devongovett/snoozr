@@ -1,3 +1,0 @@
-compile with: javac -classpath neuroph-core-2.8.jar;. .\neurophFiles\adalineTest.java
-
-java -classpath neuroph-core-2.8.jar;. .\neurophFiles\adalineTest
