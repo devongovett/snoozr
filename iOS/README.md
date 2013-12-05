@@ -4,9 +4,9 @@ Snoozr iOS App
 This is the Snoozr iOS app. It uses [SNNeuralNet](https://github.com/devongovett/SNNeuralNet) to learn
 your sleep schedule over time, and set your wake-up alarm for you.
 
-<img src="http://f.cl.ly/items/323g1K2s1P1Q2z1b1k0J/photo%201.PNG" alt="Home Screen Image" width="320"/>
-<img src="http://f.cl.ly/items/303k3R1q1G0N1D0B3c3g/photo%202.PNG" alt="Settings Screen Image" width="320"/>
-<img src="http://f.cl.ly/items/2c1H371Q0i342L1E3g2j/photo%203.PNG" alt="Alarm Screen Image" width="320"/>
+<img src="http://f.cl.ly/items/323g1K2s1P1Q2z1b1k0J/photo%201.PNG" alt="Home Screen Image" width="200"/>
+<img src="http://f.cl.ly/items/303k3R1q1G0N1D0B3c3g/photo%202.PNG" alt="Settings Screen Image" width="200"/>
+<img src="http://f.cl.ly/items/2c1H371Q0i342L1E3g2j/photo%203.PNG" alt="Alarm Screen Image" width="200"/>
 
 ## Installation
 
