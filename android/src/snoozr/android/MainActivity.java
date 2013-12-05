@@ -134,7 +134,11 @@ public class MainActivity extends Activity implements OnGestureListener{
     	alarmTime = cal.getTime();
     	
     	if (alarmTime.before(new Date())) {
-    		alarmTime = new Date();
+    		cal = Calendar.getInstance();
+    		cal.set(Calendar.SECOND, 0);
+    		cal.set(Calendar.MILLISECOND, 0);
+    		cal.add(Calendar.MINUTE, 1);
+    		alarmTime = cal.getTime();
     	}
 
     	hrMin.setText(timeParse.format(alarmTime));
