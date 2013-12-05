@@ -27,7 +27,7 @@
 
 - (void)setDate:(NSDate *)date
 {
-    _date = date;
+    _date = [date dateRoundedToMinutes];
     if (self.enabled)
         [self schedule];
 }
