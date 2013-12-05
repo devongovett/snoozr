@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -108,7 +109,7 @@ public class MainActivity extends Activity implements OnGestureListener{
     	cal.set(Calendar.SECOND, 0);
     	cal.set(Calendar.MILLISECOND, 0);
     	
-    	int cycleTime = getSharedPreferences("snoozr.android", Context.MODE_PRIVATE).getInt("sleepCycle", 90);
+    	int cycleTime = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(this).getString("sleepCycle", "90"));
     	
     	cal.add(Calendar.MINUTE, 14);
     	

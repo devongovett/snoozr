@@ -6,10 +6,12 @@ import java.util.Calendar;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -34,7 +36,9 @@ public class AlarmActivity extends Activity{
 
 		time.setText(DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT).format(cal.getTime()));
 		
-		String sound = getSharedPreferences("snoozr.android", Context.MODE_PRIVATE).getString("sound", "");
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		
+		String sound = prefs.getString("sound", "");
 		int type = R.raw.church_bells;
 		
 		if (getString(R.string.alarm).equals(sound))
@@ -64,7 +68,7 @@ public class AlarmActivity extends Activity{
 			e.printStackTrace();
 		}
 
-		int maxSnoozes = getSharedPreferences("snoozr.android", Context.MODE_PRIVATE).getInt("allowedSnoozes", 5);
+		int maxSnoozes = Integer.parseInt(prefs.getString("allowedSnoozes", "5"));
 		final int numSnoozes = getIntent().getIntExtra("snoozes", maxSnoozes);
 
 		if (numSnoozes >= maxSnoozes)
