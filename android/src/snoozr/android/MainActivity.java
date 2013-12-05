@@ -132,6 +132,10 @@ public class MainActivity extends Activity implements OnGestureListener{
     	cal.setTime(alarmTime);
     	cal.add(Calendar.MINUTE, addMin);
     	alarmTime = cal.getTime();
+    	
+    	if (alarmTime.before(new Date())) {
+    		alarmTime = new Date();
+    	}
 
     	hrMin.setText(timeParse.format(alarmTime));
     	amPm.setText(cal.get(Calendar.AM_PM) == Calendar.AM 
