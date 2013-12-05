@@ -10,7 +10,7 @@
 #import "UIImage+ImageEffects.h"
 #import "UIColor+Hex.h"
 #import "SNSettings.h"
-#import "NSDate+Greeting.h"
+#import "NSDate+Snoozr.h"
 #import "SNAlarmPredictor.h"
 
 @implementation SNWakeViewController

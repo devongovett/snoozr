@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Snoozr. All rights reserved.
 //
 
-#import "NSDate+Greeting.h"
+#import "NSDate+Snoozr.h"
 
-@implementation NSDate (Greeting)
+@implementation NSDate (Snoozr)
 
 - (NSString *)greeting
 {

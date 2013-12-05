@@ -8,7 +8,7 @@
 
 
 
-@interface NSDate (Greeting)
+@interface NSDate (Snoozr)
 
 @property (readonly) NSString *greeting;
 
