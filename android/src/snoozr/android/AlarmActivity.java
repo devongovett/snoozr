@@ -75,7 +75,7 @@ public class AlarmActivity extends Activity{
 			}
         });
         
-        if (getIntent().getBooleanExtra("snooze", false))
+        if (! getIntent().getBooleanExtra("snooze", true))
         	AlarmPredictor.getInstance(this).addRecord(cal.getTime());
 	}
 }
