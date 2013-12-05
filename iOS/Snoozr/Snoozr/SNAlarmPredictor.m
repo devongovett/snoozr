@@ -141,12 +141,13 @@
 // Check if we have at least 1 full week of training data
 - (BOOL)hasFullWeek
 {
+    int count = 0;
     for (int i = 1; i <= 7; i++) {
-        if (counts[i] == 0)
-            return NO;
+        if (counts[i] != 0)
+            count++;
     }
     
-    return YES;
+    return count >= 5;
 }
 
 - (NSDate *)predictAlarmTimeForDate:(NSDate *)date

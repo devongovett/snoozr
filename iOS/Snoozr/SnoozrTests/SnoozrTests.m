@@ -60,8 +60,6 @@
     [predictor learnAlarmTimeForDate:[self dateWithWeekday:5 hours:8 minutes:20]];
     [predictor learnAlarmTimeForDate:[self dateWithWeekday:6 hours:9 minutes:45]];
 
-//    NSDate *date = [predictor predictAlarmTimeForDate:[NSDate date]];
-//    NSDate *date = [predictor predictAlarmTimeForDate:[self dateWithWeekday:7 hours:0 minutes:0]];
     NSDate *date = [predictor predictAlarmTimeForDate:[NSDate tomorrow]];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -69,9 +67,6 @@
     formatter.timeStyle = NSDateFormatterShortStyle;
     
     NSLog(@"%@", [formatter stringFromDate:date]);
-    
-//    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:predictor];
-//    NSLog(@"data length = %d", data.length);
 }
 
 @end
