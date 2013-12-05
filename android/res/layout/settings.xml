@@ -4,16 +4,19 @@
         android:key="settingsLabel">
         <ListPreference 
             android:key="allowedSnoozes"
+            android:defaultValue="3"
             android:title="@string/allowedSnoozes"
             android:entries="@array/numSnoozes"
             android:entryValues="@array/numSnoozes" />
         <ListPreference
             android:key="sleepCycle"
+            android:defaultValue="90"
             android:title="@string/sleepCycle"
             android:entries="@array/sleepCycle"
             android:entryValues="@array/sleepCycle" />
         <ListPreference
             android:key="sound"
+            android:defaultValue="@string/church_bells"
             android:title="@string/sound"
             android:entries="@array/alarmSounds"
             android:entryValues="@array/alarmSounds" />
