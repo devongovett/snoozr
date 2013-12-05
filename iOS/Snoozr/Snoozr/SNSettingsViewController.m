@@ -10,6 +10,7 @@
 #import "SNSoundViewController.h"
 #import "SNSettings.h"
 #import "UIColor+Hex.h"
+#import "SNAlarmPredictor.h"
 
 #define PICKER_TAG 99
 
@@ -255,13 +256,7 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == actionSheet.destructiveButtonIndex) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Reset complete"
-                                   message:@"This is not really what will be here."
-                                  delegate:nil
-                         cancelButtonTitle:@"OK"
-                         otherButtonTitles:nil];
-        
-        [alert show];
+        [[SNAlarmPredictor shared] reset];
     }
 }
 
