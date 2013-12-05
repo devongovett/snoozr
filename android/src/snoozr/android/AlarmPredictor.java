@@ -11,15 +11,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-public class AlarmPredictor {
-	public static final int SUNDAY = 0;
-	public static final int MONDAY = 1;
-	public static final int TUESDAY = 2;
-	public static final int WEDNESDAY = 3;
-	public static final int THURSDAY = 4;
-	public static final int FRIDAY = 5;
-	public static final int SATURDAY = 6;
-	
+public class AlarmPredictor {	
 	private static final double[] DAY_IN = {0.000, 0.167, 0.333, 0.50, 0.667, 0.833, 1.000};
 	
 	private static AlarmPredictor predictor = null;
