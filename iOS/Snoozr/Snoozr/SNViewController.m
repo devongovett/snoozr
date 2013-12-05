@@ -23,6 +23,9 @@
     SNAlarm *alarm;
 }
 
+/**
+ *  Set up the sub views
+ */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -88,6 +91,9 @@
 
 }
 
+/**
+ *  When the view appears, predict the alarm time and animate the "Swipe to set alarm" help text
+ */
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -108,6 +114,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+/**
+ *  Divides the screen into 3 sections for high, medium, and low speed scrubbing.
+ *  Given a point, this method computes which section the finger is in.
+ *
+ *  @param point Input point
+ *  @return section number (1 to 3)
+ */
 - (int)sectionForPoint:(CGPoint)point
 {
     float screenWidth = [UIScreen mainScreen].bounds.size.width;
@@ -115,6 +128,11 @@
     return point.x / sectionWidth + 1;
 }
 
+/**
+ *  Updates the text of the status label for the section the user's finger is on
+ *
+ *  @param section section number
+ */
 - (void)updateStatusForSection:(int)section
 {
     switch (section) {
@@ -132,6 +150,13 @@
     }
 }
 
+/**
+ *  Helper method to show or hide the status label
+ *
+ *  @param showing whether to show or hide the label
+ *  @param delay   delay to change it
+ *  @param block   completion handler
+ */
 - (void)setStatusShowing:(BOOL)showing afterDelay:(NSTimeInterval)delay completion:(void (^)(BOOL done))block
 {
     [UIView animateWithDuration:0.25 delay:delay options:0 animations:^{
@@ -139,20 +164,28 @@
     } completion:block];
 }
 
+/**
+ *  Helper to show the status label
+ */
 - (void)showStatus
 {
     [self setStatusShowing:YES afterDelay:0 completion:nil];
 }
 
+/**
+ *  Helper to hide the status label
+ */
 - (void)hideStatus
 {
     __weak id selfWeak = self;
     [self setStatusShowing:NO afterDelay:0 completion:^(BOOL done) {
         [selfWeak updateStatusForSection:0];
-//        [selfWeak showStatus];
     }];
 }
 
+/**
+ *  Handles the user's finger movements to adjust date
+ */
 - (void)pan:(UIPanGestureRecognizer *)recognizer
 {
     if (recognizer.state == UIGestureRecognizerStateEnded) {
@@ -182,6 +215,9 @@
     }
 }
 
+/**
+ *  Enables or disables the alarm based on the user's setting
+ */
 - (void)enableSwitchChanged:(UISwitch *)sender
 {
     [UIView beginAnimations:nil context:nil];
@@ -200,11 +236,17 @@
         alarm.enabled = NO;
 }
 
+/**
+ *  Handles the user's action to enable/disable learning
+ */
 - (void)learnSwitchChanged:(UISwitch *)sender
 {
     alarm.learn = sender.on;
 }
 
+/**
+ *  Handles the sleep button. Asks the user whether they want to adjust for their sleep cycle.
+ */
 - (IBAction)sleep:(id)sender
 {
     NSDate *wakeDate = [alarm dateAdjustedForSleepCycle];
@@ -226,6 +268,9 @@
     }
 }
 
+/**
+ *  Handles the user's action after asking them if they want to adjust for their sleep cycle.
+ */
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1) {
@@ -236,6 +281,9 @@
     [self sleepWell];
 }
 
+/**
+ *  Schedules the alarm and displays the "Sleep well!" message to the user
+ */
 - (void)sleepWell
 {
     [alarm schedule];

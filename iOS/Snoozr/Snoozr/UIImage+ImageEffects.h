@@ -95,6 +95,9 @@
 
 @import UIKit;
 
+/**
+ *  Allows blurring and tinting a UIImage
+ */
 @interface UIImage (ImageEffects)
 
 - (UIImage *)applyLightEffect;

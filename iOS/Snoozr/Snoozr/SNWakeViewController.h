@@ -11,6 +11,12 @@
 #import "SNBlurredViewController.h"
 #import "SNAlarm.h"
 
+/**
+ *  The view displayed to the user when they wake up. Includes
+ *  current time, and dismiss and snooze buttons. When the alarm is
+ *  dismissed, triggers learning in the SNAlarmPredictor for the current
+ *  alarm.
+ */
 @interface SNWakeViewController : SNBlurredViewController
 
 @property (weak, nonatomic) IBOutlet SNButton *dismissButton;

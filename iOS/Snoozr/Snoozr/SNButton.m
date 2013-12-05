@@ -9,6 +9,9 @@
 #import "SNButton.h"
 #import "UIColor+Hex.h"
 
+/**
+ *  Special button class with support for background colors and rounded corners
+ */
 @implementation SNButton
 
 - (void)awakeFromNib

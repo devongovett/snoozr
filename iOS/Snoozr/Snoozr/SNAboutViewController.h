@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  Shows the about.html file in a web view
+ */
 @interface SNAboutViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;

@@ -68,6 +68,9 @@
     [self updateDate];
 }
 
+/**
+ *  Computes attributed string for time label
+ */
 - (void)updateTime
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -85,6 +88,9 @@
     timeLabel.attributedText = string;
 }
 
+/**
+ *  Computes string for date label
+ */
 - (void)updateDate
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

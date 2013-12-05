@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  Displays a date on screen, including time and date
+ *  Formats it to look nice using attributed strings.
+ */
 @interface SNDateTimeView : UIView
 
+/**
+ *  The date to display
+ */
 @property (nonatomic, copy) NSDate *date;
 
 @end

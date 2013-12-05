@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "SNSound.h"
 
+/**
+ *  Shows the list of sounds to the user to pick from. Plays the sound
+ *  when the user selects it. Tapping again stops the sound.
+ */
 @interface SNSoundViewController : UITableViewController
 
 @property (nonatomic, copy) NSArray *sounds;

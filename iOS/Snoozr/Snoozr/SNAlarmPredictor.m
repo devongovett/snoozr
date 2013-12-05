@@ -56,7 +56,14 @@
 
 @interface SNAlarmPredictor ()
 
+/**
+ *  The internal neural network
+ */
 @property (nonatomic) SNNeuralNet *net;
+
+/**
+ *  The original training data
+ */
 @property (nonatomic) NSMutableArray *records;
 
 @end
@@ -93,6 +100,9 @@
     return self;
 }
 
+/**
+ *  Sets up the neural network, and trains it based on training data
+ */
 - (void)initNeuralNet
 {
     self.net = [[SNNeuralNet alloc] initWithInputs:1 outputs:1];
@@ -130,6 +140,13 @@
     [self save];
 }
 
+/**
+ *  Computes the average time for a weekday from the training dataset
+ *
+ *  @param weekday Integer day of the week, 1 being Sunday, 7 being Saturday
+ *
+ *  @return Average time for input weekday
+ */
 - (double)averageTimeForWeekday:(long)weekday
 {
     if (counts[weekday] == 0)
@@ -138,7 +155,11 @@
     return averages[weekday] / counts[weekday];
 }
 
-// Check if we have at least 1 full week of training data
+/**
+ *  Check if we have at least 1 full week of training data
+ *
+ *  @return Whether we have at least 1 full week of training data
+ */
 - (BOOL)hasFullWeek
 {
     int count = 0;
@@ -216,6 +237,9 @@
     [coder encodeObject:[NSData dataWithBytes:counts length:8 * sizeof(int)] forKey:@"counts"];
 }
 
+/**
+ *  Persists all data to disk
+ */
 - (void)save
 {
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self];
