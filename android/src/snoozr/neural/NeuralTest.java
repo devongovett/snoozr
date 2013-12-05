@@ -33,7 +33,7 @@ public class NeuralTest {
 		net.train(records);
 
 		for (int i = 0; i < 5; i++) {
-			double[] output = net.runInput(records[i].input).points;
+			double[] output = net.runInput(records[i].getInputs());
 
 			double sum = 0;
 			int c = 0;

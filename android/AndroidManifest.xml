@@ -32,6 +32,12 @@
             android:noHistory="true"/>
         
         <receiver android:name="snoozr.android.AlarmReciever"/>
+        
+        <uses-library android:name="android.test.runner" />
+    
+	    <instrumentation android:name="android.test.InstrumentationTestRunner"
+	    	android:targetPackage="snoozr.neural"
+	    	android:label="Neural Net Tests" />
     </application>
 
 </manifest>
