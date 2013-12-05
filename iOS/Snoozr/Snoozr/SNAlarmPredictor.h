@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// This class manages a neural network to learn and predict alarm times
 @interface SNAlarmPredictor : NSObject <NSCoding>
 
 + (instancetype)shared;

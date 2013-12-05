@@ -138,13 +138,24 @@
     return averages[weekday] / counts[weekday];
 }
 
+// Check if we have at least 1 full week of training data
+- (BOOL)hasFullWeek
+{
+    for (int i = 1; i <= 7; i++) {
+        if (counts[i] == 0)
+            return NO;
+    }
+    
+    return YES;
+}
+
 - (NSDate *)predictAlarmTimeForDate:(NSDate *)date
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit)
                                                fromDate:date];
     
-    if (counts[components.weekday] == 0) {
+    if (counts[components.weekday] == 0 || ![self hasFullWeek]) {
         // if there is no training data, just assume 8am
         components.hour = 8;
     } else {
@@ -161,7 +172,7 @@
         if (avg != netAvg)
             alarmTime -= (alarmTime % ROUND_TIME);
         
-//        printf("OUTPUT = %f, ALARM_TIME = %d, AVG = %f, NETAVG = %f\n", netOutput, alarmTime, avg, netAvg);
+//        printf("COUNT = %d, OUTPUT = %f, ALARM_TIME = %d, AVG = %f, NETAVG = %f\n", counts[components.weekday], netOutput, alarmTime, avg, netAvg);
         
         components.hour = alarmTime / 60;
         components.minute = alarmTime % 60;
