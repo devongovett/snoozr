@@ -2,22 +2,28 @@
     <PreferenceCategory 
         android:title="@string/settings"
         android:key="settingsLabel">
-        <ListPreference
+        <ListPreference 
             android:key="allowedSnoozes"
-            android:title="@string/allowedSnoozes" />
+            android:title="@string/allowedSnoozes"
+            android:entries="@array/numSnoozes"
+            android:entryValues="@array/numSnoozes" />
         <ListPreference
             android:key="sleepCycle"
-            android:title="@string/sleepCycle" />
+            android:title="@string/sleepCycle"
+            android:entries="@array/sleepCycle"
+            android:entryValues="@array/sleepCycle" />
         <ListPreference
             android:key="sound"
-            android:title="@string/sound" />
+            android:title="@string/sound"
+            android:entries="@array/alarmSounds"
+            android:entryValues="@array/alarmSounds" />
     </PreferenceCategory>
     <PreferenceCategory 
         android:title="@string/about"
         android:key="aboutLabel">
-        <ListPreference
+        <Preference
             android:key="about"
-            android:title="@string/about" />
+            android:title="@string/about"/>
         <ListPreference
             android:key="version"
             android:title="@string/version" />
@@ -25,7 +31,7 @@
     <PreferenceCategory 
         android:title="@string/dangerZone"
         android:key="dangerLabel">  
-        <ListPreference
+        <Preference
             android:key="resetSchedule"
             android:title="@string/resetSchedule" />
     </PreferenceCategory>
