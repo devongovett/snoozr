@@ -12,4 +12,6 @@
 DerivedData/
 build/
 project.xcworkspace/
+Snoozr.xcworkspace/
+Pods/
 xcuserdata/
