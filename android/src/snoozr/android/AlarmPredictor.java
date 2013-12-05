@@ -13,12 +13,16 @@ import android.database.sqlite.SQLiteDatabase;
 
 public class AlarmPredictor {	
 	private static final double[] DAY_IN = {0.000, 0.167, 0.333, 0.50, 0.667, 0.833, 1.000};
+	private static final int ROUND_TIME = 5;
 	
 	private static AlarmPredictor predictor = null;
 	
 	private TrainingRecord[] records;
 	private NeuralNet net;
 	private Context context;
+	
+	private int count[];
+	private double sum[];
 	
 	public AlarmPredictor getInstance(Context context) {
 		if (predictor == null)
@@ -57,10 +61,25 @@ public class AlarmPredictor {
 		cursor.close();
 		db.close();
 		
+		count = new int[7];
+		sum = new double[7];
+		for (TrainingRecord record : records) {
+			int day = getDateFromFraction(record.getInputs()[0]);
+			count[day]++;
+			sum[day] += record.getOutputs()[0];
+		}
+		
 		net = NeuralNet.fromDB(context);
 		if (net == null) {
 			getTrainedNet();
 		}
+	}
+	
+	private int getDateFromFraction(double val) {
+		for (int i = 0; i < 7; i++)
+			if (DAY_IN[i] == val)
+				return i;
+		return 0;
 	}
 	
 	private void getTrainedNet() {
@@ -84,6 +103,8 @@ public class AlarmPredictor {
 	
 	public void reset() {
 		records = new TrainingRecord[0];
+		count = new int[7];
+		sum = new double[7];
 		getTrainedNet();
 		save();
 	}
@@ -110,7 +131,22 @@ public class AlarmPredictor {
 		
 		boolean sameDay = cal.get(Calendar.HOUR_OF_DAY) < 5;
 		
-		int min = (int) (net.runInput((cal.get(Calendar.DAY_OF_WEEK) - (sameDay ? 1 : 0)) % 7)[0] * 60 * 24);
+		int day = (cal.get(Calendar.DAY_OF_WEEK) - (sameDay ? 1 : 0)) % 7;
+		int min = 8 * 60;
+		
+		if (count[day] > 0) {
+			double netOutput = net.runInput(day)[0] * 60 * 24;
+			double avg = count[day] / count[day];
+			
+			double netAvg = (netOutput + avg) / 2;
+			min = (int) netAvg;
+			
+			if (avg > netAvg)
+				min += ROUND_TIME;
+			
+			if (avg != netAvg)
+				min -= (min % ROUND_TIME);
+		}		
 		
 		if (!sameDay)
 			cal.add(Calendar.DATE, 1);
