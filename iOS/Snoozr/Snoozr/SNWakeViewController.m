@@ -89,6 +89,9 @@
 {
     [self.snoozeButton setTitle:[NSString stringWithFormat:@"Snooze (%ld)", ++numSnoozes] forState:UIControlStateNormal];
     [SNSound stop];
+    
+    if (numSnoozes > [SNSettings numSnoozes])
+        self.snoozeButton.enabled = NO;
 }
 
 @end
