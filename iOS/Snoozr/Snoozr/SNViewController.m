@@ -169,7 +169,12 @@
             CGPoint translatedPoint = [recognizer translationInView:self.view];
             int sectionInverse = 3 - section + 1;
             int velocity = sectionInverse * sectionInverse * 7;
-            alarm.date = [_startDate dateByAddingTimeInterval:translatedPoint.y * velocity];
+            
+            NSDate *newDate = [_startDate dateByAddingTimeInterval:translatedPoint.y * velocity];
+            if ([newDate compare:[NSDate date]] < 0)
+                newDate = [NSDate date];
+            
+            alarm.date = newDate;
             self.dateTimeView.date = alarm.date;
         }
         
