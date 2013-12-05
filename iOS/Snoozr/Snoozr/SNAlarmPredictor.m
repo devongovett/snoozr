@@ -54,10 +54,15 @@
 
 @end
 
+@interface SNAlarmPredictor ()
+
+@property (nonatomic) SNNeuralNet *net;
+@property (nonatomic) NSMutableArray *records;
+
+@end
+
 @implementation SNAlarmPredictor
 {
-    SNNeuralNet *net;
-    NSMutableArray *records;
     double averages[8];
     int counts[8];
 }
@@ -81,7 +86,7 @@
 - (instancetype)init
 {    
     if (self = [super init]) {
-        records = [[NSMutableArray alloc] init];
+        self.records = [[NSMutableArray alloc] init];
         [self initNeuralNet];
     }
     
@@ -90,22 +95,22 @@
 
 - (void)initNeuralNet
 {
-    net = [[SNNeuralNet alloc] initWithInputs:1 outputs:1];
-    net.minError = MIN_ERROR;
-    net.learningRate = LEARNING_RATE;
-    net.maxIterations = MAX_ITERATIONS;
+    self.net = [[SNNeuralNet alloc] initWithInputs:1 outputs:1];
+    self.net.minError = MIN_ERROR;
+    self.net.learningRate = LEARNING_RATE;
+    self.net.maxIterations = MAX_ITERATIONS;
     
-    if (records.count > 0) {
+    if (self.records.count > 0) {
         // convert NSArray of record classes into C array of SNTrainingRecord structs
-        SNTrainingRecord trainingData[records.count];
+        SNTrainingRecord trainingData[self.records.count];
         
-        for (int i = 0; i < records.count; i++) {
-            SNInputRecord *record = records[i];
+        for (int i = 0; i < self.records.count; i++) {
+            SNInputRecord *record = self.records[i];
             trainingData[i].input = SNInput(record.input);
             trainingData[i].output = SNOutput(record.output);
         }
         
-        [net train:trainingData numRecords:(int)records.count];
+        [self.net train:trainingData numRecords:(int)self.records.count];
     }
 }
 
@@ -115,7 +120,7 @@
     NSDateComponents *components = [calendar components:(NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:date];
     double time = (components.hour * 60 + components.minute);
 
-    [records addObject:[SNInputRecord recordWithInput:components.weekday / 7.0
+    [self.records addObject:[SNInputRecord recordWithInput:components.weekday / 7.0
                                                output:time / MINUTES_PER_DAY]];
 
     counts[components.weekday]++;
@@ -143,7 +148,7 @@
         // if there is no training data, just assume 8am
         components.hour = 8;
     } else {
-        double *output = [net runInput:SNInput(components.weekday / 7.0)];
+        double *output = [self.net runInput:SNInput(components.weekday / 7.0)];
         double netOutput = *output * MINUTES_PER_DAY;
         double avg = [self averageTimeForWeekday:components.weekday];
         
@@ -170,7 +175,7 @@
     for (int i = 1; i <= 7; i++)
         averages[i] = counts[i] = 0;
     
-    [records removeAllObjects];
+    [self.records removeAllObjects];
     [self initNeuralNet];
     [self save];
 }
@@ -178,8 +183,8 @@
 - (instancetype)initWithCoder:(NSCoder *)decoder
 {
     if (self = [super init]) {
-        net = [decoder decodeObjectForKey:@"net"];
-        records = [decoder decodeObjectForKey:@"records"];
+        self.net = [decoder decodeObjectForKey:@"net"];
+        self.records = [decoder decodeObjectForKey:@"records"];
         
         NSData *data = [decoder decodeObjectForKey:@"averages"];
         memcpy(averages, data.bytes, data.length);
@@ -193,10 +198,10 @@
 
 - (void)encodeWithCoder:(NSCoder *)coder
 {
-    [coder encodeObject:net forKey:@"net"];
-    [coder encodeObject:records forKey:@"records"];
+    [coder encodeObject:self.net forKey:@"net"];
+    [coder encodeObject:self.records forKey:@"records"];
     [coder encodeObject:[NSData dataWithBytes:averages length:8 * sizeof(double)] forKey:@"averages"];
-    [coder encodeObject:[NSData dataWithBytes:counts length:8 * sizeof(double)] forKey:@"counts"];
+    [coder encodeObject:[NSData dataWithBytes:counts length:8 * sizeof(int)] forKey:@"counts"];
 }
 
 - (void)save
