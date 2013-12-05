@@ -53,6 +53,8 @@ public class AlarmActivity extends Activity{
             e.printStackTrace();
         }
         
+        final int numSnoozes = getIntent().getIntExtra("snoozes", 5); // this should be maxSnoozes
+        
         dismiss.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
@@ -66,7 +68,7 @@ public class AlarmActivity extends Activity{
 			public void onClick(View v) {
 				mPlayer.stop();
 				cal.add(Calendar.MINUTE, 5);
-				Utilities.setupAlarm(cal.getTime(), AlarmActivity.this, true);
+				Utilities.setupAlarm(cal.getTime(), AlarmActivity.this, numSnoozes + 1);
 				
                 Toast toast = Toast.makeText(AlarmActivity.this,
                         "Snoozing for 5 more minutes", Toast.LENGTH_LONG);
@@ -75,7 +77,7 @@ public class AlarmActivity extends Activity{
 			}
         });
         
-        if (! getIntent().getBooleanExtra("snooze", true))
+        if (numSnoozes == 0)
         	AlarmPredictor.getInstance(this).addRecord(cal.getTime());
 	}
 }

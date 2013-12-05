@@ -11,9 +11,9 @@ import android.widget.Toast;
 
 public class Utilities {
 
-    public static void setupAlarm(Date alarmTime, Context context, boolean snooze) {    	
+    public static void setupAlarm(Date alarmTime, Context context, int numSnoozes) {    	
 		Intent intentAlarm = new Intent(context, AlarmReciever.class);
-		intentAlarm.putExtra("snooze", snooze);
+		intentAlarm.putExtra("snoozes", numSnoozes);
 		
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(alarmTime);

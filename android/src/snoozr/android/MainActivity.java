@@ -46,7 +46,7 @@ public class MainActivity extends Activity implements OnGestureListener{
 			@Override
 			public void onClick(View arg0) {
 				
-				Utilities.setupAlarm(alarmTime, MainActivity.this, false);
+				Utilities.setupAlarm(alarmTime, MainActivity.this, 0);
 
                 Toast toast = Toast.makeText(MainActivity.this,
                         "Sleep tight!", Toast.LENGTH_LONG);
